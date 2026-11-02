@@ -1,0 +1,98 @@
+{
+  "generado": "2026-10-30",
+  "datos_simulados": true,
+  "semilla": 42,
+  "umbral_usd": 100000,
+  "regla_umbral": "perdida_critica = perdida_economica_usd >= umbral_usd",
+  "predictores": [
+    "tipo_equipo",
+    "provincia",
+    "meses_inactividad",
+    "anio_fabricacion",
+    "estado_motor"
+  ],
+  "categorias": {
+    "tipo_equipo": [
+      "Motoniveladora",
+      "Excavadora",
+      "Retroexcavadora",
+      "Cargadora frontal",
+      "Rodillo compactador",
+      "Topadora"
+    ],
+    "provincia": [
+      "Buenos Aires",
+      "Córdoba",
+      "Santa Fe",
+      "Mendoza",
+      "Salta"
+    ],
+    "estado_motor": [
+      "Funcional",
+      "Requiere_Reparacion",
+      "Averia_Grave"
+    ]
+  },
+  "rangos": {
+    "meses_inactividad": [
+      1,
+      120
+    ],
+    "anio_fabricacion": [
+      2000,
+      2026
+    ]
+  },
+  "costos_relativos": {
+    "falso_negativo": 5,
+    "falso_positivo": 1
+  },
+  "modelo_regresion": "KNN k=15",
+  "modelo_clasificacion": "Árbol prof=10",
+  "versiones": {
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "filas": {
+    "train": 1464,
+    "validation": 488,
+    "test": 488
+  },
+  "metricas_test": {
+    "regresion": {
+      "MAE (USD)": 20618.69388114754,
+      "RMSE (USD)": 31841.45613533685,
+      "R2": 0.8820375551278105
+    },
+    "baseline_regresion": {
+      "MAE (USD)": 71057.0337129076,
+      "RMSE (USD)": 92757.68393119099,
+      "R2": -0.0010544883163927654
+    },
+    "clasificador_directo": {
+      "Accuracy": 0.9036885245901639,
+      "Precision": 0.8909090909090909,
+      "Recall": 0.8949771689497716,
+      "F1": 0.8929384965831435,
+      "TN": 245.0,
+      "FP": 24.0,
+      "FN": 23.0,
+      "TP": 196.0,
+      "Costo": 139.0
+    },
+    "regresion_mas_umbral": {
+      "Accuracy": 0.9344262295081968,
+      "Precision": 0.8978723404255319,
+      "Recall": 0.9634703196347032,
+      "F1": 0.9295154185022027,
+      "TN": 245.0,
+      "FP": 24.0,
+      "FN": 8.0,
+      "TP": 211.0,
+      "Costo": 64.0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Para ejecutar el notebook desde cero:  pip install -r requirements-notebook.txt
+-r requirements.txt
+matplotlib==3.10.8
+seaborn==0.13.2
+# Además, para abrir el notebook:  pip install notebook

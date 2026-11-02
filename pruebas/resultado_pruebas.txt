@@ -1,0 +1,33 @@
+Ejecutado: 2026-10-31 | Python 3.12.3 | scikit-learn 1.8.0
+Comando: python -m unittest discover -s pruebas -v
+
+test_01_pagina_inicial (test_app.PruebasApp.test_01_pagina_inicial) ... ok
+test_02_caso_valido_dos_predicciones (test_app.PruebasApp.test_02_caso_valido_dos_predicciones) ... ok
+test_03_cambiar_meses_cambia_resultado (test_app.PruebasApp.test_03_cambiar_meses_cambia_resultado) ... ok
+test_04_valor_no_numerico (test_app.PruebasApp.test_04_valor_no_numerico) ... ok
+test_05_meses_fuera_de_rango (test_app.PruebasApp.test_05_meses_fuera_de_rango) ... ok
+test_06_categoria_no_permitida (test_app.PruebasApp.test_06_categoria_no_permitida) ... ok
+test_07_anio_fuera_de_rango_o_decimal (test_app.PruebasApp.test_07_anio_fuera_de_rango_o_decimal) ... ok
+test_08_campo_ausente (test_app.PruebasApp.test_08_campo_ausente) ... ok
+test_09_valores_conservados_tras_error (test_app.PruebasApp.test_09_valores_conservados_tras_error) ... ok
+test_10_sin_modelos_no_entrena (test_app.PruebasApp.test_10_sin_modelos_no_entrena) ... ok
+test_11_version_incompatible (test_app.PruebasApp.test_11_version_incompatible) ... ok
+test_12_coincide_con_artefactos_del_notebook (test_app.PruebasApp.test_12_coincide_con_artefactos_del_notebook) ... ok
+test_13_umbral_exacto_usa_mayor_o_igual (test_app.PruebasApp.test_13_umbral_exacto_usa_mayor_o_igual) ... ok
+test_14_solicitud_demasiado_grande (test_app.PruebasApp.test_14_solicitud_demasiado_grande) ... ok
+test_15_estatico_y_metodos (test_app.PruebasApp.test_15_estatico_y_metodos) ... ok
+test_16_tablero_columnas_y_filas (test_app.PruebasApp.test_16_tablero_columnas_y_filas) ... ok
+test_17_filtros_por_tipo_y_provincia (test_app.PruebasApp.test_17_filtros_por_tipo_y_provincia) ... ok
+test_18_proyeccion_suma_meses_con_tope (test_app.PruebasApp.test_18_proyeccion_suma_meses_con_tope) ... ok
+test_19_parametros_invalidos_no_rompen (test_app.PruebasApp.test_19_parametros_invalidos_no_rompen) ... ok
+test_20_dictamen_urgente_usa_la_misma_regla_del_umbral (test_app.PruebasApp.test_20_dictamen_urgente_usa_la_misma_regla_del_umbral) ... ok
+test_21_tablero_se_conserva_tras_predecir (test_app.PruebasApp.test_21_tablero_se_conserva_tras_predecir) ... ok
+test_22_sin_csv_el_tablero_avisa_y_la_prediccion_sigue (test_app.PruebasApp.test_22_sin_csv_el_tablero_avisa_y_la_prediccion_sigue) ... ok
+test_23_escape_de_html (test_app.PruebasApp.test_23_escape_de_html) ... ok
+test_24_version_menor_distinta_carga_con_aviso (test_app.PruebasApp.test_24_version_menor_distinta_carga_con_aviso)
+Mismo scikit-learn mayor pero distinta menor (p. ej. 1.8.0 vs 1.9.0): el sistema funciona y avisa; no bloquea. ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.355s
+
+OK

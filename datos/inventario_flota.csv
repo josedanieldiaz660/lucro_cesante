@@ -1,0 +1,51 @@
+id_maquina,tipo_equipo,provincia,anio_fabricacion,estado_motor,meses_inactividad_actual
+CAR-001,Cargadora frontal,Salta,2019,Averia_Grave,21
+EXC-002,Excavadora,Santa Fe,2015,Requiere_Reparacion,21
+CAR-003,Cargadora frontal,Santa Fe,2006,Averia_Grave,6
+EXC-004,Excavadora,Mendoza,2005,Requiere_Reparacion,22
+ROD-005,Rodillo compactador,Mendoza,2021,Requiere_Reparacion,10
+CAR-006,Cargadora frontal,Mendoza,2020,Requiere_Reparacion,15
+TOP-007,Topadora,Santa Fe,2016,Requiere_Reparacion,3
+ROD-008,Rodillo compactador,Santa Fe,2011,Funcional,7
+EXC-009,Excavadora,Mendoza,2018,Averia_Grave,9
+EXC-010,Excavadora,Salta,2006,Requiere_Reparacion,15
+CAR-011,Cargadora frontal,Mendoza,2012,Funcional,14
+MOT-012,Motoniveladora,Mendoza,2022,Requiere_Reparacion,2
+TOP-013,Topadora,Córdoba,2008,Funcional,18
+EXC-014,Excavadora,Mendoza,2006,Requiere_Reparacion,4
+TOP-015,Topadora,Mendoza,2012,Averia_Grave,13
+EXC-016,Excavadora,Salta,2017,Funcional,15
+ROD-017,Rodillo compactador,Buenos Aires,2011,Requiere_Reparacion,1
+CAR-018,Cargadora frontal,Santa Fe,2021,Averia_Grave,3
+MOT-019,Motoniveladora,Santa Fe,2009,Averia_Grave,9
+CAR-020,Cargadora frontal,Buenos Aires,2012,Requiere_Reparacion,1
+TOP-021,Topadora,Salta,2007,Requiere_Reparacion,22
+RET-022,Retroexcavadora,Santa Fe,2005,Requiere_Reparacion,15
+TOP-023,Topadora,Santa Fe,2005,Averia_Grave,23
+TOP-024,Topadora,Santa Fe,2013,Averia_Grave,10
+CAR-025,Cargadora frontal,Salta,2011,Requiere_Reparacion,4
+TOP-026,Topadora,Salta,2011,Requiere_Reparacion,11
+ROD-027,Rodillo compactador,Mendoza,2017,Funcional,19
+TOP-028,Topadora,Mendoza,2006,Requiere_Reparacion,21
+TOP-029,Topadora,Mendoza,2016,Funcional,11
+EXC-030,Excavadora,Mendoza,2011,Averia_Grave,1
+MOT-031,Motoniveladora,Santa Fe,2017,Averia_Grave,7
+TOP-032,Topadora,Santa Fe,2013,Requiere_Reparacion,1
+RET-033,Retroexcavadora,Córdoba,2016,Requiere_Reparacion,22
+MOT-034,Motoniveladora,Mendoza,2021,Funcional,20
+CAR-035,Cargadora frontal,Córdoba,2007,Requiere_Reparacion,17
+MOT-036,Motoniveladora,Santa Fe,2021,Averia_Grave,22
+ROD-037,Rodillo compactador,Buenos Aires,2005,Requiere_Reparacion,2
+ROD-038,Rodillo compactador,Mendoza,2010,Requiere_Reparacion,4
+RET-039,Retroexcavadora,Santa Fe,2021,Averia_Grave,5
+CAR-040,Cargadora frontal,Córdoba,2010,Requiere_Reparacion,16
+MOT-041,Motoniveladora,Buenos Aires,2010,Requiere_Reparacion,3
+CAR-042,Cargadora frontal,Mendoza,2008,Funcional,3
+RET-043,Retroexcavadora,Mendoza,2011,Funcional,1
+EXC-044,Excavadora,Buenos Aires,2015,Requiere_Reparacion,18
+TOP-045,Topadora,Córdoba,2007,Requiere_Reparacion,16
+EXC-046,Excavadora,Buenos Aires,2021,Requiere_Reparacion,16
+TOP-047,Topadora,Mendoza,2009,Averia_Grave,23
+MOT-048,Motoniveladora,Buenos Aires,2007,Averia_Grave,16
+RET-049,Retroexcavadora,Mendoza,2005,Requiere_Reparacion,11
+MOT-050,Motoniveladora,Mendoza,2010,Requiere_Reparacion,3

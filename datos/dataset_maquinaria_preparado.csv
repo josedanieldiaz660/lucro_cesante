@@ -1,0 +1,2441 @@
+id_registro,tipo_equipo,provincia,meses_inactividad,anio_fabricacion,estado_motor,perdida_economica_usd,perdida_critica
+EQ-0001,Motoniveladora,Mendoza,24,2023,Funcional,68983.62,0
+EQ-0002,Rodillo compactador,Buenos Aires,5,2002,Requiere_Reparacion,6005.22,0
+EQ-0003,Cargadora frontal,Mendoza,76,2020,Averia_Grave,198916.24,1
+EQ-0004,Retroexcavadora,Buenos Aires,82,2013,Funcional,77686.1,0
+EQ-0005,Retroexcavadora,Buenos Aires,93,2020,Funcional,122083.34,1
+EQ-0006,Topadora,Buenos Aires,115,2012,Requiere_Reparacion,224020.05,1
+EQ-0007,Motoniveladora,Santa Fe,60,2004,Averia_Grave,86732.86,0
+EQ-0008,Rodillo compactador,Mendoza,100,2020,Requiere_Reparacion,167038.42,1
+EQ-0009,Excavadora,Santa Fe,86,2017,Averia_Grave,243901.52,1
+EQ-0010,Motoniveladora,Buenos Aires,34,2012,Requiere_Reparacion,81558.14,0
+EQ-0011,Cargadora frontal,Buenos Aires,102,2010,Funcional,147046.64,1
+EQ-0012,Topadora,Salta,7,2009,Requiere_Reparacion,11786.79,0
+EQ-0013,Rodillo compactador,Salta,72,2012,Funcional,60922.95,0
+EQ-0014,Rodillo compactador,Mendoza,113,2007,Averia_Grave,99253.43,0
+EQ-0015,Rodillo compactador,Buenos Aires,80,2007,Funcional,57546.2,0
+EQ-0016,Rodillo compactador,Salta,113,2007,Funcional,81209.72,0
+EQ-0017,Cargadora frontal,Mendoza,7,2000,Requiere_Reparacion,13035.24,0
+EQ-0018,Motoniveladora,Santa Fe,64,2025,Requiere_Reparacion,208784.52,1
+EQ-0019,Topadora,Buenos Aires,94,2006,Requiere_Reparacion,226787.33,1
+EQ-0020,Retroexcavadora,Salta,78,2004,Requiere_Reparacion,75263.84,0
+EQ-0021,Cargadora frontal,Santa Fe,106,2004,Averia_Grave,144897.43,1
+EQ-0022,Retroexcavadora,Buenos Aires,56,2026,Averia_Grave,175898.3,1
+EQ-0023,Excavadora,Córdoba,82,2012,Averia_Grave,155345.06,1
+EQ-0024,Topadora,Santa Fe,51,2008,Requiere_Reparacion,99984.26,0
+EQ-0025,Rodillo compactador,Buenos Aires,105,2010,Requiere_Reparacion,91498.04,0
+EQ-0026,Cargadora frontal,Córdoba,15,2002,Requiere_Reparacion,11599.41,0
+EQ-0027,Retroexcavadora,Santa Fe,31,2008,Requiere_Reparacion,32711.06,0
+EQ-0028,Rodillo compactador,Salta,12,2006,Requiere_Reparacion,1693.43,0
+EQ-0029,Cargadora frontal,Buenos Aires,85,2021,Requiere_Reparacion,190809.2,1
+EQ-0030,Retroexcavadora,Santa Fe,28,2001,Funcional,14763.34,0
+EQ-0031,Retroexcavadora,Salta,39,2011,Funcional,38499.88,0
+EQ-0032,Excavadora,Salta,101,2021,Averia_Grave,414571.66,1
+EQ-0033,Motoniveladora,Salta,44,2022,Funcional,118154.62,1
+EQ-0034,Cargadora frontal,Buenos Aires,18,2013,Requiere_Reparacion,25033.23,0
+EQ-0035,Topadora,Salta,3,2006,Requiere_Reparacion,6900.57,0
+EQ-0036,Motoniveladora,Salta,28,2009,Funcional,54687.4,0
+EQ-0037,Topadora,Córdoba,110,2006,Averia_Grave,245242.66,1
+EQ-0038,Rodillo compactador,Santa Fe,66,2017,Funcional,47743.96,0
+EQ-0039,Excavadora,Santa Fe,120,2007,Averia_Grave,211860.11,1
+EQ-0040,Cargadora frontal,Santa Fe,26,2017,Averia_Grave,59033.6,0
+EQ-0041,Motoniveladora,Córdoba,43,2017,Funcional,74799.49,0
+EQ-0042,Rodillo compactador,Salta,20,2025,Funcional,22594.35,0
+EQ-0043,Rodillo compactador,Salta,48,2009,Requiere_Reparacion,48079.05,0
+EQ-0044,Retroexcavadora,Córdoba,68,2025,Requiere_Reparacion,118166.56,1
+EQ-0045,Motoniveladora,Salta,97,2010,Funcional,179222.44,1
+EQ-0046,Topadora,Córdoba,45,2018,Averia_Grave,158160.4,1
+EQ-0047,Retroexcavadora,Mendoza,93,2017,Funcional,107434.41,1
+EQ-0048,Topadora,Santa Fe,76,2022,Averia_Grave,316579.55,1
+EQ-0049,Rodillo compactador,Santa Fe,36,2012,Funcional,34038.7,0
+EQ-0050,Rodillo compactador,Buenos Aires,110,2021,Averia_Grave,196127.26,1
+EQ-0051,Rodillo compactador,Mendoza,53,2009,Funcional,40939.65,0
+EQ-0052,Excavadora,Córdoba,19,2013,Requiere_Reparacion,23639.98,0
+EQ-0053,Retroexcavadora,Córdoba,116,2013,Requiere_Reparacion,159139.27,1
+EQ-0054,Retroexcavadora,Buenos Aires,110,2019,Funcional,172335.24,1
+EQ-0055,Retroexcavadora,Salta,6,2016,Averia_Grave,6623.67,0
+EQ-0056,Motoniveladora,Buenos Aires,109,2002,Funcional,127549.63,1
+EQ-0057,Cargadora frontal,Mendoza,114,2021,Requiere_Reparacion,281145.99,1
+EQ-0058,Motoniveladora,Salta,100,2020,Requiere_Reparacion,284659.05,1
+EQ-0059,Rodillo compactador,Buenos Aires,31,2002,Requiere_Reparacion,16751.05,0
+EQ-0060,Rodillo compactador,Santa Fe,76,2025,Funcional,101911.77,1
+EQ-0061,Topadora,Santa Fe,65,2017,Funcional,134207.7,1
+EQ-0062,Rodillo compactador,Córdoba,75,2002,Funcional,29415.49,0
+EQ-0063,Retroexcavadora,Mendoza,74,2013,Requiere_Reparacion,74953.23,0
+EQ-0064,Topadora,Santa Fe,77,2022,Funcional,191002.16,1
+EQ-0065,Retroexcavadora,Santa Fe,62,2007,Averia_Grave,78906.45,0
+EQ-0066,Excavadora,Santa Fe,83,2025,Requiere_Reparacion,258357.57,1
+EQ-0067,Topadora,Salta,64,2011,Requiere_Reparacion,159812.62,1
+EQ-0068,Retroexcavadora,Mendoza,2,2006,Requiere_Reparacion,0.0,0
+EQ-0069,Motoniveladora,Córdoba,5,2009,Funcional,5708.67,0
+EQ-0070,Retroexcavadora,Salta,115,2014,Requiere_Reparacion,196853.82,1
+EQ-0071,Rodillo compactador,Salta,110,2018,Funcional,115864.79,1
+EQ-0072,Excavadora,Salta,71,2025,Requiere_Reparacion,262400.99,1
+EQ-0073,Retroexcavadora,Mendoza,21,2005,Requiere_Reparacion,28658.33,0
+EQ-0074,Motoniveladora,Córdoba,94,2025,Requiere_Reparacion,274194.86,1
+EQ-0075,Rodillo compactador,Mendoza,18,2014,Averia_Grave,21042.4,0
+EQ-0076,Retroexcavadora,Córdoba,46,2003,Funcional,27251.0,0
+EQ-0077,Excavadora,Córdoba,40,2025,Requiere_Reparacion,120505.12,1
+EQ-0078,Excavadora,Santa Fe,2,2009,Funcional,0.0,0
+EQ-0079,Cargadora frontal,Salta,97,2016,Requiere_Reparacion,199373.77,1
+EQ-0080,Rodillo compactador,Santa Fe,62,2018,Averia_Grave,83288.99,0
+EQ-0081,Topadora,Córdoba,38,2000,Funcional,54837.08,0
+EQ-0082,Retroexcavadora,Santa Fe,61,2005,Requiere_Reparacion,57954.47,0
+EQ-0083,Motoniveladora,Córdoba,1,2018,Requiere_Reparacion,2607.62,0
+EQ-0084,Rodillo compactador,Mendoza,53,2008,Funcional,43243.2,0
+EQ-0085,Cargadora frontal,Córdoba,63,2000,Averia_Grave,64463.9,0
+EQ-0086,Rodillo compactador,Santa Fe,41,2000,Requiere_Reparacion,18085.77,0
+EQ-0087,Motoniveladora,Córdoba,100,2022,Averia_Grave,425100.96,1
+EQ-0088,Excavadora,Córdoba,30,2004,Requiere_Reparacion,38417.26,0
+EQ-0089,Rodillo compactador,Salta,17,2002,Averia_Grave,15648.43,0
+EQ-0090,Rodillo compactador,Córdoba,64,2015,Funcional,73483.27,0
+EQ-0091,Retroexcavadora,Buenos Aires,107,2003,Requiere_Reparacion,84368.31,0
+EQ-0092,Rodillo compactador,Córdoba,46,2017,Averia_Grave,53814.91,0
+EQ-0093,Topadora,Santa Fe,6,2014,Requiere_Reparacion,20992.4,0
+EQ-0094,Retroexcavadora,Buenos Aires,117,2017,Requiere_Reparacion,132045.58,1
+EQ-0095,Topadora,Córdoba,54,2013,Averia_Grave,165693.12,1
+EQ-0096,Excavadora,Buenos Aires,21,2021,Requiere_Reparacion,59333.99,0
+EQ-0097,Excavadora,Santa Fe,74,2017,Requiere_Reparacion,143173.4,1
+EQ-0098,Rodillo compactador,Mendoza,39,2011,Requiere_Reparacion,39359.5,0
+EQ-0099,Cargadora frontal,Salta,113,2000,Averia_Grave,155037.16,1
+EQ-0100,Motoniveladora,Córdoba,36,2007,Averia_Grave,61645.53,0
+EQ-0101,Rodillo compactador,Salta,67,2003,Requiere_Reparacion,40571.12,0
+EQ-0102,Excavadora,Córdoba,66,2000,Funcional,47747.98,0
+EQ-0103,Rodillo compactador,Mendoza,30,2007,Funcional,20682.98,0
+EQ-0104,Motoniveladora,Santa Fe,60,2005,Requiere_Reparacion,85542.75,0
+EQ-0105,Rodillo compactador,Mendoza,14,2002,Averia_Grave,19696.58,0
+EQ-0106,Rodillo compactador,Mendoza,78,2008,Requiere_Reparacion,81657.29,0
+EQ-0107,Rodillo compactador,Santa Fe,91,2013,Funcional,82092.83,0
+EQ-0108,Cargadora frontal,Córdoba,115,2004,Funcional,96852.59,0
+EQ-0109,Retroexcavadora,Santa Fe,40,2007,Requiere_Reparacion,43009.53,0
+EQ-0110,Rodillo compactador,Salta,35,2000,Averia_Grave,33727.4,0
+EQ-0111,Excavadora,Salta,66,2001,Funcional,63565.32,0
+EQ-0112,Rodillo compactador,Salta,84,2004,Requiere_Reparacion,69399.26,0
+EQ-0113,Cargadora frontal,Buenos Aires,120,2012,Averia_Grave,218795.66,1
+EQ-0114,Retroexcavadora,Santa Fe,4,2017,Averia_Grave,6990.38,0
+EQ-0115,Cargadora frontal,Buenos Aires,29,2021,Funcional,57360.17,0
+EQ-0116,Cargadora frontal,Mendoza,32,2016,Averia_Grave,59663.05,0
+EQ-0117,Motoniveladora,Salta,31,2016,Requiere_Reparacion,100538.69,1
+EQ-0118,Motoniveladora,Buenos Aires,56,2025,Averia_Grave,278212.57,1
+EQ-0119,Excavadora,Mendoza,105,2006,Funcional,141031.48,1
+EQ-0120,Motoniveladora,Salta,4,2021,Requiere_Reparacion,13372.55,0
+EQ-0121,Retroexcavadora,Salta,98,2025,Requiere_Reparacion,188025.89,1
+EQ-0122,Rodillo compactador,Córdoba,75,2015,Requiere_Reparacion,90950.29,0
+EQ-0123,Cargadora frontal,Buenos Aires,74,2022,Requiere_Reparacion,175533.21,1
+EQ-0124,Retroexcavadora,Salta,82,2003,Requiere_Reparacion,72671.0,0
+EQ-0125,Topadora,Salta,14,2023,Requiere_Reparacion,61670.81,0
+EQ-0126,Cargadora frontal,Santa Fe,90,2015,Funcional,110984.79,1
+EQ-0127,Motoniveladora,Salta,30,2005,Requiere_Reparacion,46284.2,0
+EQ-0128,Rodillo compactador,Buenos Aires,62,2001,Funcional,27288.92,0
+EQ-0129,Cargadora frontal,Mendoza,82,2019,Averia_Grave,182424.35,1
+EQ-0130,Cargadora frontal,Buenos Aires,73,2011,Averia_Grave,128234.89,1
+EQ-0131,Cargadora frontal,Salta,39,2008,Funcional,49073.13,0
+EQ-0132,Cargadora frontal,Mendoza,48,2010,Funcional,47198.45,0
+EQ-0133,Motoniveladora,Salta,58,2026,Funcional,214910.52,1
+EQ-0134,Cargadora frontal,Santa Fe,5,2011,Requiere_Reparacion,13632.93,0
+EQ-0135,Rodillo compactador,Buenos Aires,88,2002,Averia_Grave,69157.31,0
+EQ-0136,Excavadora,Buenos Aires,12,2007,Requiere_Reparacion,13605.9,0
+EQ-0137,Cargadora frontal,Córdoba,56,2003,Funcional,45447.79,0
+EQ-0138,Motoniveladora,Mendoza,79,2018,Funcional,197735.02,1
+EQ-0139,Retroexcavadora,Buenos Aires,10,2021,Funcional,17677.8,0
+EQ-0140,Retroexcavadora,Salta,120,2022,Averia_Grave,279114.92,1
+EQ-0141,Topadora,Córdoba,46,2017,Requiere_Reparacion,149542.99,1
+EQ-0142,Excavadora,Santa Fe,2,2020,Requiere_Reparacion,8866.83,0
+EQ-0143,Excavadora,Córdoba,80,2011,Requiere_Reparacion,140665.47,1
+EQ-0144,Retroexcavadora,Santa Fe,67,2016,Averia_Grave,103222.58,1
+EQ-0145,Topadora,Santa Fe,77,2002,Requiere_Reparacion,114112.99,1
+EQ-0146,Topadora,Buenos Aires,91,2014,Averia_Grave,311874.72,1
+EQ-0147,Motoniveladora,Santa Fe,58,2015,Averia_Grave,154452.33,1
+EQ-0148,Excavadora,Mendoza,100,2000,Requiere_Reparacion,136413.19,1
+EQ-0149,Rodillo compactador,Salta,45,2014,Averia_Grave,65854.03,0
+EQ-0150,Motoniveladora,Córdoba,66,2019,Funcional,142619.49,1
+EQ-0151,Topadora,Salta,20,2009,Requiere_Reparacion,50507.29,0
+EQ-0152,Excavadora,Salta,75,2014,Funcional,130826.22,1
+EQ-0153,Topadora,Salta,32,2007,Requiere_Reparacion,78037.27,0
+EQ-0154,Excavadora,Córdoba,84,2007,Funcional,96753.2,0
+EQ-0155,Retroexcavadora,Salta,97,2003,Funcional,86456.45,0
+EQ-0156,Cargadora frontal,Santa Fe,104,2008,Funcional,110656.16,1
+EQ-0157,Motoniveladora,Buenos Aires,112,2021,Requiere_Reparacion,361012.25,1
+EQ-0158,Cargadora frontal,Córdoba,15,2025,Requiere_Reparacion,33831.37,0
+EQ-0159,Cargadora frontal,Mendoza,17,2017,Requiere_Reparacion,20637.45,0
+EQ-0160,Rodillo compactador,Buenos Aires,112,2016,Requiere_Reparacion,150746.79,1
+EQ-0161,Topadora,Santa Fe,46,2016,Averia_Grave,163391.28,1
+EQ-0162,Cargadora frontal,Mendoza,4,2012,Averia_Grave,6288.26,0
+EQ-0163,Retroexcavadora,Buenos Aires,35,2011,Funcional,31419.28,0
+EQ-0164,Retroexcavadora,Santa Fe,101,2016,Requiere_Reparacion,113096.72,1
+EQ-0165,Retroexcavadora,Córdoba,43,2021,Requiere_Reparacion,65566.39,0
+EQ-0166,Rodillo compactador,Santa Fe,10,2011,Averia_Grave,5842.09,0
+EQ-0167,Excavadora,Córdoba,87,2015,Requiere_Reparacion,178025.13,1
+EQ-0168,Excavadora,Salta,24,2012,Averia_Grave,54885.11,0
+EQ-0169,Retroexcavadora,Buenos Aires,43,2007,Funcional,26358.58,0
+EQ-0170,Motoniveladora,Salta,1,2007,Requiere_Reparacion,6598.75,0
+EQ-0171,Motoniveladora,Mendoza,73,2002,Averia_Grave,138516.13,1
+EQ-0172,Motoniveladora,Salta,54,2011,Requiere_Reparacion,130475.1,1
+EQ-0173,Rodillo compactador,Salta,105,2019,Averia_Grave,207923.48,1
+EQ-0174,Rodillo compactador,Buenos Aires,41,2018,Funcional,45324.7,0
+EQ-0175,Rodillo compactador,Salta,25,2026,Funcional,45814.85,0
+EQ-0176,Retroexcavadora,Santa Fe,20,2001,Funcional,12913.43,0
+EQ-0177,Rodillo compactador,Salta,25,2020,Funcional,21183.68,0
+EQ-0178,Motoniveladora,Salta,55,2021,Funcional,127807.09,1
+EQ-0179,Topadora,Santa Fe,11,2011,Requiere_Reparacion,24672.55,0
+EQ-0180,Cargadora frontal,Córdoba,49,2007,Requiere_Reparacion,48781.35,0
+EQ-0181,Topadora,Buenos Aires,103,2009,Requiere_Reparacion,277366.86,1
+EQ-0182,Motoniveladora,Buenos Aires,93,2018,Requiere_Reparacion,244553.07,1
+EQ-0183,Retroexcavadora,Córdoba,77,2023,Funcional,119509.22,1
+EQ-0184,Rodillo compactador,Salta,108,2017,Requiere_Reparacion,146302.69,1
+EQ-0185,Retroexcavadora,Santa Fe,94,2013,Funcional,78133.11,0
+EQ-0186,Retroexcavadora,Santa Fe,79,2017,Averia_Grave,154984.15,1
+EQ-0187,Motoniveladora,Córdoba,104,2001,Funcional,90460.62,0
+EQ-0188,Retroexcavadora,Santa Fe,15,2016,Requiere_Reparacion,12804.44,0
+EQ-0189,Excavadora,Mendoza,99,2001,Averia_Grave,146119.91,1
+EQ-0190,Excavadora,Salta,36,2025,Requiere_Reparacion,132523.7,1
+EQ-0191,Rodillo compactador,Mendoza,88,2024,Requiere_Reparacion,142868.01,1
+EQ-0192,Cargadora frontal,Mendoza,110,2013,Requiere_Reparacion,159970.26,1
+EQ-0193,Cargadora frontal,Salta,60,2010,Funcional,60597.64,0
+EQ-0194,Retroexcavadora,Santa Fe,11,2019,Requiere_Reparacion,7943.78,0
+EQ-0195,Topadora,Salta,45,2017,Averia_Grave,175190.91,1
+EQ-0196,Motoniveladora,Córdoba,49,2019,Averia_Grave,177773.3,1
+EQ-0197,Retroexcavadora,Buenos Aires,113,2013,Requiere_Reparacion,131492.57,1
+EQ-0198,Motoniveladora,Santa Fe,114,2006,Requiere_Reparacion,186995.17,1
+EQ-0199,Retroexcavadora,Buenos Aires,69,2001,Averia_Grave,71939.24,0
+EQ-0200,Topadora,Buenos Aires,115,2007,Requiere_Reparacion,258217.11,1
+EQ-0201,Retroexcavadora,Salta,53,2014,Funcional,59913.18,0
+EQ-0202,Topadora,Mendoza,50,2011,Funcional,111837.69,1
+EQ-0203,Retroexcavadora,Córdoba,101,2013,Funcional,104374.13,1
+EQ-0204,Rodillo compactador,Salta,81,2007,Requiere_Reparacion,71290.58,0
+EQ-0205,Retroexcavadora,Buenos Aires,63,2025,Funcional,92682.82,0
+EQ-0206,Excavadora,Córdoba,55,2009,Funcional,51711.29,0
+EQ-0207,Rodillo compactador,Mendoza,85,2022,Funcional,115447.83,1
+EQ-0208,Topadora,Córdoba,91,2010,Averia_Grave,253600.47,1
+EQ-0209,Excavadora,Mendoza,59,2011,Funcional,90245.23,0
+EQ-0210,Rodillo compactador,Salta,4,2016,Funcional,10239.79,0
+EQ-0211,Excavadora,Buenos Aires,13,2007,Requiere_Reparacion,20228.67,0
+EQ-0212,Rodillo compactador,Buenos Aires,18,2005,Funcional,9043.61,0
+EQ-0213,Rodillo compactador,Salta,56,2010,Averia_Grave,64261.72,0
+EQ-0214,Retroexcavadora,Santa Fe,74,2021,Averia_Grave,160679.83,1
+EQ-0215,Rodillo compactador,Santa Fe,97,2003,Requiere_Reparacion,79608.65,0
+EQ-0216,Excavadora,Santa Fe,28,2011,Requiere_Reparacion,47702.45,0
+EQ-0217,Motoniveladora,Santa Fe,95,2018,Requiere_Reparacion,231705.15,1
+EQ-0218,Motoniveladora,Mendoza,80,2019,Funcional,165772.91,1
+EQ-0219,Retroexcavadora,Santa Fe,7,2011,Funcional,18017.03,0
+EQ-0220,Topadora,Buenos Aires,43,2002,Funcional,56876.0,0
+EQ-0221,Motoniveladora,Mendoza,37,2000,Funcional,34095.89,0
+EQ-0222,Retroexcavadora,Mendoza,107,2012,Requiere_Reparacion,189691.11,1
+EQ-0223,Rodillo compactador,Buenos Aires,111,2021,Funcional,131116.8,1
+EQ-0224,Excavadora,Córdoba,99,2000,Funcional,70543.01,0
+EQ-0225,Rodillo compactador,Mendoza,64,2023,Requiere_Reparacion,105409.86,1
+EQ-0226,Excavadora,Mendoza,60,2018,Requiere_Reparacion,142310.63,1
+EQ-0227,Rodillo compactador,Buenos Aires,38,2000,Funcional,25895.55,0
+EQ-0228,Cargadora frontal,Buenos Aires,93,2009,Funcional,98918.52,0
+EQ-0229,Cargadora frontal,Santa Fe,11,2005,Funcional,19738.11,0
+EQ-0230,Excavadora,Santa Fe,33,2025,Funcional,67338.05,0
+EQ-0231,Retroexcavadora,Salta,17,2014,Averia_Grave,28113.59,0
+EQ-0232,Topadora,Santa Fe,60,2008,Averia_Grave,157366.03,1
+EQ-0233,Motoniveladora,Salta,36,2007,Requiere_Reparacion,57654.93,0
+EQ-0234,Rodillo compactador,Córdoba,24,2015,Requiere_Reparacion,24479.95,0
+EQ-0235,Retroexcavadora,Santa Fe,46,2000,Averia_Grave,45391.86,0
+EQ-0236,Rodillo compactador,Buenos Aires,104,2006,Requiere_Reparacion,84543.83,0
+EQ-0237,Cargadora frontal,Santa Fe,67,2004,Funcional,59019.98,0
+EQ-0238,Retroexcavadora,Buenos Aires,99,2016,Funcional,114166.67,1
+EQ-0239,Excavadora,Santa Fe,110,2018,Requiere_Reparacion,265961.79,1
+EQ-0240,Cargadora frontal,Córdoba,109,2012,Requiere_Reparacion,175241.37,1
+EQ-0241,Motoniveladora,Buenos Aires,43,2003,Funcional,51373.56,0
+EQ-0242,Cargadora frontal,Buenos Aires,106,2010,Funcional,112403.02,1
+EQ-0243,Motoniveladora,Santa Fe,110,2022,Requiere_Reparacion,381641.8,1
+EQ-0245,Cargadora frontal,Buenos Aires,43,2004,Requiere_Reparacion,51142.28,0
+EQ-0246,Motoniveladora,Santa Fe,28,2003,Requiere_Reparacion,42374.24,0
+EQ-0247,Rodillo compactador,Córdoba,71,2022,Requiere_Reparacion,93018.66,0
+EQ-0248,Retroexcavadora,Salta,112,2003,Funcional,68936.68,0
+EQ-0249,Rodillo compactador,Santa Fe,109,2015,Funcional,93960.51,0
+EQ-0250,Motoniveladora,Salta,69,2026,Averia_Grave,320656.84,1
+EQ-0251,Excavadora,Córdoba,18,2017,Requiere_Reparacion,37222.64,0
+EQ-0252,Retroexcavadora,Buenos Aires,51,2011,Funcional,42844.26,0
+EQ-0253,Excavadora,Santa Fe,86,2005,Funcional,89050.96,0
+EQ-0254,Excavadora,Mendoza,68,2000,Averia_Grave,111791.86,1
+EQ-0255,Cargadora frontal,Salta,42,2004,Averia_Grave,76239.7,0
+EQ-0256,Motoniveladora,Salta,42,2025,Averia_Grave,157641.87,1
+EQ-0257,Rodillo compactador,Salta,8,2003,Requiere_Reparacion,7285.67,0
+EQ-0258,Motoniveladora,Mendoza,35,2000,Requiere_Reparacion,46886.36,0
+EQ-0259,Excavadora,Córdoba,81,2022,Requiere_Reparacion,216919.97,1
+EQ-0260,Cargadora frontal,Santa Fe,29,2011,Funcional,26601.21,0
+EQ-0261,Rodillo compactador,Buenos Aires,120,2009,Requiere_Reparacion,93296.7,0
+EQ-0262,Excavadora,Santa Fe,10,2019,Requiere_Reparacion,31967.63,0
+EQ-0263,Excavadora,Córdoba,71,2014,Funcional,116496.55,1
+EQ-0264,Topadora,Buenos Aires,60,2024,Averia_Grave,343529.78,1
+EQ-0265,Topadora,Córdoba,100,2012,Requiere_Reparacion,241599.29,1
+EQ-0266,Cargadora frontal,Santa Fe,107,2019,Funcional,176151.48,1
+EQ-0267,Retroexcavadora,Córdoba,66,2023,Requiere_Reparacion,136017.99,1
+EQ-0268,Retroexcavadora,Salta,76,2012,Averia_Grave,145212.03,1
+EQ-0269,Cargadora frontal,Santa Fe,84,2007,Averia_Grave,100222.71,1
+EQ-0270,Cargadora frontal,Salta,63,2026,Requiere_Reparacion,206391.25,1
+EQ-0271,Excavadora,Mendoza,23,2006,Averia_Grave,31588.18,0
+EQ-0272,Motoniveladora,Buenos Aires,52,2001,Averia_Grave,97491.54,0
+EQ-0274,Topadora,Mendoza,56,2026,Averia_Grave,273251.96,1
+EQ-0275,Retroexcavadora,Santa Fe,74,2002,Requiere_Reparacion,67735.73,0
+EQ-0276,Retroexcavadora,Córdoba,26,2022,Averia_Grave,45085.89,0
+EQ-0277,Retroexcavadora,Santa Fe,30,2022,Requiere_Reparacion,60419.6,0
+EQ-0278,Rodillo compactador,Salta,99,2025,Averia_Grave,229541.74,1
+EQ-0279,Motoniveladora,Córdoba,46,2011,Funcional,65627.6,0
+EQ-0280,Motoniveladora,Buenos Aires,24,2006,Averia_Grave,51407.98,0
+EQ-0281,Excavadora,Córdoba,86,2013,Averia_Grave,167479.01,1
+EQ-0282,Retroexcavadora,Salta,86,2003,Requiere_Reparacion,88433.31,0
+EQ-0283,Rodillo compactador,Mendoza,100,2022,Averia_Grave,171078.27,1
+EQ-0284,Retroexcavadora,Salta,92,2017,Requiere_Reparacion,166802.55,1
+EQ-0285,Retroexcavadora,Salta,120,2013,Funcional,150483.05,1
+EQ-0286,Topadora,Buenos Aires,69,2013,Funcional,145354.13,1
+EQ-0287,Motoniveladora,Córdoba,35,2019,Averia_Grave,91815.18,0
+EQ-0288,Cargadora frontal,Buenos Aires,104,2014,Requiere_Reparacion,186285.75,1
+EQ-0289,Cargadora frontal,Buenos Aires,32,2022,Requiere_Reparacion,64733.78,0
+EQ-0290,Retroexcavadora,Salta,35,2024,Requiere_Reparacion,77093.2,0
+EQ-0291,Rodillo compactador,Salta,100,2025,Requiere_Reparacion,195289.61,1
+EQ-0292,Excavadora,Buenos Aires,106,2016,Requiere_Reparacion,229510.6,1
+EQ-0293,Topadora,Mendoza,41,2020,Averia_Grave,155189.76,1
+EQ-0294,Excavadora,Santa Fe,88,2008,Requiere_Reparacion,157260.07,1
+EQ-0295,Cargadora frontal,Buenos Aires,111,2001,Averia_Grave,132411.9,1
+EQ-0296,Cargadora frontal,Salta,96,2010,Requiere_Reparacion,158694.8,1
+EQ-0297,Topadora,Salta,1,2023,Averia_Grave,0.0,0
+EQ-0298,Retroexcavadora,Santa Fe,80,2003,Funcional,59444.7,0
+EQ-0299,Excavadora,Mendoza,21,2014,Funcional,30224.46,0
+EQ-0300,Motoniveladora,Córdoba,102,2005,Funcional,101342.94,1
+EQ-0301,Retroexcavadora,Mendoza,9,2011,Requiere_Reparacion,7194.95,0
+EQ-0302,Rodillo compactador,Santa Fe,120,2003,Requiere_Reparacion,95750.15,0
+EQ-0303,Motoniveladora,Salta,22,2019,Averia_Grave,86493.25,0
+EQ-0304,Topadora,Buenos Aires,51,2021,Requiere_Reparacion,193662.87,1
+EQ-0305,Cargadora frontal,Buenos Aires,29,2020,Funcional,58329.42,0
+EQ-0306,Motoniveladora,Salta,98,2019,Requiere_Reparacion,322314.29,1
+EQ-0307,Excavadora,Córdoba,48,2006,Averia_Grave,75881.83,0
+EQ-0308,Cargadora frontal,Córdoba,90,2014,Funcional,107284.13,1
+EQ-0309,Excavadora,Mendoza,9,2002,Funcional,13679.72,0
+EQ-0310,Motoniveladora,Buenos Aires,55,2010,Funcional,70818.51,0
+EQ-0312,Rodillo compactador,Córdoba,112,2018,Funcional,111033.79,1
+EQ-0313,Motoniveladora,Buenos Aires,26,2002,Requiere_Reparacion,34335.5,0
+EQ-0314,Excavadora,Salta,48,2021,Requiere_Reparacion,145571.46,1
+EQ-0315,Excavadora,Buenos Aires,50,2012,Requiere_Reparacion,97292.56,0
+EQ-0316,Cargadora frontal,Buenos Aires,68,2023,Requiere_Reparacion,182674.83,1
+EQ-0317,Rodillo compactador,Mendoza,65,2014,Funcional,49659.8,0
+EQ-0318,Rodillo compactador,Salta,13,2014,Averia_Grave,22190.09,0
+EQ-0319,Topadora,Buenos Aires,92,2018,Requiere_Reparacion,278886.0,1
+EQ-0320,Rodillo compactador,Mendoza,28,2022,Requiere_Reparacion,40253.34,0
+EQ-0321,Excavadora,Santa Fe,38,2004,Funcional,40836.53,0
+EQ-0322,Motoniveladora,Salta,101,2013,Requiere_Reparacion,288246.41,1
+EQ-0323,Cargadora frontal,Buenos Aires,83,2000,Averia_Grave,99084.53,0
+EQ-0324,Topadora,Salta,48,2012,Funcional,103617.28,1
+EQ-0325,Topadora,Mendoza,110,2021,Funcional,348495.91,1
+EQ-0326,Excavadora,Salta,48,2023,Funcional,123723.92,1
+EQ-0327,Excavadora,Córdoba,68,2007,Requiere_Reparacion,111120.77,1
+EQ-0328,Motoniveladora,Salta,30,2010,Averia_Grave,68615.93,0
+EQ-0329,Motoniveladora,Mendoza,22,2014,Requiere_Reparacion,46669.27,0
+EQ-0330,Cargadora frontal,Buenos Aires,59,2010,Requiere_Reparacion,87304.07,0
+EQ-0331,Cargadora frontal,Salta,68,2004,Averia_Grave,108614.7,1
+EQ-0332,Retroexcavadora,Mendoza,97,2008,Averia_Grave,104840.04,1
+EQ-0333,Excavadora,Córdoba,47,2010,Funcional,83472.23,0
+EQ-0334,Rodillo compactador,Santa Fe,108,2014,Funcional,90175.42,0
+EQ-0335,Retroexcavadora,Córdoba,73,2024,Requiere_Reparacion,121363.3,1
+EQ-0336,Rodillo compactador,Santa Fe,9,2014,Averia_Grave,4853.89,0
+EQ-0337,Topadora,Salta,89,2010,Requiere_Reparacion,201850.28,1
+EQ-0338,Excavadora,Salta,69,2017,Requiere_Reparacion,176918.89,1
+EQ-0339,Excavadora,Córdoba,47,2020,Averia_Grave,141330.25,1
+EQ-0340,Topadora,Salta,57,2011,Funcional,131432.57,1
+EQ-0341,Cargadora frontal,Santa Fe,37,2013,Requiere_Reparacion,58009.54,0
+EQ-0342,Excavadora,Mendoza,74,2005,Funcional,84269.51,0
+EQ-0343,Cargadora frontal,Mendoza,69,2023,Averia_Grave,200692.41,1
+EQ-0344,Cargadora frontal,Santa Fe,54,2023,Requiere_Reparacion,122384.29,1
+EQ-0345,Topadora,Santa Fe,35,2004,Funcional,54370.91,0
+EQ-0346,Excavadora,Santa Fe,48,2009,Funcional,51057.86,0
+EQ-0347,Topadora,Salta,60,2007,Averia_Grave,175982.96,1
+EQ-0348,Topadora,Córdoba,57,2024,Averia_Grave,252982.52,1
+EQ-0349,Excavadora,Córdoba,38,2001,Requiere_Reparacion,30651.0,0
+EQ-0350,Motoniveladora,Córdoba,70,2005,Funcional,84321.11,0
+EQ-0351,Cargadora frontal,Buenos Aires,28,2008,Averia_Grave,43632.21,0
+EQ-0352,Motoniveladora,Córdoba,61,2015,Averia_Grave,161883.79,1
+EQ-0354,Retroexcavadora,Buenos Aires,57,2014,Requiere_Reparacion,86401.45,0
+EQ-0355,Topadora,Mendoza,95,2020,Averia_Grave,520668.84,1
+EQ-0356,Topadora,Buenos Aires,99,2022,Averia_Grave,463345.2,1
+EQ-0357,Motoniveladora,Santa Fe,84,2002,Requiere_Reparacion,126796.97,1
+EQ-0358,Topadora,Mendoza,90,2003,Requiere_Reparacion,182214.98,1
+EQ-0359,Motoniveladora,Mendoza,8,2002,Requiere_Reparacion,7264.6,0
+EQ-0360,Rodillo compactador,Santa Fe,41,2024,Averia_Grave,83150.21,0
+EQ-0361,Topadora,Buenos Aires,79,2017,Requiere_Reparacion,206039.1,1
+EQ-0362,Topadora,Salta,97,2014,Funcional,229551.19,1
+EQ-0363,Excavadora,Salta,70,2021,Funcional,153343.71,1
+EQ-0364,Topadora,Mendoza,103,2015,Averia_Grave,360113.5,1
+EQ-0365,Motoniveladora,Buenos Aires,33,2006,Averia_Grave,53623.81,0
+EQ-0366,Cargadora frontal,Buenos Aires,19,2013,Averia_Grave,32685.96,0
+EQ-0367,Retroexcavadora,Córdoba,11,2018,Requiere_Reparacion,17377.09,0
+EQ-0368,Excavadora,Buenos Aires,70,2000,Averia_Grave,100117.08,1
+EQ-0369,Motoniveladora,Salta,80,2016,Averia_Grave,220154.57,1
+EQ-0370,Rodillo compactador,Córdoba,35,2013,Requiere_Reparacion,26755.38,0
+EQ-0371,Retroexcavadora,Córdoba,95,2001,Funcional,47856.35,0
+EQ-0372,Cargadora frontal,Salta,89,2007,Averia_Grave,154081.57,1
+EQ-0373,Retroexcavadora,Salta,44,2012,Funcional,45729.87,0
+EQ-0374,Retroexcavadora,Córdoba,29,2009,Requiere_Reparacion,31379.68,0
+EQ-0375,Topadora,Córdoba,90,2007,Requiere_Reparacion,163687.13,1
+EQ-0376,Motoniveladora,Santa Fe,81,2017,Requiere_Reparacion,202904.93,1
+EQ-0377,Rodillo compactador,Mendoza,21,2010,Funcional,29243.76,0
+EQ-0378,Rodillo compactador,Salta,31,2013,Averia_Grave,36599.89,0
+EQ-0379,Retroexcavadora,Salta,59,2021,Funcional,104836.45,1
+EQ-0380,Excavadora,Salta,62,2002,Averia_Grave,106199.64,1
+EQ-0381,Motoniveladora,Buenos Aires,20,2009,Funcional,35597.6,0
+EQ-0382,Topadora,Córdoba,114,2001,Requiere_Reparacion,169626.8,1
+EQ-0384,Excavadora,Buenos Aires,46,2005,Funcional,48774.53,0
+EQ-0385,Motoniveladora,Córdoba,8,2022,Funcional,16196.48,0
+EQ-0386,Motoniveladora,Buenos Aires,106,2005,Averia_Grave,186598.5,1
+EQ-0387,Motoniveladora,Salta,29,2008,Funcional,50065.41,0
+EQ-0388,Rodillo compactador,Buenos Aires,119,2016,Funcional,86657.55,0
+EQ-0389,Topadora,Buenos Aires,60,2022,Requiere_Reparacion,210435.4,1
+EQ-0391,Rodillo compactador,Buenos Aires,22,2005,Requiere_Reparacion,12117.61,0
+EQ-0392,Excavadora,Santa Fe,20,2023,Requiere_Reparacion,64890.98,0
+EQ-0393,Retroexcavadora,Córdoba,97,2008,Averia_Grave,114436.7,1
+EQ-0394,Cargadora frontal,Salta,99,2005,Requiere_Reparacion,117217.82,1
+EQ-0395,Rodillo compactador,Córdoba,66,2020,Requiere_Reparacion,79882.53,0
+EQ-0396,Topadora,Santa Fe,4,2002,Requiere_Reparacion,0.0,0
+EQ-0397,Motoniveladora,Mendoza,114,2023,Requiere_Reparacion,432109.74,1
+EQ-0398,Excavadora,Mendoza,48,2023,Requiere_Reparacion,169755.99,1
+EQ-0399,Excavadora,Mendoza,113,2023,Requiere_Reparacion,324782.68,1
+EQ-0400,Excavadora,Córdoba,105,2007,Funcional,114317.59,1
+EQ-0401,Topadora,Santa Fe,103,2003,Requiere_Reparacion,150969.99,1
+EQ-0402,Rodillo compactador,Salta,83,2011,Funcional,81315.68,0
+EQ-0403,Excavadora,Salta,81,2009,Requiere_Reparacion,155132.73,1
+EQ-0404,Topadora,Mendoza,64,2025,Funcional,232095.68,1
+EQ-0405,Retroexcavadora,Mendoza,3,2017,Requiere_Reparacion,5075.8,0
+EQ-0406,Cargadora frontal,Salta,47,2025,Averia_Grave,150978.75,1
+EQ-0407,Retroexcavadora,Mendoza,88,2020,Requiere_Reparacion,165573.31,1
+EQ-0408,Motoniveladora,Salta,98,2019,Funcional,252028.16,1
+EQ-0409,Topadora,Buenos Aires,68,2003,Funcional,77607.07,0
+EQ-0410,Motoniveladora,Córdoba,86,2001,Averia_Grave,126671.17,1
+EQ-0411,Excavadora,Buenos Aires,3,2001,Funcional,5529.27,0
+EQ-0412,Excavadora,Buenos Aires,57,2016,Averia_Grave,146971.65,1
+EQ-0413,Excavadora,Santa Fe,61,2005,Requiere_Reparacion,87880.0,0
+EQ-0414,Motoniveladora,Córdoba,108,2026,Funcional,320261.5,1
+EQ-0415,Motoniveladora,Santa Fe,38,2003,Averia_Grave,58313.7,0
+EQ-0416,Rodillo compactador,Santa Fe,28,2025,Requiere_Reparacion,51554.61,0
+EQ-0417,Topadora,Mendoza,43,2018,Funcional,116152.07,1
+EQ-0418,Motoniveladora,Salta,21,2002,Averia_Grave,39545.13,0
+EQ-0419,Excavadora,Salta,68,2001,Funcional,69654.08,0
+EQ-0420,Cargadora frontal,Córdoba,78,2010,Requiere_Reparacion,122382.58,1
+EQ-0421,Topadora,Córdoba,97,2009,Requiere_Reparacion,183804.1,1
+EQ-0422,Rodillo compactador,Mendoza,117,2008,Requiere_Reparacion,119108.05,1
+EQ-0423,Rodillo compactador,Buenos Aires,9,2014,Averia_Grave,17437.73,0
+EQ-0424,Cargadora frontal,Santa Fe,30,2003,Funcional,26661.18,0
+EQ-0425,Retroexcavadora,Santa Fe,37,2003,Averia_Grave,42999.22,0
+EQ-0426,Excavadora,Buenos Aires,30,2018,Requiere_Reparacion,64955.5,0
+EQ-0427,Topadora,Mendoza,100,2026,Averia_Grave,599120.29,1
+EQ-0428,Rodillo compactador,Córdoba,17,2007,Averia_Grave,12495.3,0
+EQ-0429,Motoniveladora,Buenos Aires,4,2025,Averia_Grave,17800.08,0
+EQ-0430,Rodillo compactador,Mendoza,104,2009,Requiere_Reparacion,82558.13,0
+EQ-0431,Motoniveladora,Buenos Aires,116,2009,Requiere_Reparacion,200710.05,1
+EQ-0432,Rodillo compactador,Mendoza,28,2002,Requiere_Reparacion,21791.27,0
+EQ-0433,Rodillo compactador,Buenos Aires,40,2011,Requiere_Reparacion,41138.73,0
+EQ-0434,Motoniveladora,Santa Fe,61,2013,Requiere_Reparacion,105401.58,1
+EQ-0435,Retroexcavadora,Salta,64,2017,Averia_Grave,120464.97,1
+EQ-0436,Motoniveladora,Córdoba,119,2004,Funcional,125336.1,1
+EQ-0437,Cargadora frontal,Mendoza,49,2005,Averia_Grave,70278.04,0
+EQ-0438,Topadora,Mendoza,2,2011,Funcional,12588.51,0
+EQ-0439,Motoniveladora,Salta,51,2001,Averia_Grave,95911.79,0
+EQ-0440,Retroexcavadora,Buenos Aires,67,2003,Funcional,51525.57,0
+EQ-0441,Topadora,Mendoza,63,2016,Funcional,155808.81,1
+EQ-0442,Excavadora,Salta,62,2025,Averia_Grave,272429.76,1
+EQ-0443,Motoniveladora,Mendoza,111,2015,Averia_Grave,352310.82,1
+EQ-0444,Retroexcavadora,Buenos Aires,97,2003,Averia_Grave,101028.35,1
+EQ-0445,Cargadora frontal,Salta,31,2026,Averia_Grave,87287.95,0
+EQ-0446,Cargadora frontal,Buenos Aires,43,2014,Funcional,50672.29,0
+EQ-0447,Excavadora,Santa Fe,81,2019,Averia_Grave,211000.72,1
+EQ-0448,Topadora,Santa Fe,50,2005,Requiere_Reparacion,85322.85,0
+EQ-0449,Cargadora frontal,Santa Fe,52,2015,Requiere_Reparacion,82161.67,0
+EQ-0450,Excavadora,Santa Fe,21,2002,Requiere_Reparacion,30621.65,0
+EQ-0451,Topadora,Buenos Aires,31,2016,Funcional,72568.33,0
+EQ-0452,Topadora,Santa Fe,89,2005,Requiere_Reparacion,173294.86,1
+EQ-0453,Retroexcavadora,Salta,102,2024,Averia_Grave,243847.21,1
+EQ-0454,Motoniveladora,Santa Fe,95,2001,Funcional,96961.5,0
+EQ-0455,Cargadora frontal,Córdoba,37,2017,Averia_Grave,81563.09,0
+EQ-0456,Cargadora frontal,Salta,17,2003,Requiere_Reparacion,19837.37,0
+EQ-0457,Motoniveladora,Buenos Aires,20,2018,Funcional,38841.77,0
+EQ-0458,Cargadora frontal,Santa Fe,48,2013,Requiere_Reparacion,68029.04,0
+EQ-0459,Topadora,Santa Fe,63,2026,Funcional,245179.62,1
+EQ-0460,Motoniveladora,Santa Fe,108,2017,Funcional,209806.29,1
+EQ-0461,Rodillo compactador,Salta,108,2010,Requiere_Reparacion,106465.19,1
+EQ-0462,Motoniveladora,Santa Fe,1,2002,Funcional,10298.35,0
+EQ-0463,Rodillo compactador,Salta,85,2016,Funcional,76667.11,0
+EQ-0464,Retroexcavadora,Buenos Aires,36,2011,Averia_Grave,37746.01,0
+EQ-0465,Motoniveladora,Mendoza,24,2001,Funcional,33429.69,0
+EQ-0466,Topadora,Santa Fe,67,2015,Averia_Grave,223609.35,1
+EQ-0467,Motoniveladora,Córdoba,5,2005,Averia_Grave,4568.48,0
+EQ-0468,Cargadora frontal,Córdoba,41,2006,Funcional,33562.21,0
+EQ-0469,Excavadora,Mendoza,67,2000,Requiere_Reparacion,76382.11,0
+EQ-0470,Topadora,Mendoza,33,2010,Funcional,64546.51,0
+EQ-0471,Rodillo compactador,Mendoza,72,2005,Requiere_Reparacion,72392.96,0
+EQ-0472,Rodillo compactador,Buenos Aires,56,2001,Funcional,34848.02,0
+EQ-0473,Retroexcavadora,Santa Fe,96,2011,Averia_Grave,144165.11,1
+EQ-0474,Retroexcavadora,Salta,22,2005,Funcional,16329.01,0
+EQ-0475,Cargadora frontal,Buenos Aires,7,2003,Requiere_Reparacion,5181.55,0
+EQ-0476,Rodillo compactador,Santa Fe,64,2012,Funcional,50045.19,0
+EQ-0477,Topadora,Santa Fe,31,2001,Funcional,36825.62,0
+EQ-0478,Motoniveladora,Salta,85,2026,Requiere_Reparacion,350022.17,1
+EQ-0479,Cargadora frontal,Córdoba,12,2012,Requiere_Reparacion,15379.75,0
+EQ-0481,Excavadora,Mendoza,119,2023,Funcional,261849.9,1
+EQ-0482,Rodillo compactador,Buenos Aires,12,2026,Funcional,14391.1,0
+EQ-0483,Excavadora,Salta,37,2014,Requiere_Reparacion,69547.21,0
+EQ-0484,Rodillo compactador,Salta,102,2011,Requiere_Reparacion,122437.08,1
+EQ-0485,Retroexcavadora,Mendoza,65,2019,Averia_Grave,125737.34,1
+EQ-0486,Excavadora,Mendoza,21,2002,Averia_Grave,37987.41,0
+EQ-0487,Retroexcavadora,Mendoza,26,2022,Averia_Grave,75278.34,0
+EQ-0488,Cargadora frontal,Mendoza,92,2008,Funcional,91840.23,0
+EQ-0489,Rodillo compactador,Salta,104,2000,Requiere_Reparacion,59093.95,0
+EQ-0490,Cargadora frontal,Santa Fe,44,2006,Averia_Grave,50438.46,0
+EQ-0491,Topadora,Santa Fe,57,2006,Requiere_Reparacion,121348.34,1
+EQ-0493,Rodillo compactador,Buenos Aires,22,2018,Funcional,21618.68,0
+EQ-0494,Cargadora frontal,Salta,25,2002,Requiere_Reparacion,21135.04,0
+EQ-0495,Excavadora,Mendoza,93,2022,Averia_Grave,343477.22,1
+EQ-0496,Retroexcavadora,Mendoza,23,2012,Funcional,24924.65,0
+EQ-0497,Motoniveladora,Córdoba,93,2019,Averia_Grave,268855.06,1
+EQ-0498,Retroexcavadora,Córdoba,60,2009,Requiere_Reparacion,56819.23,0
+EQ-0499,Topadora,Santa Fe,119,2003,Funcional,176581.52,1
+EQ-0500,Retroexcavadora,Mendoza,4,2004,Funcional,0.0,0
+EQ-0501,Motoniveladora,Mendoza,114,2017,Funcional,184686.1,1
+EQ-0502,Cargadora frontal,Mendoza,28,2019,Requiere_Reparacion,69909.27,0
+EQ-0503,Topadora,Salta,5,2007,Funcional,8597.79,0
+EQ-0504,Topadora,Salta,87,2009,Requiere_Reparacion,228784.56,1
+EQ-0505,Excavadora,Mendoza,64,2025,Averia_Grave,295655.49,1
+EQ-0506,Retroexcavadora,Córdoba,101,2023,Requiere_Reparacion,191147.21,1
+EQ-0507,Cargadora frontal,Santa Fe,14,2011,Funcional,15462.11,0
+EQ-0508,Excavadora,Santa Fe,10,2006,Requiere_Reparacion,18229.33,0
+EQ-0509,Excavadora,Mendoza,69,2008,Averia_Grave,167082.93,1
+EQ-0510,Excavadora,Salta,106,2014,Requiere_Reparacion,217423.24,1
+EQ-0511,Topadora,Córdoba,49,2015,Funcional,100940.96,1
+EQ-0512,Rodillo compactador,Santa Fe,96,2004,Requiere_Reparacion,78051.47,0
+EQ-0513,Topadora,Buenos Aires,109,2001,Requiere_Reparacion,171650.76,1
+EQ-0514,Rodillo compactador,Mendoza,105,2013,Requiere_Reparacion,127208.59,1
+EQ-0515,Topadora,Santa Fe,62,2021,Funcional,164734.45,1
+EQ-0516,Motoniveladora,Santa Fe,84,2004,Averia_Grave,184065.18,1
+EQ-0517,Topadora,Santa Fe,64,2011,Funcional,149405.81,1
+EQ-0518,Motoniveladora,Córdoba,81,2004,Funcional,95449.96,0
+EQ-0519,Retroexcavadora,Santa Fe,69,2006,Funcional,59303.23,0
+EQ-0520,Cargadora frontal,Mendoza,64,2016,Requiere_Reparacion,136592.9,1
+EQ-0521,Retroexcavadora,Córdoba,53,2007,Requiere_Reparacion,43455.95,0
+EQ-0522,Motoniveladora,Buenos Aires,79,2007,Funcional,92162.12,0
+EQ-0523,Excavadora,Córdoba,91,2026,Requiere_Reparacion,325529.0,1
+EQ-0524,Rodillo compactador,Buenos Aires,111,2004,Requiere_Reparacion,83236.61,0
+EQ-0525,Excavadora,Córdoba,74,2005,Funcional,70109.61,0
+EQ-0526,Excavadora,Mendoza,13,2025,Averia_Grave,56185.4,0
+EQ-0527,Topadora,Buenos Aires,71,2014,Requiere_Reparacion,151804.6,1
+EQ-0528,Motoniveladora,Mendoza,38,2001,Funcional,50285.79,0
+EQ-0529,Topadora,Córdoba,4,2011,Averia_Grave,3301.77,0
+EQ-0530,Topadora,Salta,9,2015,Averia_Grave,36497.51,0
+EQ-0531,Cargadora frontal,Mendoza,71,2006,Requiere_Reparacion,94776.62,0
+EQ-0532,Motoniveladora,Córdoba,114,2014,Averia_Grave,311453.1,1
+EQ-0533,Motoniveladora,Santa Fe,61,2017,Requiere_Reparacion,154133.09,1
+EQ-0534,Excavadora,Buenos Aires,54,2006,Requiere_Reparacion,76664.35,0
+EQ-0535,Cargadora frontal,Buenos Aires,11,2021,Averia_Grave,31544.84,0
+EQ-0536,Motoniveladora,Salta,82,2012,Averia_Grave,240131.87,1
+EQ-0537,Retroexcavadora,Salta,7,2026,Funcional,6554.75,0
+EQ-0538,Motoniveladora,Buenos Aires,101,2002,Requiere_Reparacion,167126.83,1
+EQ-0539,Cargadora frontal,Córdoba,98,2008,Requiere_Reparacion,99103.83,0
+EQ-0540,Motoniveladora,Buenos Aires,119,2019,Funcional,254876.6,1
+EQ-0541,Rodillo compactador,Córdoba,35,2024,Averia_Grave,60333.96,0
+EQ-0542,Motoniveladora,Córdoba,20,2005,Requiere_Reparacion,19398.11,0
+EQ-0543,Excavadora,Córdoba,36,2026,Requiere_Reparacion,112552.95,1
+EQ-0544,Excavadora,Santa Fe,96,2005,Requiere_Reparacion,129888.09,1
+EQ-0545,Rodillo compactador,Buenos Aires,27,2011,Requiere_Reparacion,37310.86,0
+EQ-0546,Motoniveladora,Salta,107,2008,Funcional,142213.98,1
+EQ-0547,Retroexcavadora,Mendoza,19,2011,Averia_Grave,22305.4,0
+EQ-0548,Cargadora frontal,Mendoza,6,2024,Requiere_Reparacion,9879.12,0
+EQ-0549,Cargadora frontal,Buenos Aires,27,2019,Requiere_Reparacion,53570.37,0
+EQ-0550,Rodillo compactador,Mendoza,91,2021,Requiere_Reparacion,117924.18,1
+EQ-0551,Rodillo compactador,Salta,73,2006,Funcional,59273.3,0
+EQ-0552,Retroexcavadora,Buenos Aires,43,2025,Funcional,73302.07,0
+EQ-0553,Rodillo compactador,Mendoza,79,2011,Requiere_Reparacion,74201.13,0
+EQ-0554,Excavadora,Córdoba,78,2017,Funcional,155809.85,1
+EQ-0555,Topadora,Mendoza,67,2018,Requiere_Reparacion,226938.87,1
+EQ-0556,Cargadora frontal,Santa Fe,62,2017,Averia_Grave,148979.27,1
+EQ-0557,Rodillo compactador,Salta,13,2016,Requiere_Reparacion,13028.25,0
+EQ-0558,Topadora,Buenos Aires,32,2012,Requiere_Reparacion,74263.95,0
+EQ-0559,Rodillo compactador,Córdoba,64,2017,Requiere_Reparacion,68591.54,0
+EQ-0560,Topadora,Córdoba,17,2024,Funcional,64478.96,0
+EQ-0561,Cargadora frontal,Córdoba,58,2010,Averia_Grave,102927.79,1
+EQ-0562,Motoniveladora,Córdoba,15,2013,Requiere_Reparacion,31538.01,0
+EQ-0563,Retroexcavadora,Córdoba,95,2004,Funcional,64813.06,0
+EQ-0564,Excavadora,Buenos Aires,13,2009,Funcional,20363.68,0
+EQ-0565,Topadora,Mendoza,12,2020,Averia_Grave,50670.37,0
+EQ-0566,Excavadora,Santa Fe,77,2017,Funcional,118369.08,1
+EQ-0567,Excavadora,Salta,27,2005,Requiere_Reparacion,42490.55,0
+EQ-0568,Excavadora,Mendoza,43,2014,Funcional,83251.69,0
+EQ-0569,Cargadora frontal,Buenos Aires,38,2021,Funcional,87409.25,0
+EQ-0570,Cargadora frontal,Buenos Aires,26,2003,Averia_Grave,27095.71,0
+EQ-0571,Topadora,Santa Fe,92,2001,Funcional,94461.97,0
+EQ-0572,Retroexcavadora,Santa Fe,84,2010,Funcional,62081.65,0
+EQ-0573,Excavadora,Córdoba,29,2017,Requiere_Reparacion,55210.75,0
+EQ-0574,Motoniveladora,Mendoza,83,2008,Averia_Grave,164608.85,1
+EQ-0575,Motoniveladora,Santa Fe,86,2022,Requiere_Reparacion,280853.46,1
+EQ-0577,Topadora,Buenos Aires,70,2014,Averia_Grave,219769.81,1
+EQ-0578,Cargadora frontal,Salta,113,2010,Requiere_Reparacion,170803.26,1
+EQ-0579,Topadora,Córdoba,55,2001,Averia_Grave,92287.47,0
+EQ-0580,Motoniveladora,Santa Fe,47,2022,Averia_Grave,203961.93,1
+EQ-0581,Motoniveladora,Santa Fe,65,2024,Requiere_Reparacion,195738.9,1
+EQ-0582,Topadora,Salta,101,2011,Requiere_Reparacion,239749.12,1
+EQ-0583,Motoniveladora,Córdoba,86,2013,Requiere_Reparacion,197034.79,1
+EQ-0584,Motoniveladora,Córdoba,10,2020,Averia_Grave,33092.67,0
+EQ-0585,Retroexcavadora,Córdoba,56,2018,Averia_Grave,131026.62,1
+EQ-0586,Topadora,Córdoba,89,2003,Averia_Grave,161540.01,1
+EQ-0587,Rodillo compactador,Buenos Aires,27,2018,Requiere_Reparacion,32830.01,0
+EQ-0588,Motoniveladora,Buenos Aires,119,2024,Funcional,365264.44,1
+EQ-0589,Topadora,Córdoba,97,2020,Requiere_Reparacion,300885.26,1
+EQ-0590,Topadora,Santa Fe,102,2012,Requiere_Reparacion,226561.83,1
+EQ-0591,Rodillo compactador,Córdoba,10,2014,Requiere_Reparacion,9410.46,0
+EQ-0592,Topadora,Córdoba,70,2007,Averia_Grave,181668.55,1
+EQ-0593,Excavadora,Mendoza,64,2017,Requiere_Reparacion,134083.94,1
+EQ-0594,Topadora,Córdoba,76,2006,Funcional,107773.06,1
+EQ-0595,Excavadora,Salta,103,2009,Requiere_Reparacion,146451.98,1
+EQ-0596,Rodillo compactador,Mendoza,43,2007,Requiere_Reparacion,37035.42,0
+EQ-0597,Cargadora frontal,Buenos Aires,65,2009,Averia_Grave,103162.55,1
+EQ-0598,Rodillo compactador,Córdoba,82,2009,Requiere_Reparacion,72572.46,0
+EQ-0599,Cargadora frontal,Buenos Aires,91,2002,Requiere_Reparacion,83852.44,0
+EQ-0600,Cargadora frontal,Córdoba,93,2019,Requiere_Reparacion,159950.81,1
+EQ-0601,Cargadora frontal,Córdoba,41,2011,Requiere_Reparacion,46110.28,0
+EQ-0602,Rodillo compactador,Buenos Aires,120,2025,Funcional,146512.58,1
+EQ-0603,Rodillo compactador,Buenos Aires,2,2004,Averia_Grave,148.55,0
+EQ-0604,Motoniveladora,Santa Fe,60,2018,Averia_Grave,184464.39,1
+EQ-0605,Rodillo compactador,Mendoza,74,2004,Requiere_Reparacion,80462.79,0
+EQ-0606,Cargadora frontal,Córdoba,8,2014,Requiere_Reparacion,15532.33,0
+EQ-0607,Excavadora,Salta,55,2013,Funcional,101854.88,1
+EQ-0608,Cargadora frontal,Córdoba,72,2012,Requiere_Reparacion,90429.8,0
+EQ-0609,Topadora,Salta,73,2017,Requiere_Reparacion,216794.93,1
+EQ-0610,Topadora,Córdoba,15,2022,Averia_Grave,57526.57,0
+EQ-0611,Topadora,Santa Fe,34,2008,Funcional,42442.28,0
+EQ-0612,Retroexcavadora,Mendoza,30,2022,Averia_Grave,68513.27,0
+EQ-0613,Rodillo compactador,Buenos Aires,77,2004,Funcional,42346.32,0
+EQ-0614,Retroexcavadora,Salta,40,2007,Requiere_Reparacion,40594.01,0
+EQ-0615,Rodillo compactador,Córdoba,69,2008,Requiere_Reparacion,73279.94,0
+EQ-0616,Cargadora frontal,Santa Fe,88,2025,Funcional,169505.07,1
+EQ-0617,Excavadora,Mendoza,96,2003,Requiere_Reparacion,110435.1,1
+EQ-0618,Excavadora,Mendoza,23,2010,Averia_Grave,59547.75,0
+EQ-0619,Motoniveladora,Buenos Aires,109,2011,Requiere_Reparacion,202652.46,1
+EQ-0620,Motoniveladora,Salta,20,2021,Funcional,50908.68,0
+EQ-0621,Retroexcavadora,Mendoza,3,2013,Requiere_Reparacion,518.42,0
+EQ-0622,Retroexcavadora,Salta,6,2026,Requiere_Reparacion,10036.8,0
+EQ-0623,Motoniveladora,Santa Fe,25,2019,Requiere_Reparacion,66113.92,0
+EQ-0624,Retroexcavadora,Mendoza,105,2018,Requiere_Reparacion,185089.66,1
+EQ-0625,Cargadora frontal,Santa Fe,25,2020,Funcional,41057.48,0
+EQ-0626,Excavadora,Salta,84,2004,Requiere_Reparacion,126199.4,1
+EQ-0627,Retroexcavadora,Salta,51,2012,Averia_Grave,98750.3,0
+EQ-0628,Retroexcavadora,Salta,5,2015,Averia_Grave,1584.83,0
+EQ-0629,Cargadora frontal,Santa Fe,54,2005,Funcional,41532.2,0
+EQ-0630,Retroexcavadora,Mendoza,4,2003,Requiere_Reparacion,0.0,0
+EQ-0631,Rodillo compactador,Córdoba,58,2003,Requiere_Reparacion,37394.29,0
+EQ-0632,Excavadora,Santa Fe,68,2021,Funcional,146618.79,1
+EQ-0633,Retroexcavadora,Mendoza,63,2017,Requiere_Reparacion,99890.11,0
+EQ-0634,Retroexcavadora,Buenos Aires,34,2007,Funcional,30619.62,0
+EQ-0635,Excavadora,Mendoza,92,2019,Funcional,222539.08,1
+EQ-0636,Rodillo compactador,Buenos Aires,72,2018,Requiere_Reparacion,80958.41,0
+EQ-0637,Excavadora,Santa Fe,31,2022,Funcional,73753.69,0
+EQ-0638,Excavadora,Santa Fe,53,2024,Averia_Grave,184696.71,1
+EQ-0639,Rodillo compactador,Santa Fe,14,2023,Funcional,16324.77,0
+EQ-0640,Topadora,Santa Fe,111,2004,Requiere_Reparacion,184605.19,1
+EQ-0641,Rodillo compactador,Santa Fe,91,2020,Requiere_Reparacion,100539.47,1
+EQ-0642,Topadora,Santa Fe,35,2010,Averia_Grave,96767.83,0
+EQ-0643,Topadora,Santa Fe,81,2010,Averia_Grave,224853.57,1
+EQ-0644,Retroexcavadora,Santa Fe,82,2017,Requiere_Reparacion,135054.58,1
+EQ-0645,Rodillo compactador,Mendoza,74,2016,Requiere_Reparacion,97841.85,0
+EQ-0646,Excavadora,Santa Fe,7,2011,Funcional,9938.07,0
+EQ-0647,Retroexcavadora,Mendoza,106,2026,Requiere_Reparacion,212114.3,1
+EQ-0648,Cargadora frontal,Salta,115,2004,Funcional,141857.88,1
+EQ-0649,Topadora,Salta,117,2002,Requiere_Reparacion,197246.54,1
+EQ-0650,Topadora,Buenos Aires,118,2000,Funcional,182533.56,1
+EQ-0651,Retroexcavadora,Mendoza,112,2021,Averia_Grave,237359.52,1
+EQ-0652,Cargadora frontal,Córdoba,89,2010,Requiere_Reparacion,120140.7,1
+EQ-0653,Excavadora,Buenos Aires,7,2011,Requiere_Reparacion,14782.2,0
+EQ-0654,Rodillo compactador,Mendoza,56,2017,Requiere_Reparacion,67030.4,0
+EQ-0655,Cargadora frontal,Buenos Aires,30,2011,Funcional,39896.11,0
+EQ-0656,Cargadora frontal,Salta,27,2015,Funcional,42726.79,0
+EQ-0657,Rodillo compactador,Mendoza,100,2001,Averia_Grave,88198.9,0
+EQ-0658,Cargadora frontal,Salta,98,2004,Averia_Grave,144290.79,1
+EQ-0659,Motoniveladora,Mendoza,63,2025,Funcional,205028.22,1
+EQ-0660,Excavadora,Salta,89,2012,Averia_Grave,254040.23,1
+EQ-0661,Excavadora,Buenos Aires,16,2004,Requiere_Reparacion,19593.26,0
+EQ-0662,Rodillo compactador,Salta,27,2009,Funcional,18786.29,0
+EQ-0663,Motoniveladora,Buenos Aires,104,2009,Requiere_Reparacion,191585.74,1
+EQ-0664,Excavadora,Córdoba,55,2007,Funcional,65847.36,0
+EQ-0665,Cargadora frontal,Buenos Aires,66,2007,Funcional,73764.79,0
+EQ-0666,Rodillo compactador,Santa Fe,56,2019,Requiere_Reparacion,66048.58,0
+EQ-0667,Cargadora frontal,Mendoza,25,2002,Funcional,23264.6,0
+EQ-0668,Topadora,Córdoba,100,2008,Averia_Grave,245630.57,1
+EQ-0669,Topadora,Salta,91,2012,Requiere_Reparacion,229616.55,1
+EQ-0670,Motoniveladora,Mendoza,83,2014,Averia_Grave,244205.03,1
+EQ-0671,Topadora,Mendoza,43,2023,Requiere_Reparacion,191047.54,1
+EQ-0672,Cargadora frontal,Salta,78,2024,Averia_Grave,254914.31,1
+EQ-0673,Cargadora frontal,Santa Fe,115,2008,Requiere_Reparacion,146130.48,1
+EQ-0674,Motoniveladora,Córdoba,78,2014,Requiere_Reparacion,175655.65,1
+EQ-0675,Cargadora frontal,Salta,60,2000,Requiere_Reparacion,57373.72,0
+EQ-0676,Rodillo compactador,Santa Fe,33,2016,Averia_Grave,47771.29,0
+EQ-0677,Cargadora frontal,Mendoza,63,2004,Funcional,54799.07,0
+EQ-0678,Motoniveladora,Córdoba,45,2001,Requiere_Reparacion,69572.39,0
+EQ-0679,Cargadora frontal,Córdoba,74,2018,Averia_Grave,141785.63,1
+EQ-0680,Topadora,Buenos Aires,6,2004,Requiere_Reparacion,13311.29,0
+EQ-0682,Motoniveladora,Buenos Aires,95,2002,Requiere_Reparacion,162390.18,1
+EQ-0683,Topadora,Mendoza,46,2020,Funcional,118406.76,1
+EQ-0684,Topadora,Buenos Aires,52,2020,Requiere_Reparacion,201692.91,1
+EQ-0685,Excavadora,Mendoza,66,2015,Requiere_Reparacion,140459.64,1
+EQ-0686,Rodillo compactador,Salta,53,2022,Funcional,76231.41,0
+EQ-0687,Retroexcavadora,Mendoza,92,2011,Funcional,105395.82,1
+EQ-0688,Cargadora frontal,Santa Fe,30,2005,Funcional,26295.05,0
+EQ-0689,Retroexcavadora,Buenos Aires,92,2004,Averia_Grave,95334.55,0
+EQ-0690,Rodillo compactador,Salta,26,2005,Averia_Grave,30063.36,0
+EQ-0691,Topadora,Buenos Aires,45,2005,Requiere_Reparacion,74934.84,0
+EQ-0692,Rodillo compactador,Mendoza,71,2008,Funcional,52929.19,0
+EQ-0693,Topadora,Mendoza,107,2005,Requiere_Reparacion,203615.94,1
+EQ-0694,Topadora,Buenos Aires,28,2015,Averia_Grave,101063.99,1
+EQ-0695,Motoniveladora,Mendoza,71,2004,Averia_Grave,119542.14,1
+EQ-0696,Excavadora,Buenos Aires,8,2016,Funcional,11890.46,0
+EQ-0697,Rodillo compactador,Córdoba,10,2009,Funcional,8240.09,0
+EQ-0698,Cargadora frontal,Salta,93,2018,Averia_Grave,245174.01,1
+EQ-0699,Motoniveladora,Salta,87,2013,Averia_Grave,219992.0,1
+EQ-0700,Motoniveladora,Córdoba,46,2024,Funcional,103133.06,1
+EQ-0702,Cargadora frontal,Salta,46,2007,Funcional,53718.47,0
+EQ-0703,Excavadora,Mendoza,34,2015,Funcional,68968.63,0
+EQ-0704,Excavadora,Buenos Aires,52,2017,Averia_Grave,160768.88,1
+EQ-0705,Motoniveladora,Córdoba,38,2011,Requiere_Reparacion,73157.25,0
+EQ-0706,Cargadora frontal,Mendoza,98,2015,Requiere_Reparacion,206758.72,1
+EQ-0707,Motoniveladora,Salta,50,2012,Averia_Grave,127452.57,1
+EQ-0708,Cargadora frontal,Salta,39,2008,Averia_Grave,73679.6,0
+EQ-0709,Retroexcavadora,Santa Fe,65,2008,Funcional,45410.18,0
+EQ-0710,Retroexcavadora,Córdoba,91,2024,Requiere_Reparacion,165629.53,1
+EQ-0711,Rodillo compactador,Salta,33,2018,Averia_Grave,63497.88,0
+EQ-0712,Cargadora frontal,Córdoba,113,2002,Requiere_Reparacion,116857.19,1
+EQ-0713,Rodillo compactador,Córdoba,56,2025,Averia_Grave,113678.38,1
+EQ-0714,Rodillo compactador,Salta,80,2019,Requiere_Reparacion,122115.9,1
+EQ-0715,Topadora,Santa Fe,115,2001,Funcional,138622.62,1
+EQ-0716,Rodillo compactador,Córdoba,52,2019,Funcional,61951.28,0
+EQ-0717,Cargadora frontal,Buenos Aires,24,2015,Averia_Grave,49124.3,0
+EQ-0718,Retroexcavadora,Santa Fe,90,2024,Averia_Grave,233209.24,1
+EQ-0719,Excavadora,Salta,1,2013,Funcional,0.0,0
+EQ-0720,Cargadora frontal,Santa Fe,55,2014,Funcional,75904.92,0
+EQ-0721,Motoniveladora,Mendoza,118,2008,Averia_Grave,234393.5,1
+EQ-0722,Topadora,Córdoba,50,2008,Funcional,76491.08,0
+EQ-0723,Topadora,Mendoza,83,2016,Funcional,180831.88,1
+EQ-0724,Motoniveladora,Mendoza,64,2022,Averia_Grave,262033.34,1
+EQ-0725,Rodillo compactador,Mendoza,26,2024,Averia_Grave,60623.47,0
+EQ-0726,Motoniveladora,Mendoza,39,2020,Averia_Grave,138787.04,1
+EQ-0727,Rodillo compactador,Santa Fe,63,2016,Requiere_Reparacion,66062.55,0
+EQ-0728,Motoniveladora,Córdoba,13,2013,Requiere_Reparacion,28826.93,0
+EQ-0729,Retroexcavadora,Mendoza,50,2009,Averia_Grave,60168.23,0
+EQ-0730,Cargadora frontal,Salta,50,2020,Funcional,87185.54,0
+EQ-0731,Rodillo compactador,Salta,101,2008,Funcional,74576.33,0
+EQ-0732,Retroexcavadora,Córdoba,15,2007,Averia_Grave,18410.12,0
+EQ-0733,Topadora,Mendoza,102,2023,Requiere_Reparacion,390368.43,1
+EQ-0734,Rodillo compactador,Buenos Aires,50,2015,Averia_Grave,71745.54,0
+EQ-0735,Excavadora,Santa Fe,79,2009,Funcional,102956.64,1
+EQ-0736,Rodillo compactador,Santa Fe,67,2023,Averia_Grave,121516.81,1
+EQ-0737,Rodillo compactador,Córdoba,36,2025,Requiere_Reparacion,67274.43,0
+EQ-0738,Retroexcavadora,Salta,112,2008,Requiere_Reparacion,137214.61,1
+EQ-0739,Rodillo compactador,Salta,27,2014,Averia_Grave,45501.8,0
+EQ-0740,Topadora,Buenos Aires,5,2013,Requiere_Reparacion,11192.55,0
+EQ-0741,Rodillo compactador,Córdoba,91,2018,Averia_Grave,131651.99,1
+EQ-0742,Rodillo compactador,Córdoba,75,2025,Requiere_Reparacion,120169.55,1
+EQ-0743,Cargadora frontal,Salta,107,2014,Averia_Grave,262356.52,1
+EQ-0744,Excavadora,Santa Fe,55,2021,Averia_Grave,197367.41,1
+EQ-0745,Rodillo compactador,Mendoza,3,2016,Requiere_Reparacion,0.0,0
+EQ-0746,Retroexcavadora,Salta,3,2023,Funcional,2196.12,0
+EQ-0747,Cargadora frontal,Mendoza,52,2010,Funcional,60837.99,0
+EQ-0748,Excavadora,Buenos Aires,30,2010,Averia_Grave,66663.47,0
+EQ-0749,Excavadora,Buenos Aires,111,2011,Averia_Grave,255671.14,1
+EQ-0751,Topadora,Córdoba,106,2016,Funcional,223420.44,1
+EQ-0752,Motoniveladora,Mendoza,27,2004,Requiere_Reparacion,44332.75,0
+EQ-0753,Motoniveladora,Buenos Aires,15,2001,Averia_Grave,30537.57,0
+EQ-0754,Topadora,Córdoba,33,2014,Averia_Grave,104670.16,1
+EQ-0755,Cargadora frontal,Córdoba,18,2021,Funcional,37924.24,0
+EQ-0756,Retroexcavadora,Buenos Aires,49,2012,Requiere_Reparacion,78569.01,0
+EQ-0757,Rodillo compactador,Buenos Aires,40,2015,Funcional,35854.35,0
+EQ-0758,Retroexcavadora,Buenos Aires,64,2021,Requiere_Reparacion,100390.6,1
+EQ-0759,Motoniveladora,Santa Fe,65,2013,Funcional,111844.0,1
+EQ-0760,Rodillo compactador,Santa Fe,1,2024,Funcional,0.0,0
+EQ-0761,Excavadora,Santa Fe,15,2017,Funcional,21610.11,0
+EQ-0762,Cargadora frontal,Santa Fe,20,2019,Averia_Grave,52366.71,0
+EQ-0763,Topadora,Mendoza,24,2021,Averia_Grave,130415.69,1
+EQ-0764,Topadora,Salta,12,2016,Averia_Grave,49622.19,0
+EQ-0765,Retroexcavadora,Santa Fe,38,2001,Requiere_Reparacion,38078.41,0
+EQ-0766,Rodillo compactador,Mendoza,66,2011,Requiere_Reparacion,65745.97,0
+EQ-0767,Cargadora frontal,Mendoza,38,2003,Requiere_Reparacion,42020.48,0
+EQ-0768,Retroexcavadora,Mendoza,40,2013,Requiere_Reparacion,60041.26,0
+EQ-0770,Retroexcavadora,Salta,66,2013,Averia_Grave,119634.43,1
+EQ-0771,Cargadora frontal,Buenos Aires,40,2009,Averia_Grave,67709.09,0
+EQ-0772,Topadora,Santa Fe,27,2000,Averia_Grave,48937.94,0
+EQ-0773,Motoniveladora,Mendoza,50,2003,Funcional,60392.08,0
+EQ-0774,Rodillo compactador,Santa Fe,3,2013,Requiere_Reparacion,1525.57,0
+EQ-0775,Topadora,Córdoba,60,2002,Funcional,74300.06,0
+EQ-0776,Topadora,Salta,113,2023,Funcional,438205.67,1
+EQ-0777,Retroexcavadora,Buenos Aires,48,2020,Averia_Grave,154203.56,1
+EQ-0778,Motoniveladora,Córdoba,13,2019,Requiere_Reparacion,43729.58,0
+EQ-0779,Excavadora,Salta,85,2004,Averia_Grave,155218.4,1
+EQ-0780,Topadora,Mendoza,16,2021,Funcional,39931.16,0
+EQ-0781,Topadora,Buenos Aires,24,2017,Averia_Grave,80237.39,0
+EQ-0782,Cargadora frontal,Mendoza,18,2010,Averia_Grave,32692.84,0
+EQ-0783,Motoniveladora,Salta,107,2000,Requiere_Reparacion,143991.42,1
+EQ-0784,Motoniveladora,Buenos Aires,118,2014,Averia_Grave,327041.42,1
+EQ-0785,Retroexcavadora,Santa Fe,69,2021,Funcional,117934.96,1
+EQ-0786,Cargadora frontal,Santa Fe,75,2000,Averia_Grave,95938.02,0
+EQ-0787,Motoniveladora,Buenos Aires,78,2001,Averia_Grave,118845.28,1
+EQ-0788,Rodillo compactador,Córdoba,74,2010,Averia_Grave,71136.44,0
+EQ-0789,Cargadora frontal,Buenos Aires,66,2013,Averia_Grave,141961.84,1
+EQ-0790,Motoniveladora,Buenos Aires,119,2012,Requiere_Reparacion,250259.22,1
+EQ-0791,Motoniveladora,Santa Fe,88,2011,Averia_Grave,175917.71,1
+EQ-0792,Retroexcavadora,Santa Fe,11,2006,Requiere_Reparacion,16025.62,0
+EQ-0793,Rodillo compactador,Córdoba,48,2001,Funcional,33213.45,0
+EQ-0794,Rodillo compactador,Córdoba,117,2000,Funcional,45575.79,0
+EQ-0795,Retroexcavadora,Buenos Aires,49,2002,Averia_Grave,45186.05,0
+EQ-0796,Excavadora,Mendoza,25,2018,Requiere_Reparacion,60539.55,0
+EQ-0797,Topadora,Córdoba,105,2021,Requiere_Reparacion,385221.7,1
+EQ-0798,Retroexcavadora,Salta,75,2011,Averia_Grave,121378.66,1
+EQ-0799,Excavadora,Santa Fe,68,2002,Requiere_Reparacion,72030.98,0
+EQ-0800,Retroexcavadora,Salta,51,2011,Requiere_Reparacion,76115.36,0
+EQ-0801,Motoniveladora,Mendoza,15,2026,Requiere_Reparacion,59755.22,0
+EQ-0802,Excavadora,Córdoba,47,2006,Requiere_Reparacion,62527.93,0
+EQ-0803,Cargadora frontal,Mendoza,53,2013,Averia_Grave,90282.72,0
+EQ-0804,Topadora,Córdoba,112,2014,Requiere_Reparacion,263993.35,1
+EQ-0805,Rodillo compactador,Buenos Aires,37,2008,Requiere_Reparacion,35899.65,0
+EQ-0806,Rodillo compactador,Córdoba,18,2011,Averia_Grave,17631.62,0
+EQ-0807,Cargadora frontal,Córdoba,52,2012,Averia_Grave,98481.34,0
+EQ-0808,Motoniveladora,Buenos Aires,120,2012,Averia_Grave,294539.65,1
+EQ-0809,Retroexcavadora,Buenos Aires,58,2019,Funcional,77126.54,0
+EQ-0810,Topadora,Salta,46,2015,Averia_Grave,192482.3,1
+EQ-0811,Motoniveladora,Santa Fe,81,2001,Requiere_Reparacion,97477.18,0
+EQ-0812,Topadora,Santa Fe,78,2000,Funcional,109428.65,1
+EQ-0814,Excavadora,Córdoba,117,2024,Averia_Grave,436120.84,1
+EQ-0815,Rodillo compactador,Santa Fe,72,2000,Requiere_Reparacion,45035.83,0
+EQ-0816,Topadora,Salta,7,2001,Averia_Grave,16192.47,0
+EQ-0817,Motoniveladora,Mendoza,49,2018,Requiere_Reparacion,129000.98,1
+EQ-0818,Motoniveladora,Córdoba,111,2012,Funcional,155775.49,1
+EQ-0819,Cargadora frontal,Córdoba,48,2006,Requiere_Reparacion,65060.5,0
+EQ-0820,Topadora,Buenos Aires,69,2005,Requiere_Reparacion,140608.92,1
+EQ-0821,Motoniveladora,Buenos Aires,74,2017,Requiere_Reparacion,201361.48,1
+EQ-0822,Cargadora frontal,Buenos Aires,85,2014,Averia_Grave,146884.98,1
+EQ-0823,Motoniveladora,Mendoza,105,2017,Averia_Grave,376477.69,1
+EQ-0824,Cargadora frontal,Mendoza,18,2007,Funcional,23908.56,0
+EQ-0825,Cargadora frontal,Santa Fe,63,2014,Requiere_Reparacion,122185.15,1
+EQ-0826,Motoniveladora,Mendoza,65,2023,Funcional,192999.54,1
+EQ-0827,Rodillo compactador,Buenos Aires,19,2008,Requiere_Reparacion,24504.09,0
+EQ-0828,Topadora,Córdoba,81,2010,Funcional,146964.76,1
+EQ-0829,Topadora,Córdoba,15,2004,Requiere_Reparacion,29623.55,0
+EQ-0830,Motoniveladora,Salta,55,2017,Averia_Grave,167206.89,1
+EQ-0831,Excavadora,Mendoza,40,2000,Requiere_Reparacion,54284.92,0
+EQ-0832,Excavadora,Salta,19,2006,Funcional,25887.26,0
+EQ-0833,Retroexcavadora,Córdoba,99,2019,Requiere_Reparacion,152058.97,1
+EQ-0834,Motoniveladora,Salta,30,2000,Requiere_Reparacion,45078.82,0
+EQ-0836,Rodillo compactador,Córdoba,103,2010,Funcional,64655.47,0
+EQ-0837,Rodillo compactador,Santa Fe,106,2010,Averia_Grave,115365.31,1
+EQ-0838,Excavadora,Buenos Aires,5,2014,Requiere_Reparacion,7518.89,0
+EQ-0839,Motoniveladora,Salta,34,2017,Requiere_Reparacion,107084.15,1
+EQ-0840,Topadora,Salta,86,2012,Funcional,203304.41,1
+EQ-0841,Excavadora,Santa Fe,94,2023,Requiere_Reparacion,242458.13,1
+EQ-0842,Cargadora frontal,Córdoba,120,2025,Requiere_Reparacion,292492.28,1
+EQ-0843,Topadora,Buenos Aires,67,2005,Funcional,95613.48,0
+EQ-0844,Motoniveladora,Mendoza,1,2019,Requiere_Reparacion,5482.75,0
+EQ-0845,Motoniveladora,Santa Fe,105,2008,Requiere_Reparacion,177388.79,1
+EQ-0846,Motoniveladora,Mendoza,20,2026,Averia_Grave,90426.22,0
+EQ-0847,Motoniveladora,Mendoza,15,2006,Averia_Grave,30278.44,0
+EQ-0848,Motoniveladora,Buenos Aires,81,2007,Funcional,104446.35,1
+EQ-0849,Rodillo compactador,Buenos Aires,73,2019,Funcional,72546.58,0
+EQ-0850,Cargadora frontal,Mendoza,8,2021,Averia_Grave,24683.92,0
+EQ-0851,Topadora,Buenos Aires,21,2003,Averia_Grave,49504.37,0
+EQ-0852,Rodillo compactador,Salta,71,2015,Averia_Grave,103380.57,1
+EQ-0853,Topadora,Buenos Aires,31,2009,Funcional,47517.59,0
+EQ-0854,Excavadora,Mendoza,83,2016,Funcional,142681.13,1
+EQ-0855,Excavadora,Salta,50,2015,Funcional,94455.94,0
+EQ-0856,Topadora,Santa Fe,71,2026,Averia_Grave,336618.41,1
+EQ-0857,Excavadora,Buenos Aires,57,2025,Requiere_Reparacion,165691.33,1
+EQ-0858,Motoniveladora,Salta,44,2017,Requiere_Reparacion,115274.5,1
+EQ-0859,Rodillo compactador,Buenos Aires,42,2018,Requiere_Reparacion,57507.24,0
+EQ-0860,Rodillo compactador,Santa Fe,84,2024,Funcional,109919.43,1
+EQ-0861,Topadora,Salta,62,2004,Requiere_Reparacion,100628.22,1
+EQ-0862,Topadora,Mendoza,72,2019,Funcional,191530.35,1
+EQ-0863,Motoniveladora,Buenos Aires,70,2020,Requiere_Reparacion,204414.02,1
+EQ-0864,Rodillo compactador,Salta,25,2003,Averia_Grave,27594.72,0
+EQ-0865,Topadora,Buenos Aires,110,2023,Requiere_Reparacion,525861.0,1
+EQ-0866,Rodillo compactador,Mendoza,68,2018,Requiere_Reparacion,93028.06,0
+EQ-0867,Rodillo compactador,Mendoza,87,2009,Averia_Grave,93818.57,0
+EQ-0868,Topadora,Córdoba,106,2013,Averia_Grave,333544.3,1
+EQ-0869,Retroexcavadora,Santa Fe,111,2013,Funcional,121505.73,1
+EQ-0870,Motoniveladora,Buenos Aires,81,2024,Funcional,218466.33,1
+EQ-0871,Retroexcavadora,Salta,95,2026,Requiere_Reparacion,211707.53,1
+EQ-0872,Excavadora,Córdoba,57,2021,Funcional,131688.28,1
+EQ-0873,Motoniveladora,Córdoba,89,2017,Funcional,155527.64,1
+EQ-0874,Motoniveladora,Santa Fe,39,2002,Funcional,38536.16,0
+EQ-0875,Rodillo compactador,Mendoza,86,2024,Funcional,119234.12,1
+EQ-0876,Cargadora frontal,Santa Fe,11,2003,Requiere_Reparacion,17969.21,0
+EQ-0877,Cargadora frontal,Santa Fe,110,2004,Requiere_Reparacion,133263.24,1
+EQ-0878,Rodillo compactador,Santa Fe,30,2001,Funcional,19236.43,0
+EQ-0879,Cargadora frontal,Salta,79,2025,Averia_Grave,263193.8,1
+EQ-0880,Cargadora frontal,Córdoba,2,2013,Funcional,2558.4,0
+EQ-0881,Motoniveladora,Salta,19,2006,Requiere_Reparacion,37492.08,0
+EQ-0882,Topadora,Mendoza,119,2002,Funcional,174308.51,1
+EQ-0883,Retroexcavadora,Salta,101,2011,Averia_Grave,143467.77,1
+EQ-0884,Motoniveladora,Salta,27,2019,Averia_Grave,94323.33,0
+EQ-0885,Rodillo compactador,Mendoza,16,2026,Requiere_Reparacion,39595.48,0
+EQ-0886,Rodillo compactador,Córdoba,98,2014,Funcional,82035.86,0
+EQ-0887,Motoniveladora,Mendoza,119,2016,Funcional,205405.57,1
+EQ-0888,Excavadora,Mendoza,21,2022,Funcional,46873.45,0
+EQ-0889,Motoniveladora,Córdoba,80,2024,Averia_Grave,295361.85,1
+EQ-0890,Excavadora,Mendoza,35,2007,Funcional,56414.93,0
+EQ-0891,Motoniveladora,Córdoba,90,2026,Averia_Grave,368758.52,1
+EQ-0892,Rodillo compactador,Santa Fe,51,2014,Requiere_Reparacion,37075.37,0
+EQ-0893,Cargadora frontal,Mendoza,16,2025,Requiere_Reparacion,40503.17,0
+EQ-0894,Topadora,Buenos Aires,39,2003,Averia_Grave,77885.15,0
+EQ-0895,Rodillo compactador,Córdoba,65,2002,Funcional,37564.59,0
+EQ-0896,Cargadora frontal,Mendoza,96,2023,Averia_Grave,289864.76,1
+EQ-0897,Cargadora frontal,Santa Fe,3,2018,Funcional,1757.3,0
+EQ-0898,Motoniveladora,Salta,115,2004,Averia_Grave,251091.21,1
+EQ-0899,Motoniveladora,Buenos Aires,78,2024,Requiere_Reparacion,245510.53,1
+EQ-0900,Cargadora frontal,Mendoza,106,2002,Funcional,82268.5,0
+EQ-0901,Motoniveladora,Salta,112,2018,Averia_Grave,417403.29,1
+EQ-0902,Motoniveladora,Salta,19,2005,Funcional,26456.3,0
+EQ-0903,Excavadora,Buenos Aires,12,2001,Funcional,12520.92,0
+EQ-0904,Topadora,Salta,94,2021,Averia_Grave,490365.46,1
+EQ-0905,Retroexcavadora,Córdoba,23,2022,Requiere_Reparacion,45872.35,0
+EQ-0906,Rodillo compactador,Córdoba,18,2002,Averia_Grave,16189.79,0
+EQ-0907,Retroexcavadora,Córdoba,57,2002,Requiere_Reparacion,48769.11,0
+EQ-0908,Excavadora,Mendoza,110,2016,Requiere_Reparacion,233585.17,1
+EQ-0909,Retroexcavadora,Mendoza,96,2000,Funcional,70151.02,0
+EQ-0910,Motoniveladora,Santa Fe,63,2020,Funcional,149815.68,1
+EQ-0911,Rodillo compactador,Buenos Aires,24,2024,Averia_Grave,43631.11,0
+EQ-0912,Excavadora,Salta,41,2020,Funcional,99673.35,0
+EQ-0913,Retroexcavadora,Córdoba,83,2006,Requiere_Reparacion,67860.42,0
+EQ-0914,Topadora,Buenos Aires,19,2005,Funcional,21516.93,0
+EQ-0915,Cargadora frontal,Santa Fe,63,2018,Funcional,88592.84,0
+EQ-0916,Retroexcavadora,Santa Fe,2,2001,Requiere_Reparacion,0.0,0
+EQ-0917,Cargadora frontal,Mendoza,40,2014,Averia_Grave,66971.53,0
+EQ-0918,Rodillo compactador,Salta,30,2012,Averia_Grave,40601.74,0
+EQ-0919,Excavadora,Buenos Aires,82,2020,Averia_Grave,267777.21,1
+EQ-0920,Cargadora frontal,Córdoba,110,2005,Funcional,103207.97,1
+EQ-0921,Topadora,Santa Fe,18,2020,Requiere_Reparacion,53584.43,0
+EQ-0922,Cargadora frontal,Mendoza,96,2018,Funcional,151261.71,1
+EQ-0923,Retroexcavadora,Mendoza,79,2006,Averia_Grave,93993.03,0
+EQ-0924,Motoniveladora,Córdoba,117,2009,Requiere_Reparacion,210406.21,1
+EQ-0925,Excavadora,Mendoza,110,2001,Requiere_Reparacion,134129.81,1
+EQ-0926,Topadora,Salta,13,2012,Funcional,24709.98,0
+EQ-0927,Cargadora frontal,Santa Fe,90,2007,Averia_Grave,114507.86,1
+EQ-0928,Excavadora,Salta,72,2003,Averia_Grave,128902.08,1
+EQ-0929,Retroexcavadora,Mendoza,14,2015,Averia_Grave,32664.09,0
+EQ-0930,Cargadora frontal,Córdoba,31,2015,Funcional,39538.82,0
+EQ-0931,Cargadora frontal,Córdoba,112,2002,Averia_Grave,124379.9,1
+EQ-0932,Rodillo compactador,Mendoza,66,2005,Funcional,37835.59,0
+EQ-0933,Excavadora,Córdoba,41,2002,Requiere_Reparacion,36345.99,0
+EQ-0934,Cargadora frontal,Córdoba,39,2018,Funcional,58310.08,0
+EQ-0935,Retroexcavadora,Córdoba,101,2009,Funcional,91154.99,0
+EQ-0936,Topadora,Mendoza,35,2001,Requiere_Reparacion,54051.69,0
+EQ-0937,Motoniveladora,Córdoba,20,2005,Funcional,14430.7,0
+EQ-0938,Motoniveladora,Mendoza,69,2026,Requiere_Reparacion,257423.93,1
+EQ-0939,Retroexcavadora,Salta,120,2006,Requiere_Reparacion,143429.84,1
+EQ-0941,Rodillo compactador,Salta,31,2012,Requiere_Reparacion,32308.24,0
+EQ-0942,Retroexcavadora,Buenos Aires,57,2004,Requiere_Reparacion,58735.04,0
+EQ-0943,Topadora,Santa Fe,24,2008,Funcional,41999.96,0
+EQ-0944,Retroexcavadora,Córdoba,79,2000,Averia_Grave,66704.48,0
+EQ-0945,Motoniveladora,Salta,31,2020,Funcional,82684.36,0
+EQ-0946,Motoniveladora,Mendoza,16,2009,Funcional,24322.37,0
+EQ-0947,Topadora,Córdoba,32,2013,Funcional,66597.89,0
+EQ-0948,Motoniveladora,Santa Fe,112,2004,Requiere_Reparacion,163595.85,1
+EQ-0949,Topadora,Mendoza,113,2022,Requiere_Reparacion,452771.49,1
+EQ-0950,Excavadora,Santa Fe,61,2005,Requiere_Reparacion,84205.1,0
+EQ-0951,Motoniveladora,Santa Fe,49,2015,Requiere_Reparacion,111907.06,1
+EQ-0952,Excavadora,Buenos Aires,99,2023,Requiere_Reparacion,332149.44,1
+EQ-0953,Cargadora frontal,Santa Fe,24,2019,Requiere_Reparacion,45712.25,0
+EQ-0954,Retroexcavadora,Córdoba,79,2016,Funcional,90135.31,0
+EQ-0955,Rodillo compactador,Salta,82,2023,Requiere_Reparacion,155291.41,1
+EQ-0956,Cargadora frontal,Salta,86,2004,Requiere_Reparacion,112381.91,1
+EQ-0957,Retroexcavadora,Mendoza,27,2026,Requiere_Reparacion,70228.34,0
+EQ-0958,Cargadora frontal,Buenos Aires,86,2015,Funcional,163620.36,1
+EQ-0959,Topadora,Salta,74,2011,Requiere_Reparacion,210972.89,1
+EQ-0960,Retroexcavadora,Córdoba,106,2006,Requiere_Reparacion,112957.75,1
+EQ-0961,Motoniveladora,Santa Fe,21,2020,Funcional,50091.68,0
+EQ-0962,Retroexcavadora,Salta,74,2026,Funcional,130218.84,1
+EQ-0963,Topadora,Salta,100,2018,Requiere_Reparacion,339362.17,1
+EQ-0964,Excavadora,Buenos Aires,34,2000,Requiere_Reparacion,44149.73,0
+EQ-0965,Topadora,Córdoba,90,2012,Requiere_Reparacion,225248.86,1
+EQ-0966,Cargadora frontal,Mendoza,12,2019,Funcional,15255.32,0
+EQ-0967,Cargadora frontal,Santa Fe,87,2010,Averia_Grave,138904.08,1
+EQ-0968,Excavadora,Córdoba,73,2020,Funcional,145208.0,1
+EQ-0969,Topadora,Santa Fe,24,2019,Requiere_Reparacion,67575.52,0
+EQ-0970,Motoniveladora,Salta,8,2001,Averia_Grave,20455.66,0
+EQ-0971,Excavadora,Córdoba,90,2015,Requiere_Reparacion,183188.28,1
+EQ-0972,Retroexcavadora,Mendoza,29,2004,Funcional,18188.11,0
+EQ-0973,Retroexcavadora,Mendoza,60,2013,Requiere_Reparacion,99184.91,0
+EQ-0974,Retroexcavadora,Salta,8,2010,Averia_Grave,9944.17,0
+EQ-0975,Motoniveladora,Córdoba,116,2021,Averia_Grave,424205.13,1
+EQ-0976,Excavadora,Córdoba,66,2023,Funcional,147478.41,1
+EQ-0977,Motoniveladora,Santa Fe,112,2012,Averia_Grave,307610.99,1
+EQ-0978,Cargadora frontal,Santa Fe,20,2014,Requiere_Reparacion,30505.48,0
+EQ-0979,Retroexcavadora,Santa Fe,25,2016,Funcional,29254.86,0
+EQ-0980,Cargadora frontal,Mendoza,74,2017,Requiere_Reparacion,163684.09,1
+EQ-0981,Cargadora frontal,Mendoza,73,2017,Requiere_Reparacion,125150.55,1
+EQ-0982,Rodillo compactador,Córdoba,95,2021,Requiere_Reparacion,129588.06,1
+EQ-0983,Cargadora frontal,Mendoza,112,2026,Averia_Grave,366358.89,1
+EQ-0984,Cargadora frontal,Córdoba,99,2022,Requiere_Reparacion,199704.78,1
+EQ-0985,Cargadora frontal,Santa Fe,17,2003,Requiere_Reparacion,21955.42,0
+EQ-0986,Cargadora frontal,Buenos Aires,38,2012,Requiere_Reparacion,64883.11,0
+EQ-0987,Cargadora frontal,Córdoba,110,2012,Funcional,117275.04,1
+EQ-0988,Excavadora,Salta,66,2013,Requiere_Reparacion,146544.33,1
+EQ-0989,Excavadora,Santa Fe,105,2014,Averia_Grave,246945.41,1
+EQ-0990,Rodillo compactador,Mendoza,68,2019,Requiere_Reparacion,81615.51,0
+EQ-0991,Retroexcavadora,Buenos Aires,6,2011,Funcional,0.0,0
+EQ-0993,Excavadora,Córdoba,99,2012,Averia_Grave,222142.55,1
+EQ-0994,Retroexcavadora,Mendoza,79,2023,Averia_Grave,184561.53,1
+EQ-0995,Cargadora frontal,Salta,16,2008,Requiere_Reparacion,23585.06,0
+EQ-0996,Cargadora frontal,Santa Fe,26,2000,Requiere_Reparacion,21471.74,0
+EQ-0997,Cargadora frontal,Buenos Aires,103,2026,Requiere_Reparacion,278741.13,1
+EQ-0998,Retroexcavadora,Santa Fe,118,2005,Averia_Grave,140182.97,1
+EQ-0999,Topadora,Buenos Aires,91,2016,Averia_Grave,312164.09,1
+EQ-1000,Cargadora frontal,Santa Fe,12,2021,Averia_Grave,38944.6,0
+EQ-1001,Rodillo compactador,Buenos Aires,75,2007,Requiere_Reparacion,59777.13,0
+EQ-1002,Rodillo compactador,Mendoza,100,2009,Funcional,74676.49,0
+EQ-1003,Cargadora frontal,Córdoba,77,2007,Requiere_Reparacion,65990.99,0
+EQ-1004,Topadora,Córdoba,72,2004,Funcional,127987.86,1
+EQ-1005,Motoniveladora,Buenos Aires,57,2004,Funcional,71444.88,0
+EQ-1006,Topadora,Salta,30,2005,Requiere_Reparacion,68758.29,0
+EQ-1007,Topadora,Salta,34,2012,Requiere_Reparacion,103664.97,1
+EQ-1008,Cargadora frontal,Salta,90,2014,Averia_Grave,163199.49,1
+EQ-1009,Rodillo compactador,Buenos Aires,9,2000,Averia_Grave,10726.58,0
+EQ-1010,Cargadora frontal,Córdoba,11,2022,Averia_Grave,29779.04,0
+EQ-1012,Rodillo compactador,Santa Fe,93,2001,Averia_Grave,72583.98,0
+EQ-1013,Excavadora,Buenos Aires,79,2022,Funcional,177158.42,1
+EQ-1014,Excavadora,Buenos Aires,71,2000,Requiere_Reparacion,81717.61,0
+EQ-1015,Cargadora frontal,Córdoba,65,2015,Funcional,89876.9,0
+EQ-1016,Topadora,Salta,14,2012,Funcional,25407.92,0
+EQ-1017,Retroexcavadora,Buenos Aires,40,2013,Funcional,47570.56,0
+EQ-1018,Retroexcavadora,Salta,10,2025,Averia_Grave,31041.92,0
+EQ-1019,Motoniveladora,Mendoza,91,2025,Averia_Grave,483849.85,1
+EQ-1020,Motoniveladora,Salta,91,2007,Averia_Grave,223453.07,1
+EQ-1021,Motoniveladora,Salta,31,2015,Averia_Grave,95946.61,0
+EQ-1022,Motoniveladora,Córdoba,36,2025,Averia_Grave,163484.69,1
+EQ-1023,Topadora,Salta,39,2019,Funcional,118892.79,1
+EQ-1024,Topadora,Buenos Aires,107,2023,Averia_Grave,439760.77,1
+EQ-1025,Rodillo compactador,Córdoba,59,2011,Averia_Grave,72736.61,0
+EQ-1026,Motoniveladora,Córdoba,92,2007,Averia_Grave,200429.58,1
+EQ-1027,Motoniveladora,Buenos Aires,54,2013,Funcional,93817.37,0
+EQ-1028,Excavadora,Buenos Aires,84,2022,Funcional,174062.04,1
+EQ-1029,Cargadora frontal,Buenos Aires,64,2025,Averia_Grave,183620.28,1
+EQ-1030,Retroexcavadora,Buenos Aires,34,2018,Funcional,33199.68,0
+EQ-1031,Retroexcavadora,Córdoba,106,2019,Requiere_Reparacion,181492.05,1
+EQ-1032,Excavadora,Buenos Aires,86,2013,Requiere_Reparacion,134792.42,1
+EQ-1033,Rodillo compactador,Buenos Aires,93,2008,Funcional,67632.44,0
+EQ-1034,Excavadora,Salta,114,2011,Funcional,165955.59,1
+EQ-1035,Motoniveladora,Buenos Aires,30,2013,Averia_Grave,75263.0,0
+EQ-1036,Rodillo compactador,Buenos Aires,11,2022,Averia_Grave,25874.31,0
+EQ-1037,Topadora,Buenos Aires,70,2014,Averia_Grave,235986.54,1
+EQ-1038,Motoniveladora,Buenos Aires,40,2021,Funcional,106030.12,1
+EQ-1039,Retroexcavadora,Santa Fe,53,2000,Funcional,26320.47,0
+EQ-1040,Rodillo compactador,Salta,29,2020,Requiere_Reparacion,35166.69,0
+EQ-1041,Rodillo compactador,Mendoza,48,2013,Requiere_Reparacion,45510.54,0
+EQ-1042,Topadora,Santa Fe,48,2026,Funcional,132540.54,1
+EQ-1043,Retroexcavadora,Buenos Aires,43,2012,Averia_Grave,81730.01,0
+EQ-1044,Retroexcavadora,Mendoza,90,2012,Averia_Grave,171756.97,1
+EQ-1045,Rodillo compactador,Buenos Aires,72,2003,Requiere_Reparacion,52910.94,0
+EQ-1046,Motoniveladora,Mendoza,57,2021,Requiere_Reparacion,169554.42,1
+EQ-1047,Excavadora,Santa Fe,14,2018,Requiere_Reparacion,31425.98,0
+EQ-1048,Cargadora frontal,Salta,69,2023,Funcional,154871.7,1
+EQ-1049,Rodillo compactador,Córdoba,22,2002,Funcional,16678.58,0
+EQ-1050,Motoniveladora,Mendoza,38,2005,Requiere_Reparacion,75267.56,0
+EQ-1051,Cargadora frontal,Santa Fe,50,2023,Requiere_Reparacion,107771.02,1
+EQ-1052,Retroexcavadora,Santa Fe,17,2001,Requiere_Reparacion,15974.01,0
+EQ-1053,Cargadora frontal,Salta,47,2013,Averia_Grave,79088.73,0
+EQ-1054,Topadora,Mendoza,33,2010,Funcional,70190.41,0
+EQ-1055,Motoniveladora,Santa Fe,102,2025,Funcional,243748.3,1
+EQ-1056,Topadora,Santa Fe,104,2023,Funcional,326599.17,1
+EQ-1057,Retroexcavadora,Mendoza,1,2024,Funcional,0.0,0
+EQ-1058,Rodillo compactador,Córdoba,73,2007,Requiere_Reparacion,57132.79,0
+EQ-1059,Retroexcavadora,Buenos Aires,77,2015,Averia_Grave,156579.17,1
+EQ-1060,Excavadora,Santa Fe,46,2018,Averia_Grave,113469.23,1
+EQ-1061,Rodillo compactador,Buenos Aires,57,2026,Requiere_Reparacion,110687.43,1
+EQ-1062,Rodillo compactador,Buenos Aires,95,2000,Requiere_Reparacion,46889.4,0
+EQ-1063,Motoniveladora,Santa Fe,46,2026,Funcional,132981.56,1
+EQ-1064,Rodillo compactador,Mendoza,8,2009,Requiere_Reparacion,9733.5,0
+EQ-1065,Rodillo compactador,Mendoza,45,2003,Requiere_Reparacion,34426.61,0
+EQ-1066,Retroexcavadora,Córdoba,31,2016,Averia_Grave,41098.73,0
+EQ-1067,Topadora,Santa Fe,46,2021,Requiere_Reparacion,166588.3,1
+EQ-1068,Cargadora frontal,Buenos Aires,28,2003,Funcional,30931.65,0
+EQ-1069,Retroexcavadora,Mendoza,18,2001,Funcional,6743.85,0
+EQ-1070,Motoniveladora,Córdoba,119,2024,Funcional,304643.08,1
+EQ-1071,Rodillo compactador,Mendoza,16,2025,Averia_Grave,34835.98,0
+EQ-1072,Excavadora,Salta,85,2004,Funcional,99732.68,0
+EQ-1073,Rodillo compactador,Mendoza,87,2024,Funcional,133228.64,1
+EQ-1074,Cargadora frontal,Córdoba,75,2024,Funcional,144951.82,1
+EQ-1075,Retroexcavadora,Salta,110,2026,Averia_Grave,380035.97,1
+EQ-1076,Motoniveladora,Mendoza,1,2005,Requiere_Reparacion,0.0,0
+EQ-1077,Rodillo compactador,Mendoza,37,2015,Requiere_Reparacion,40930.1,0
+EQ-1078,Motoniveladora,Salta,23,2026,Requiere_Reparacion,93460.07,0
+EQ-1079,Retroexcavadora,Salta,70,2024,Funcional,124844.66,1
+EQ-1080,Topadora,Buenos Aires,77,2016,Averia_Grave,290176.26,1
+EQ-1081,Topadora,Salta,108,2005,Funcional,180074.6,1
+EQ-1082,Topadora,Mendoza,46,2002,Funcional,58044.78,0
+EQ-1083,Topadora,Córdoba,29,2006,Requiere_Reparacion,56302.04,0
+EQ-1084,Cargadora frontal,Córdoba,111,2001,Funcional,73279.47,0
+EQ-1085,Excavadora,Mendoza,81,2005,Funcional,99034.37,0
+EQ-1086,Topadora,Córdoba,92,2002,Averia_Grave,167885.77,1
+EQ-1087,Rodillo compactador,Santa Fe,54,2020,Requiere_Reparacion,85602.9,0
+EQ-1088,Topadora,Mendoza,54,2015,Funcional,121258.28,1
+EQ-1089,Cargadora frontal,Mendoza,47,2013,Requiere_Reparacion,83487.75,0
+EQ-1090,Motoniveladora,Salta,90,2021,Averia_Grave,373373.69,1
+EQ-1091,Cargadora frontal,Buenos Aires,26,2011,Funcional,28672.31,0
+EQ-1092,Retroexcavadora,Córdoba,118,2010,Funcional,111644.86,1
+EQ-1093,Topadora,Salta,22,2005,Requiere_Reparacion,39492.03,0
+EQ-1094,Retroexcavadora,Santa Fe,56,2012,Requiere_Reparacion,73940.15,0
+EQ-1095,Excavadora,Córdoba,38,2004,Averia_Grave,47683.94,0
+EQ-1096,Motoniveladora,Córdoba,78,2015,Requiere_Reparacion,190052.4,1
+EQ-1097,Topadora,Córdoba,82,2026,Funcional,302338.94,1
+EQ-1099,Motoniveladora,Córdoba,95,2008,Requiere_Reparacion,150965.55,1
+EQ-1100,Retroexcavadora,Mendoza,30,2018,Funcional,49304.24,0
+EQ-1101,Retroexcavadora,Santa Fe,25,2022,Requiere_Reparacion,37985.74,0
+EQ-1102,Retroexcavadora,Mendoza,107,2012,Funcional,124769.91,1
+EQ-1103,Topadora,Buenos Aires,59,2006,Averia_Grave,144438.47,1
+EQ-1104,Motoniveladora,Mendoza,12,2019,Averia_Grave,42759.79,0
+EQ-1105,Excavadora,Salta,99,2005,Requiere_Reparacion,163908.32,1
+EQ-1106,Excavadora,Buenos Aires,78,2026,Averia_Grave,321570.88,1
+EQ-1107,Excavadora,Córdoba,4,2008,Averia_Grave,8325.75,0
+EQ-1108,Topadora,Mendoza,94,2009,Funcional,180043.89,1
+EQ-1109,Topadora,Mendoza,73,2019,Requiere_Reparacion,287099.04,1
+EQ-1110,Motoniveladora,Mendoza,74,2000,Requiere_Reparacion,109142.0,1
+EQ-1111,Cargadora frontal,Santa Fe,104,2005,Funcional,98653.12,0
+EQ-1112,Excavadora,Mendoza,60,2003,Requiere_Reparacion,83381.3,0
+EQ-1113,Excavadora,Mendoza,56,2010,Funcional,79731.83,0
+EQ-1114,Excavadora,Buenos Aires,75,2014,Averia_Grave,216390.52,1
+EQ-1115,Excavadora,Mendoza,24,2004,Requiere_Reparacion,39024.35,0
+EQ-1116,Retroexcavadora,Santa Fe,19,2009,Averia_Grave,26540.84,0
+EQ-1117,Topadora,Buenos Aires,102,2020,Requiere_Reparacion,370745.77,1
+EQ-1118,Cargadora frontal,Santa Fe,26,2025,Funcional,43833.98,0
+EQ-1119,Rodillo compactador,Santa Fe,61,2000,Averia_Grave,35231.48,0
+EQ-1120,Retroexcavadora,Buenos Aires,33,2016,Funcional,41153.41,0
+EQ-1121,Motoniveladora,Salta,28,2000,Funcional,26070.84,0
+EQ-1123,Excavadora,Córdoba,97,2023,Requiere_Reparacion,238249.61,1
+EQ-1124,Excavadora,Santa Fe,54,2021,Requiere_Reparacion,154659.67,1
+EQ-1125,Topadora,Salta,17,2006,Funcional,39405.61,0
+EQ-1126,Topadora,Mendoza,30,2006,Requiere_Reparacion,47042.39,0
+EQ-1127,Topadora,Mendoza,20,2021,Funcional,81826.67,0
+EQ-1128,Cargadora frontal,Córdoba,106,2022,Funcional,212688.71,1
+EQ-1129,Cargadora frontal,Salta,39,2007,Requiere_Reparacion,56494.68,0
+EQ-1130,Cargadora frontal,Salta,45,2000,Funcional,32635.26,0
+EQ-1131,Retroexcavadora,Santa Fe,9,2012,Funcional,14367.88,0
+EQ-1132,Rodillo compactador,Santa Fe,54,2016,Requiere_Reparacion,70793.56,0
+EQ-1133,Rodillo compactador,Buenos Aires,110,2011,Averia_Grave,138219.7,1
+EQ-1134,Rodillo compactador,Mendoza,50,2025,Funcional,53865.52,0
+EQ-1135,Cargadora frontal,Salta,79,2021,Requiere_Reparacion,234265.93,1
+EQ-1136,Motoniveladora,Santa Fe,22,2021,Funcional,61101.94,0
+EQ-1137,Rodillo compactador,Santa Fe,18,2000,Averia_Grave,10962.94,0
+EQ-1138,Retroexcavadora,Santa Fe,88,2023,Funcional,125980.24,1
+EQ-1139,Rodillo compactador,Buenos Aires,8,2020,Funcional,15148.74,0
+EQ-1140,Cargadora frontal,Mendoza,54,2010,Requiere_Reparacion,74276.71,0
+EQ-1141,Topadora,Mendoza,39,2015,Funcional,105221.51,1
+EQ-1142,Retroexcavadora,Salta,2,2022,Funcional,3849.45,0
+EQ-1143,Topadora,Salta,64,2024,Funcional,220956.37,1
+EQ-1144,Topadora,Santa Fe,116,2014,Requiere_Reparacion,272249.54,1
+EQ-1145,Excavadora,Salta,9,2001,Requiere_Reparacion,12583.89,0
+EQ-1146,Retroexcavadora,Santa Fe,98,2016,Requiere_Reparacion,118881.51,1
+EQ-1147,Cargadora frontal,Mendoza,65,2018,Averia_Grave,160940.99,1
+EQ-1148,Rodillo compactador,Mendoza,87,2001,Requiere_Reparacion,44991.27,0
+EQ-1149,Rodillo compactador,Salta,12,2022,Averia_Grave,31745.18,0
+EQ-1150,Topadora,Mendoza,105,2005,Averia_Grave,279273.16,1
+EQ-1151,Retroexcavadora,Buenos Aires,2,2024,Averia_Grave,9547.21,0
+EQ-1152,Cargadora frontal,Buenos Aires,109,2014,Averia_Grave,198788.49,1
+EQ-1153,Retroexcavadora,Santa Fe,79,2008,Requiere_Reparacion,67017.28,0
+EQ-1154,Topadora,Santa Fe,41,2001,Funcional,47326.65,0
+EQ-1155,Excavadora,Mendoza,1,2000,Requiere_Reparacion,10981.21,0
+EQ-1156,Cargadora frontal,Santa Fe,74,2020,Funcional,120314.03,1
+EQ-1157,Motoniveladora,Santa Fe,11,2010,Requiere_Reparacion,7597.15,0
+EQ-1158,Topadora,Salta,74,2022,Funcional,261567.46,1
+EQ-1159,Retroexcavadora,Córdoba,93,2006,Funcional,89189.0,0
+EQ-1160,Retroexcavadora,Santa Fe,33,2024,Averia_Grave,87921.75,0
+EQ-1161,Cargadora frontal,Santa Fe,29,2025,Requiere_Reparacion,65841.61,0
+EQ-1162,Retroexcavadora,Santa Fe,27,2002,Requiere_Reparacion,28118.39,0
+EQ-1163,Topadora,Salta,27,2017,Requiere_Reparacion,113812.28,1
+EQ-1164,Cargadora frontal,Salta,14,2025,Requiere_Reparacion,24713.51,0
+EQ-1165,Cargadora frontal,Santa Fe,30,2008,Averia_Grave,44557.81,0
+EQ-1166,Motoniveladora,Santa Fe,80,2001,Requiere_Reparacion,103522.28,1
+EQ-1167,Motoniveladora,Santa Fe,37,2023,Requiere_Reparacion,117066.47,1
+EQ-1168,Retroexcavadora,Buenos Aires,94,2012,Requiere_Reparacion,120866.83,1
+EQ-1169,Topadora,Santa Fe,99,2000,Requiere_Reparacion,159288.16,1
+EQ-1170,Topadora,Córdoba,92,2022,Requiere_Reparacion,331883.52,1
+EQ-1171,Cargadora frontal,Buenos Aires,65,2018,Averia_Grave,181813.84,1
+EQ-1172,Cargadora frontal,Buenos Aires,38,2001,Requiere_Reparacion,45915.93,0
+EQ-1173,Retroexcavadora,Santa Fe,112,2006,Requiere_Reparacion,102161.27,1
+EQ-1174,Excavadora,Buenos Aires,25,2000,Requiere_Reparacion,28103.47,0
+EQ-1175,Motoniveladora,Mendoza,56,2025,Requiere_Reparacion,171603.85,1
+EQ-1177,Excavadora,Córdoba,90,2021,Averia_Grave,347815.31,1
+EQ-1178,Excavadora,Mendoza,66,2013,Requiere_Reparacion,133177.02,1
+EQ-1179,Excavadora,Santa Fe,96,2015,Requiere_Reparacion,208058.78,1
+EQ-1180,Motoniveladora,Mendoza,111,2021,Requiere_Reparacion,344644.62,1
+EQ-1181,Cargadora frontal,Mendoza,47,2024,Funcional,98505.69,0
+EQ-1182,Topadora,Buenos Aires,105,2003,Requiere_Reparacion,212107.23,1
+EQ-1183,Rodillo compactador,Córdoba,21,2000,Averia_Grave,28405.83,0
+EQ-1184,Retroexcavadora,Santa Fe,110,2003,Requiere_Reparacion,105530.99,1
+EQ-1185,Retroexcavadora,Salta,22,2018,Funcional,37424.65,0
+EQ-1186,Excavadora,Buenos Aires,103,2015,Averia_Grave,261662.89,1
+EQ-1187,Motoniveladora,Buenos Aires,47,2002,Averia_Grave,77922.07,0
+EQ-1188,Cargadora frontal,Salta,116,2006,Funcional,114334.88,1
+EQ-1189,Cargadora frontal,Salta,16,2014,Requiere_Reparacion,28548.07,0
+EQ-1190,Motoniveladora,Buenos Aires,56,2019,Requiere_Reparacion,142072.5,1
+EQ-1191,Retroexcavadora,Santa Fe,109,2009,Averia_Grave,135968.4,1
+EQ-1192,Excavadora,Mendoza,6,2025,Funcional,13189.44,0
+EQ-1193,Excavadora,Buenos Aires,32,2026,Funcional,70655.61,0
+EQ-1194,Rodillo compactador,Córdoba,11,2020,Requiere_Reparacion,10456.6,0
+EQ-1195,Cargadora frontal,Córdoba,39,2012,Funcional,45341.07,0
+EQ-1196,Cargadora frontal,Mendoza,47,2023,Requiere_Reparacion,106930.91,1
+EQ-1197,Rodillo compactador,Córdoba,75,2019,Averia_Grave,116342.59,1
+EQ-1198,Topadora,Santa Fe,31,2014,Funcional,58619.59,0
+EQ-1199,Rodillo compactador,Córdoba,20,2011,Requiere_Reparacion,14543.29,0
+EQ-1200,Cargadora frontal,Mendoza,21,2022,Averia_Grave,74343.58,0
+EQ-1201,Topadora,Buenos Aires,113,2015,Requiere_Reparacion,267484.86,1
+EQ-1202,Retroexcavadora,Córdoba,115,2004,Requiere_Reparacion,82247.97,0
+EQ-1203,Topadora,Córdoba,27,2026,Requiere_Reparacion,114587.41,1
+EQ-1204,Rodillo compactador,Salta,24,2001,Funcional,19498.33,0
+EQ-1205,Cargadora frontal,Salta,7,2018,Funcional,18352.11,0
+EQ-1206,Topadora,Santa Fe,116,2017,Requiere_Reparacion,330973.78,1
+EQ-1207,Cargadora frontal,Buenos Aires,85,2015,Requiere_Reparacion,133762.03,1
+EQ-1208,Rodillo compactador,Mendoza,92,2001,Funcional,45733.78,0
+EQ-1209,Excavadora,Santa Fe,35,2013,Funcional,59028.02,0
+EQ-1210,Topadora,Salta,77,2024,Averia_Grave,496527.11,1
+EQ-1211,Cargadora frontal,Córdoba,8,2006,Funcional,4741.13,0
+EQ-1212,Rodillo compactador,Salta,82,2018,Averia_Grave,146923.34,1
+EQ-1213,Retroexcavadora,Salta,70,2023,Requiere_Reparacion,193654.81,1
+EQ-1214,Topadora,Córdoba,40,2025,Requiere_Reparacion,168047.27,1
+EQ-1215,Motoniveladora,Mendoza,86,2013,Funcional,175848.25,1
+EQ-1216,Motoniveladora,Córdoba,78,2008,Funcional,109126.64,1
+EQ-1217,Cargadora frontal,Córdoba,53,2018,Requiere_Reparacion,108419.73,1
+EQ-1218,Rodillo compactador,Córdoba,23,2013,Requiere_Reparacion,27724.4,0
+EQ-1219,Rodillo compactador,Mendoza,3,2016,Funcional,16149.25,0
+EQ-1220,Retroexcavadora,Córdoba,113,2020,Requiere_Reparacion,187260.38,1
+EQ-1221,Cargadora frontal,Mendoza,34,2019,Requiere_Reparacion,75540.58,0
+EQ-1222,Cargadora frontal,Santa Fe,37,2006,Funcional,34755.69,0
+EQ-1223,Topadora,Mendoza,82,2020,Requiere_Reparacion,365282.24,1
+EQ-1224,Cargadora frontal,Salta,31,2014,Funcional,50338.1,0
+EQ-1225,Retroexcavadora,Buenos Aires,46,2025,Requiere_Reparacion,102438.41,1
+EQ-1226,Topadora,Salta,86,2017,Funcional,251628.53,1
+EQ-1227,Motoniveladora,Buenos Aires,72,2024,Requiere_Reparacion,229678.26,1
+EQ-1228,Topadora,Santa Fe,79,2026,Requiere_Reparacion,333829.51,1
+EQ-1229,Motoniveladora,Córdoba,1,2026,Requiere_Reparacion,5107.7,0
+EQ-1230,Excavadora,Mendoza,55,2020,Requiere_Reparacion,170384.05,1
+EQ-1231,Rodillo compactador,Mendoza,58,2016,Averia_Grave,80224.09,0
+EQ-1232,Rodillo compactador,Salta,76,2003,Requiere_Reparacion,56045.3,0
+EQ-1233,Topadora,Santa Fe,19,2010,Averia_Grave,64174.59,0
+EQ-1234,Rodillo compactador,Salta,20,2012,Funcional,23611.04,0
+EQ-1235,Cargadora frontal,Córdoba,92,2021,Requiere_Reparacion,232257.06,1
+EQ-1236,Retroexcavadora,Córdoba,81,2015,Funcional,83236.76,0
+EQ-1237,Motoniveladora,Córdoba,98,2011,Requiere_Reparacion,191161.23,1
+EQ-1238,Motoniveladora,Santa Fe,33,2003,Requiere_Reparacion,45420.35,0
+EQ-1239,Excavadora,Mendoza,120,2019,Averia_Grave,417622.33,1
+EQ-1240,Motoniveladora,Salta,33,2011,Requiere_Reparacion,91012.04,0
+EQ-1241,Cargadora frontal,Córdoba,79,2000,Requiere_Reparacion,72087.96,0
+EQ-1242,Rodillo compactador,Córdoba,20,2007,Funcional,12813.89,0
+EQ-1243,Topadora,Salta,111,2023,Funcional,429977.07,1
+EQ-1244,Retroexcavadora,Santa Fe,40,2003,Averia_Grave,32333.56,0
+EQ-1245,Topadora,Córdoba,97,2010,Funcional,166476.86,1
+EQ-1246,Topadora,Salta,40,2013,Funcional,97691.97,0
+EQ-1247,Topadora,Santa Fe,95,2002,Averia_Grave,203989.45,1
+EQ-1248,Retroexcavadora,Salta,55,2004,Averia_Grave,78764.05,0
+EQ-1249,Excavadora,Salta,8,2025,Requiere_Reparacion,29994.55,0
+EQ-1250,Topadora,Salta,23,2015,Requiere_Reparacion,60073.13,0
+EQ-1251,Excavadora,Santa Fe,83,2005,Averia_Grave,123183.12,1
+EQ-1252,Retroexcavadora,Mendoza,24,2004,Funcional,16122.85,0
+EQ-1253,Motoniveladora,Salta,34,2011,Requiere_Reparacion,71463.05,0
+EQ-1254,Rodillo compactador,Córdoba,66,2019,Requiere_Reparacion,87508.08,0
+EQ-1255,Cargadora frontal,Buenos Aires,31,2019,Averia_Grave,75594.52,0
+EQ-1256,Motoniveladora,Córdoba,16,2005,Averia_Grave,27819.1,0
+EQ-1257,Excavadora,Mendoza,75,2019,Requiere_Reparacion,202415.11,1
+EQ-1258,Cargadora frontal,Santa Fe,83,2024,Funcional,127373.22,1
+EQ-1259,Cargadora frontal,Buenos Aires,88,2006,Requiere_Reparacion,102628.28,1
+EQ-1260,Rodillo compactador,Santa Fe,114,2000,Funcional,46318.29,0
+EQ-1261,Excavadora,Buenos Aires,15,2025,Averia_Grave,44050.16,0
+EQ-1262,Topadora,Santa Fe,52,2014,Funcional,103094.45,1
+EQ-1263,Retroexcavadora,Santa Fe,29,2020,Funcional,39855.63,0
+EQ-1264,Rodillo compactador,Mendoza,109,2008,Averia_Grave,141403.64,1
+EQ-1265,Excavadora,Santa Fe,65,2008,Requiere_Reparacion,120967.37,1
+EQ-1266,Motoniveladora,Santa Fe,12,2006,Averia_Grave,21255.35,0
+EQ-1267,Motoniveladora,Mendoza,84,2005,Funcional,119411.14,1
+EQ-1268,Retroexcavadora,Mendoza,6,2012,Averia_Grave,6582.02,0
+EQ-1269,Topadora,Salta,33,2002,Funcional,37392.33,0
+EQ-1270,Motoniveladora,Córdoba,87,2022,Funcional,209620.52,1
+EQ-1271,Retroexcavadora,Santa Fe,61,2013,Requiere_Reparacion,93875.42,0
+EQ-1272,Motoniveladora,Córdoba,92,2024,Funcional,253338.16,1
+EQ-1273,Topadora,Santa Fe,69,2013,Requiere_Reparacion,157889.83,1
+EQ-1275,Rodillo compactador,Santa Fe,68,2013,Funcional,41433.56,0
+EQ-1276,Rodillo compactador,Buenos Aires,7,2004,Averia_Grave,3659.6,0
+EQ-1277,Cargadora frontal,Santa Fe,9,2022,Funcional,12579.48,0
+EQ-1278,Rodillo compactador,Salta,94,2019,Requiere_Reparacion,140634.19,1
+EQ-1279,Motoniveladora,Salta,5,2003,Averia_Grave,1616.1,0
+EQ-1280,Topadora,Santa Fe,46,2015,Funcional,96300.63,0
+EQ-1281,Rodillo compactador,Buenos Aires,2,2014,Averia_Grave,3752.9,0
+EQ-1282,Rodillo compactador,Córdoba,37,2005,Funcional,22641.87,0
+EQ-1283,Retroexcavadora,Buenos Aires,72,2003,Requiere_Reparacion,72656.83,0
+EQ-1284,Rodillo compactador,Mendoza,21,2020,Funcional,34425.02,0
+EQ-1285,Retroexcavadora,Salta,56,2007,Averia_Grave,81992.53,0
+EQ-1286,Motoniveladora,Santa Fe,120,2014,Requiere_Reparacion,277244.06,1
+EQ-1287,Topadora,Buenos Aires,9,2006,Requiere_Reparacion,18699.08,0
+EQ-1288,Excavadora,Buenos Aires,8,2017,Averia_Grave,17637.53,0
+EQ-1289,Motoniveladora,Salta,33,2001,Requiere_Reparacion,48857.84,0
+EQ-1290,Cargadora frontal,Córdoba,100,2009,Averia_Grave,175647.06,1
+EQ-1291,Excavadora,Buenos Aires,49,2014,Averia_Grave,110586.19,1
+EQ-1293,Retroexcavadora,Córdoba,5,2016,Averia_Grave,6851.93,0
+EQ-1294,Motoniveladora,Mendoza,89,2004,Averia_Grave,169419.81,1
+EQ-1295,Topadora,Salta,9,2011,Funcional,23873.08,0
+EQ-1296,Cargadora frontal,Córdoba,86,2020,Averia_Grave,262279.18,1
+EQ-1297,Excavadora,Mendoza,18,2009,Averia_Grave,35395.51,0
+EQ-1298,Rodillo compactador,Buenos Aires,104,2004,Requiere_Reparacion,68361.43,0
+EQ-1299,Cargadora frontal,Buenos Aires,36,2022,Funcional,59353.57,0
+EQ-1300,Motoniveladora,Buenos Aires,23,2021,Averia_Grave,81795.66,0
+EQ-1301,Rodillo compactador,Salta,41,2018,Funcional,46621.55,0
+EQ-1302,Retroexcavadora,Santa Fe,1,2021,Requiere_Reparacion,4318.87,0
+EQ-1303,Rodillo compactador,Salta,20,2021,Requiere_Reparacion,15614.48,0
+EQ-1304,Topadora,Buenos Aires,72,2020,Funcional,201533.88,1
+EQ-1305,Cargadora frontal,Buenos Aires,37,2013,Averia_Grave,71855.68,0
+EQ-1306,Rodillo compactador,Salta,43,2000,Funcional,21646.09,0
+EQ-1307,Excavadora,Buenos Aires,97,2016,Requiere_Reparacion,244746.62,1
+EQ-1308,Excavadora,Buenos Aires,15,2007,Averia_Grave,25303.19,0
+EQ-1309,Retroexcavadora,Santa Fe,48,2020,Requiere_Reparacion,83524.02,0
+EQ-1310,Topadora,Mendoza,23,2012,Averia_Grave,66224.05,0
+EQ-1311,Cargadora frontal,Córdoba,58,2024,Funcional,120394.49,1
+EQ-1312,Retroexcavadora,Santa Fe,40,2016,Averia_Grave,60173.89,0
+EQ-1313,Rodillo compactador,Mendoza,6,2014,Averia_Grave,6193.19,0
+EQ-1314,Topadora,Santa Fe,9,2024,Funcional,30183.64,0
+EQ-1315,Topadora,Córdoba,103,2012,Requiere_Reparacion,282206.88,1
+EQ-1316,Excavadora,Buenos Aires,7,2010,Requiere_Reparacion,3952.1,0
+EQ-1317,Rodillo compactador,Santa Fe,94,2010,Requiere_Reparacion,89469.94,0
+EQ-1318,Cargadora frontal,Salta,110,2023,Averia_Grave,319740.12,1
+EQ-1319,Retroexcavadora,Mendoza,56,2020,Requiere_Reparacion,108407.11,1
+EQ-1320,Retroexcavadora,Salta,38,2004,Requiere_Reparacion,34153.83,0
+EQ-1321,Motoniveladora,Buenos Aires,94,2013,Funcional,177977.52,1
+EQ-1322,Excavadora,Buenos Aires,118,2010,Requiere_Reparacion,200190.79,1
+EQ-1323,Cargadora frontal,Santa Fe,15,2017,Averia_Grave,32747.87,0
+EQ-1325,Topadora,Santa Fe,114,2019,Requiere_Reparacion,342164.61,1
+EQ-1326,Excavadora,Salta,18,2020,Funcional,42842.89,0
+EQ-1327,Rodillo compactador,Córdoba,7,2006,Averia_Grave,6764.86,0
+EQ-1328,Motoniveladora,Santa Fe,86,2004,Requiere_Reparacion,119871.13,1
+EQ-1329,Rodillo compactador,Mendoza,10,2016,Requiere_Reparacion,18937.4,0
+EQ-1330,Retroexcavadora,Buenos Aires,73,2006,Funcional,58398.48,0
+EQ-1331,Retroexcavadora,Salta,8,2025,Requiere_Reparacion,14600.75,0
+EQ-1332,Rodillo compactador,Córdoba,83,2020,Averia_Grave,124685.73,1
+EQ-1333,Retroexcavadora,Salta,28,2025,Requiere_Reparacion,70848.45,0
+EQ-1334,Rodillo compactador,Mendoza,12,2014,Requiere_Reparacion,6247.86,0
+EQ-1335,Cargadora frontal,Buenos Aires,8,2025,Averia_Grave,21904.21,0
+EQ-1336,Topadora,Mendoza,23,2000,Requiere_Reparacion,32681.49,0
+EQ-1337,Cargadora frontal,Buenos Aires,65,2007,Requiere_Reparacion,98967.45,0
+EQ-1338,Excavadora,Santa Fe,10,2000,Requiere_Reparacion,8337.18,0
+EQ-1339,Rodillo compactador,Salta,97,2018,Funcional,99940.9,0
+EQ-1340,Retroexcavadora,Salta,73,2013,Averia_Grave,105133.3,1
+EQ-1341,Cargadora frontal,Salta,36,2007,Averia_Grave,60559.39,0
+EQ-1342,Motoniveladora,Santa Fe,119,2008,Averia_Grave,211913.11,1
+EQ-1343,Motoniveladora,Santa Fe,80,2017,Averia_Grave,200461.39,1
+EQ-1344,Cargadora frontal,Córdoba,81,2004,Requiere_Reparacion,101242.3,1
+EQ-1345,Excavadora,Salta,21,2013,Funcional,43073.08,0
+EQ-1346,Topadora,Santa Fe,86,2016,Requiere_Reparacion,234949.07,1
+EQ-1347,Topadora,Mendoza,68,2006,Averia_Grave,191491.87,1
+EQ-1348,Rodillo compactador,Córdoba,119,2006,Averia_Grave,105405.46,1
+EQ-1349,Rodillo compactador,Mendoza,58,2009,Requiere_Reparacion,63991.32,0
+EQ-1350,Cargadora frontal,Córdoba,82,2015,Requiere_Reparacion,134946.22,1
+EQ-1351,Motoniveladora,Mendoza,41,2006,Averia_Grave,64764.95,0
+EQ-1352,Retroexcavadora,Buenos Aires,5,2010,Averia_Grave,119.55,0
+EQ-1353,Retroexcavadora,Buenos Aires,16,2014,Averia_Grave,29162.4,0
+EQ-1354,Topadora,Córdoba,105,2005,Requiere_Reparacion,183087.94,1
+EQ-1355,Excavadora,Santa Fe,89,2015,Funcional,141441.04,1
+EQ-1356,Retroexcavadora,Mendoza,44,2003,Requiere_Reparacion,49279.58,0
+EQ-1357,Retroexcavadora,Córdoba,84,2003,Requiere_Reparacion,67949.03,0
+EQ-1358,Motoniveladora,Buenos Aires,1,2006,Averia_Grave,3946.99,0
+EQ-1359,Motoniveladora,Córdoba,5,2007,Requiere_Reparacion,13282.35,0
+EQ-1360,Retroexcavadora,Santa Fe,61,2000,Requiere_Reparacion,37163.77,0
+EQ-1361,Motoniveladora,Santa Fe,75,2025,Requiere_Reparacion,247728.02,1
+EQ-1362,Motoniveladora,Mendoza,113,2008,Requiere_Reparacion,160739.06,1
+EQ-1363,Retroexcavadora,Córdoba,92,2021,Requiere_Reparacion,158343.12,1
+EQ-1364,Excavadora,Mendoza,31,2024,Funcional,76277.45,0
+EQ-1365,Cargadora frontal,Mendoza,98,2021,Averia_Grave,276843.56,1
+EQ-1366,Motoniveladora,Mendoza,59,2022,Requiere_Reparacion,198770.99,1
+EQ-1367,Excavadora,Santa Fe,100,2002,Requiere_Reparacion,121810.41,1
+EQ-1368,Retroexcavadora,Salta,21,2010,Funcional,26531.67,0
+EQ-1369,Topadora,Córdoba,4,2020,Requiere_Reparacion,11864.45,0
+EQ-1370,Cargadora frontal,Mendoza,7,2015,Averia_Grave,17721.91,0
+EQ-1371,Topadora,Buenos Aires,119,2000,Averia_Grave,227086.41,1
+EQ-1372,Retroexcavadora,Buenos Aires,10,2015,Funcional,12835.67,0
+EQ-1374,Retroexcavadora,Santa Fe,88,2022,Averia_Grave,180839.16,1
+EQ-1375,Topadora,Mendoza,18,2010,Funcional,39726.77,0
+EQ-1376,Topadora,Mendoza,104,2006,Funcional,142927.47,1
+EQ-1377,Topadora,Mendoza,18,2008,Funcional,28655.8,0
+EQ-1378,Rodillo compactador,Córdoba,18,2008,Averia_Grave,11675.09,0
+EQ-1379,Cargadora frontal,Buenos Aires,70,2009,Funcional,78243.55,0
+EQ-1380,Cargadora frontal,Buenos Aires,35,2008,Requiere_Reparacion,46948.71,0
+EQ-1381,Topadora,Salta,35,2012,Averia_Grave,122367.5,1
+EQ-1382,Excavadora,Córdoba,24,2001,Averia_Grave,36322.62,0
+EQ-1383,Retroexcavadora,Santa Fe,73,2007,Requiere_Reparacion,66526.56,0
+EQ-1384,Topadora,Santa Fe,4,2008,Averia_Grave,9085.78,0
+EQ-1385,Retroexcavadora,Buenos Aires,30,2004,Funcional,19677.69,0
+EQ-1386,Excavadora,Santa Fe,67,2023,Averia_Grave,191983.09,1
+EQ-1387,Cargadora frontal,Buenos Aires,59,2018,Funcional,79279.5,0
+EQ-1388,Excavadora,Buenos Aires,84,2024,Funcional,199511.58,1
+EQ-1389,Topadora,Buenos Aires,26,2015,Averia_Grave,95288.75,0
+EQ-1390,Topadora,Salta,78,2002,Funcional,109484.59,1
+EQ-1391,Excavadora,Santa Fe,92,2024,Funcional,204280.4,1
+EQ-1392,Cargadora frontal,Salta,47,2012,Requiere_Reparacion,69997.51,0
+EQ-1393,Topadora,Santa Fe,31,2018,Requiere_Reparacion,105038.11,1
+EQ-1394,Rodillo compactador,Córdoba,67,2010,Funcional,49293.66,0
+EQ-1395,Excavadora,Mendoza,70,2013,Requiere_Reparacion,140130.93,1
+EQ-1396,Cargadora frontal,Salta,12,2013,Averia_Grave,23488.94,0
+EQ-1397,Cargadora frontal,Santa Fe,68,2007,Averia_Grave,94197.99,0
+EQ-1398,Cargadora frontal,Buenos Aires,19,2014,Funcional,39212.9,0
+EQ-1399,Motoniveladora,Córdoba,69,2019,Requiere_Reparacion,184894.78,1
+EQ-1400,Excavadora,Salta,112,2000,Averia_Grave,151528.38,1
+EQ-1401,Topadora,Santa Fe,65,2003,Funcional,90699.75,0
+EQ-1402,Excavadora,Salta,92,2022,Funcional,222798.13,1
+EQ-1403,Excavadora,Santa Fe,38,2015,Funcional,78951.13,0
+EQ-1404,Excavadora,Buenos Aires,111,2026,Requiere_Reparacion,416874.3,1
+EQ-1405,Excavadora,Salta,98,2016,Funcional,186632.19,1
+EQ-1407,Retroexcavadora,Mendoza,89,2024,Averia_Grave,298480.83,1
+EQ-1408,Topadora,Salta,78,2017,Funcional,215920.11,1
+EQ-1409,Motoniveladora,Buenos Aires,64,2008,Requiere_Reparacion,101603.34,1
+EQ-1410,Excavadora,Salta,112,2014,Funcional,230114.8,1
+EQ-1411,Motoniveladora,Córdoba,102,2006,Funcional,139400.3,1
+EQ-1412,Cargadora frontal,Salta,51,2009,Averia_Grave,105798.72,1
+EQ-1413,Excavadora,Buenos Aires,11,2018,Requiere_Reparacion,23482.65,0
+EQ-1414,Rodillo compactador,Santa Fe,1,2004,Averia_Grave,3191.85,0
+EQ-1415,Cargadora frontal,Mendoza,29,2018,Requiere_Reparacion,45105.75,0
+EQ-1416,Rodillo compactador,Buenos Aires,8,2015,Funcional,3654.53,0
+EQ-1417,Cargadora frontal,Buenos Aires,26,2008,Requiere_Reparacion,34116.78,0
+EQ-1418,Retroexcavadora,Salta,14,2001,Funcional,0.0,0
+EQ-1419,Topadora,Buenos Aires,118,2019,Averia_Grave,470353.22,1
+EQ-1420,Retroexcavadora,Mendoza,12,2022,Requiere_Reparacion,21661.32,0
+EQ-1421,Topadora,Salta,76,2019,Requiere_Reparacion,257672.0,1
+EQ-1422,Topadora,Mendoza,43,2011,Requiere_Reparacion,116441.97,1
+EQ-1423,Cargadora frontal,Santa Fe,21,2017,Requiere_Reparacion,38316.24,0
+EQ-1424,Rodillo compactador,Santa Fe,85,2011,Averia_Grave,80321.02,0
+EQ-1425,Excavadora,Mendoza,117,2009,Funcional,171973.51,1
+EQ-1426,Rodillo compactador,Santa Fe,95,2008,Funcional,63581.46,0
+EQ-1427,Rodillo compactador,Santa Fe,118,2005,Funcional,61674.89,0
+EQ-1428,Topadora,Buenos Aires,71,2026,Requiere_Reparacion,274578.46,1
+EQ-1429,Excavadora,Mendoza,81,2017,Requiere_Reparacion,169173.44,1
+EQ-1430,Rodillo compactador,Mendoza,18,2004,Funcional,7948.42,0
+EQ-1431,Retroexcavadora,Mendoza,103,2023,Requiere_Reparacion,163046.41,1
+EQ-1432,Excavadora,Buenos Aires,90,2004,Requiere_Reparacion,142688.97,1
+EQ-1433,Excavadora,Mendoza,31,2016,Funcional,53104.95,0
+EQ-1434,Cargadora frontal,Mendoza,43,2004,Averia_Grave,59727.6,0
+EQ-1435,Excavadora,Buenos Aires,74,2009,Requiere_Reparacion,93960.87,0
+EQ-1436,Motoniveladora,Salta,2,2017,Requiere_Reparacion,2817.23,0
+EQ-1437,Retroexcavadora,Santa Fe,99,2026,Requiere_Reparacion,217324.42,1
+EQ-1438,Cargadora frontal,Santa Fe,34,2026,Requiere_Reparacion,108862.75,1
+EQ-1439,Excavadora,Mendoza,9,2024,Averia_Grave,37811.07,0
+EQ-1440,Topadora,Santa Fe,40,2006,Requiere_Reparacion,84053.41,0
+EQ-1441,Rodillo compactador,Santa Fe,101,2002,Requiere_Reparacion,63780.25,0
+EQ-1442,Cargadora frontal,Córdoba,33,2024,Averia_Grave,85223.43,0
+EQ-1443,Topadora,Salta,65,2024,Averia_Grave,400198.85,1
+EQ-1444,Retroexcavadora,Salta,98,2007,Averia_Grave,128328.26,1
+EQ-1445,Motoniveladora,Buenos Aires,5,2000,Funcional,10961.97,0
+EQ-1446,Motoniveladora,Mendoza,92,2017,Funcional,228742.15,1
+EQ-1447,Topadora,Buenos Aires,35,2002,Requiere_Reparacion,60721.87,0
+EQ-1449,Rodillo compactador,Salta,23,2025,Requiere_Reparacion,46611.32,0
+EQ-1451,Excavadora,Córdoba,95,2003,Funcional,99896.47,0
+EQ-1452,Motoniveladora,Córdoba,97,2017,Funcional,191434.36,1
+EQ-1453,Motoniveladora,Mendoza,118,2009,Requiere_Reparacion,227126.01,1
+EQ-1454,Excavadora,Santa Fe,82,2014,Funcional,108379.65,1
+EQ-1455,Cargadora frontal,Santa Fe,56,2024,Requiere_Reparacion,136286.27,1
+EQ-1456,Motoniveladora,Salta,24,2006,Averia_Grave,53604.87,0
+EQ-1457,Topadora,Santa Fe,36,2017,Requiere_Reparacion,121798.79,1
+EQ-1458,Retroexcavadora,Mendoza,78,2022,Averia_Grave,180653.92,1
+EQ-1459,Excavadora,Buenos Aires,42,2011,Requiere_Reparacion,61872.57,0
+EQ-1460,Cargadora frontal,Córdoba,59,2026,Averia_Grave,152921.56,1
+EQ-1461,Rodillo compactador,Salta,21,2012,Funcional,23023.02,0
+EQ-1462,Excavadora,Salta,53,2012,Averia_Grave,147144.45,1
+EQ-1463,Motoniveladora,Mendoza,29,2023,Averia_Grave,112013.95,1
+EQ-1464,Motoniveladora,Córdoba,14,2017,Funcional,30128.97,0
+EQ-1465,Topadora,Buenos Aires,16,2023,Requiere_Reparacion,71253.87,0
+EQ-1466,Motoniveladora,Salta,63,2021,Averia_Grave,251354.7,1
+EQ-1467,Cargadora frontal,Mendoza,44,2019,Funcional,76394.4,0
+EQ-1468,Retroexcavadora,Córdoba,12,2006,Averia_Grave,13176.81,0
+EQ-1469,Rodillo compactador,Santa Fe,62,2010,Averia_Grave,45598.91,0
+EQ-1470,Motoniveladora,Mendoza,20,2023,Averia_Grave,80070.07,0
+EQ-1471,Topadora,Santa Fe,2,2016,Requiere_Reparacion,344.13,0
+EQ-1472,Rodillo compactador,Salta,16,2007,Requiere_Reparacion,22311.05,0
+EQ-1473,Retroexcavadora,Buenos Aires,54,2008,Averia_Grave,85490.09,0
+EQ-1474,Excavadora,Córdoba,115,2020,Requiere_Reparacion,253389.69,1
+EQ-1475,Topadora,Buenos Aires,30,2004,Funcional,34335.35,0
+EQ-1476,Excavadora,Mendoza,35,2003,Funcional,41948.73,0
+EQ-1477,Retroexcavadora,Mendoza,30,2020,Averia_Grave,69639.01,0
+EQ-1478,Retroexcavadora,Salta,43,2007,Requiere_Reparacion,48231.63,0
+EQ-1479,Excavadora,Santa Fe,87,2020,Funcional,173784.56,1
+EQ-1480,Retroexcavadora,Buenos Aires,39,2014,Requiere_Reparacion,61204.36,0
+EQ-1481,Motoniveladora,Santa Fe,79,2026,Averia_Grave,388852.38,1
+EQ-1482,Motoniveladora,Buenos Aires,108,2014,Requiere_Reparacion,278883.37,1
+EQ-1483,Excavadora,Mendoza,114,2023,Averia_Grave,466901.72,1
+EQ-1484,Motoniveladora,Mendoza,68,2022,Averia_Grave,278766.89,1
+EQ-1485,Retroexcavadora,Salta,86,2005,Averia_Grave,110323.93,1
+EQ-1486,Topadora,Córdoba,111,2026,Averia_Grave,618824.76,1
+EQ-1487,Motoniveladora,Córdoba,95,2020,Funcional,236713.68,1
+EQ-1488,Motoniveladora,Buenos Aires,36,2002,Requiere_Reparacion,51707.86,0
+EQ-1489,Motoniveladora,Santa Fe,16,2000,Funcional,2021.68,0
+EQ-1490,Cargadora frontal,Santa Fe,14,2007,Averia_Grave,15998.37,0
+EQ-1491,Excavadora,Mendoza,106,2000,Funcional,122391.12,1
+EQ-1492,Retroexcavadora,Mendoza,67,2009,Requiere_Reparacion,71520.27,0
+EQ-1493,Motoniveladora,Buenos Aires,36,2026,Averia_Grave,154994.79,1
+EQ-1494,Excavadora,Córdoba,42,2012,Funcional,56088.72,0
+EQ-1495,Retroexcavadora,Santa Fe,34,2000,Averia_Grave,36415.46,0
+EQ-1496,Retroexcavadora,Córdoba,97,2013,Funcional,94880.28,0
+EQ-1497,Cargadora frontal,Buenos Aires,74,2005,Requiere_Reparacion,104856.85,1
+EQ-1498,Rodillo compactador,Salta,106,2023,Requiere_Reparacion,190525.97,1
+EQ-1499,Retroexcavadora,Mendoza,37,2002,Requiere_Reparacion,35488.19,0
+EQ-1500,Topadora,Santa Fe,57,2020,Requiere_Reparacion,220729.65,1
+EQ-1501,Cargadora frontal,Córdoba,15,2012,Averia_Grave,24276.98,0
+EQ-1503,Excavadora,Buenos Aires,62,2018,Requiere_Reparacion,122369.44,1
+EQ-1504,Excavadora,Santa Fe,67,2012,Averia_Grave,138284.59,1
+EQ-1505,Cargadora frontal,Salta,50,2020,Averia_Grave,132066.55,1
+EQ-1506,Excavadora,Salta,33,2016,Funcional,59655.93,0
+EQ-1507,Topadora,Córdoba,114,2021,Averia_Grave,491082.27,1
+EQ-1508,Retroexcavadora,Mendoza,59,2012,Funcional,62329.93,0
+EQ-1509,Topadora,Buenos Aires,81,2000,Requiere_Reparacion,133697.03,1
+EQ-1510,Rodillo compactador,Buenos Aires,5,2003,Requiere_Reparacion,4808.83,0
+EQ-1511,Retroexcavadora,Córdoba,34,2012,Averia_Grave,47468.57,0
+EQ-1512,Excavadora,Salta,97,2010,Funcional,147926.92,1
+EQ-1513,Rodillo compactador,Mendoza,11,2021,Funcional,11990.76,0
+EQ-1514,Excavadora,Santa Fe,13,2011,Averia_Grave,22594.29,0
+EQ-1515,Excavadora,Córdoba,98,2023,Funcional,229578.68,1
+EQ-1516,Topadora,Buenos Aires,38,2005,Requiere_Reparacion,64995.91,0
+EQ-1517,Retroexcavadora,Córdoba,33,2010,Averia_Grave,35503.18,0
+EQ-1518,Motoniveladora,Buenos Aires,68,2020,Requiere_Reparacion,182131.41,1
+EQ-1519,Retroexcavadora,Buenos Aires,24,2003,Funcional,19689.64,0
+EQ-1520,Retroexcavadora,Mendoza,6,2008,Requiere_Reparacion,4981.93,0
+EQ-1521,Topadora,Buenos Aires,1,2020,Averia_Grave,0.0,0
+EQ-1522,Rodillo compactador,Buenos Aires,10,2015,Requiere_Reparacion,6743.59,0
+EQ-1523,Excavadora,Santa Fe,20,2021,Funcional,45234.87,0
+EQ-1524,Motoniveladora,Córdoba,84,2013,Funcional,120102.15,1
+EQ-1525,Cargadora frontal,Santa Fe,36,2023,Requiere_Reparacion,87499.19,0
+EQ-1526,Motoniveladora,Buenos Aires,9,2023,Averia_Grave,24963.89,0
+EQ-1527,Excavadora,Córdoba,2,2026,Requiere_Reparacion,5507.53,0
+EQ-1528,Motoniveladora,Santa Fe,58,2003,Funcional,54167.33,0
+EQ-1529,Motoniveladora,Mendoza,101,2015,Requiere_Reparacion,275520.24,1
+EQ-1530,Topadora,Santa Fe,41,2003,Funcional,64271.2,0
+EQ-1531,Motoniveladora,Santa Fe,8,2006,Funcional,12855.67,0
+EQ-1532,Motoniveladora,Santa Fe,28,2008,Averia_Grave,52017.38,0
+EQ-1533,Topadora,Córdoba,60,2017,Averia_Grave,165511.61,1
+EQ-1534,Excavadora,Córdoba,23,2011,Funcional,35202.07,0
+EQ-1535,Rodillo compactador,Santa Fe,118,2023,Requiere_Reparacion,205746.38,1
+EQ-1536,Motoniveladora,Buenos Aires,92,2008,Funcional,148315.98,1
+EQ-1537,Motoniveladora,Mendoza,42,2016,Funcional,101642.4,1
+EQ-1538,Motoniveladora,Mendoza,115,2020,Requiere_Reparacion,309937.53,1
+EQ-1539,Rodillo compactador,Córdoba,40,2026,Requiere_Reparacion,70301.74,0
+EQ-1540,Cargadora frontal,Córdoba,17,2006,Averia_Grave,22289.12,0
+EQ-1541,Retroexcavadora,Córdoba,113,2019,Averia_Grave,192306.49,1
+EQ-1542,Excavadora,Mendoza,116,2002,Funcional,111165.15,1
+EQ-1544,Cargadora frontal,Buenos Aires,72,2011,Requiere_Reparacion,94847.14,0
+EQ-1545,Excavadora,Santa Fe,21,2025,Funcional,35073.56,0
+EQ-1546,Cargadora frontal,Buenos Aires,77,2020,Averia_Grave,224445.74,1
+EQ-1547,Rodillo compactador,Santa Fe,83,2025,Funcional,116776.6,1
+EQ-1548,Topadora,Córdoba,86,2022,Requiere_Reparacion,295176.64,1
+EQ-1549,Retroexcavadora,Córdoba,69,2011,Averia_Grave,86039.58,0
+EQ-1550,Motoniveladora,Santa Fe,85,2019,Funcional,216016.3,1
+EQ-1551,Excavadora,Córdoba,67,2000,Averia_Grave,85823.44,0
+EQ-1552,Topadora,Córdoba,99,2015,Funcional,242766.87,1
+EQ-1553,Cargadora frontal,Mendoza,22,2001,Averia_Grave,29105.06,0
+EQ-1554,Cargadora frontal,Salta,59,2019,Funcional,97488.76,0
+EQ-1555,Retroexcavadora,Buenos Aires,50,2026,Funcional,79548.1,0
+EQ-1556,Motoniveladora,Córdoba,65,2018,Requiere_Reparacion,189747.16,1
+EQ-1557,Topadora,Salta,18,2022,Averia_Grave,100443.13,1
+EQ-1558,Rodillo compactador,Santa Fe,39,2006,Funcional,12976.56,0
+EQ-1559,Topadora,Córdoba,115,2026,Averia_Grave,628706.17,1
+EQ-1560,Topadora,Santa Fe,13,2014,Funcional,25111.99,0
+EQ-1561,Excavadora,Buenos Aires,77,2018,Requiere_Reparacion,154298.4,1
+EQ-1562,Excavadora,Buenos Aires,80,2020,Requiere_Reparacion,209011.99,1
+EQ-1563,Excavadora,Mendoza,57,2017,Funcional,100182.15,1
+EQ-1564,Topadora,Santa Fe,5,2008,Averia_Grave,7934.38,0
+EQ-1565,Cargadora frontal,Mendoza,5,2016,Requiere_Reparacion,16189.5,0
+EQ-1566,Retroexcavadora,Córdoba,34,2017,Requiere_Reparacion,43592.98,0
+EQ-1567,Topadora,Salta,13,2023,Requiere_Reparacion,59044.31,0
+EQ-1568,Cargadora frontal,Santa Fe,12,2012,Requiere_Reparacion,20885.39,0
+EQ-1569,Topadora,Mendoza,20,2013,Requiere_Reparacion,67305.89,0
+EQ-1570,Topadora,Buenos Aires,23,2013,Averia_Grave,69876.16,0
+EQ-1571,Motoniveladora,Buenos Aires,101,2003,Requiere_Reparacion,172513.84,1
+EQ-1572,Retroexcavadora,Mendoza,77,2002,Requiere_Reparacion,73058.2,0
+EQ-1573,Rodillo compactador,Salta,4,2000,Requiere_Reparacion,0.0,0
+EQ-1574,Rodillo compactador,Salta,76,2017,Requiere_Reparacion,129125.67,1
+EQ-1575,Motoniveladora,Córdoba,17,2011,Requiere_Reparacion,28834.72,0
+EQ-1576,Excavadora,Buenos Aires,51,2023,Requiere_Reparacion,146976.99,1
+EQ-1577,Cargadora frontal,Salta,5,2018,Requiere_Reparacion,4581.91,0
+EQ-1578,Rodillo compactador,Mendoza,11,2003,Averia_Grave,5578.92,0
+EQ-1579,Motoniveladora,Córdoba,16,2002,Averia_Grave,23194.74,0
+EQ-1580,Cargadora frontal,Mendoza,53,2009,Averia_Grave,96617.49,0
+EQ-1581,Excavadora,Salta,56,2024,Averia_Grave,255703.48,1
+EQ-1582,Excavadora,Córdoba,43,2001,Requiere_Reparacion,55418.93,0
+EQ-1583,Cargadora frontal,Mendoza,75,2005,Averia_Grave,120843.34,1
+EQ-1584,Retroexcavadora,Mendoza,87,2000,Funcional,51613.75,0
+EQ-1585,Cargadora frontal,Santa Fe,88,2011,Requiere_Reparacion,113160.26,1
+EQ-1586,Excavadora,Mendoza,70,2026,Funcional,234474.1,1
+EQ-1587,Rodillo compactador,Córdoba,66,2018,Funcional,61303.0,0
+EQ-1588,Motoniveladora,Salta,59,2013,Averia_Grave,148373.98,1
+EQ-1589,Topadora,Salta,29,2003,Averia_Grave,69649.05,0
+EQ-1590,Motoniveladora,Salta,59,2009,Requiere_Reparacion,145351.43,1
+EQ-1591,Rodillo compactador,Mendoza,2,2014,Funcional,1506.47,0
+EQ-1592,Retroexcavadora,Buenos Aires,116,2007,Requiere_Reparacion,124508.23,1
+EQ-1593,Retroexcavadora,Córdoba,45,2019,Requiere_Reparacion,53895.43,0
+EQ-1594,Motoniveladora,Santa Fe,91,2026,Averia_Grave,375357.41,1
+EQ-1595,Rodillo compactador,Salta,115,2005,Averia_Grave,96548.69,0
+EQ-1596,Motoniveladora,Santa Fe,60,2006,Requiere_Reparacion,93738.69,0
+EQ-1597,Cargadora frontal,Santa Fe,104,2003,Funcional,73251.94,0
+EQ-1598,Rodillo compactador,Buenos Aires,58,2019,Funcional,52436.14,0
+EQ-1599,Topadora,Mendoza,16,2012,Funcional,31580.31,0
+EQ-1600,Rodillo compactador,Córdoba,4,2007,Requiere_Reparacion,0.0,0
+EQ-1601,Excavadora,Buenos Aires,17,2005,Funcional,23742.9,0
+EQ-1602,Rodillo compactador,Salta,114,2001,Funcional,59069.96,0
+EQ-1603,Rodillo compactador,Buenos Aires,58,2012,Funcional,45579.58,0
+EQ-1604,Excavadora,Buenos Aires,39,2018,Funcional,73291.95,0
+EQ-1605,Motoniveladora,Buenos Aires,54,2006,Averia_Grave,104161.26,1
+EQ-1606,Topadora,Santa Fe,31,2000,Funcional,41581.89,0
+EQ-1607,Motoniveladora,Buenos Aires,105,2012,Averia_Grave,279447.76,1
+EQ-1608,Cargadora frontal,Salta,120,2018,Funcional,232564.93,1
+EQ-1609,Excavadora,Santa Fe,11,2009,Funcional,7443.87,0
+EQ-1610,Motoniveladora,Córdoba,87,2006,Funcional,98834.95,0
+EQ-1611,Rodillo compactador,Buenos Aires,41,2004,Averia_Grave,41092.16,0
+EQ-1612,Motoniveladora,Santa Fe,6,2020,Funcional,8977.73,0
+EQ-1613,Rodillo compactador,Buenos Aires,111,2023,Requiere_Reparacion,171927.55,1
+EQ-1614,Rodillo compactador,Salta,8,2020,Funcional,7061.67,0
+EQ-1615,Motoniveladora,Córdoba,25,2013,Averia_Grave,62146.87,0
+EQ-1616,Excavadora,Santa Fe,4,2019,Funcional,0.0,0
+EQ-1617,Rodillo compactador,Buenos Aires,57,2010,Requiere_Reparacion,48008.81,0
+EQ-1619,Motoniveladora,Córdoba,39,2009,Funcional,59481.63,0
+EQ-1620,Topadora,Buenos Aires,9,2019,Funcional,28390.76,0
+EQ-1621,Excavadora,Mendoza,14,2017,Averia_Grave,51042.27,0
+EQ-1622,Motoniveladora,Salta,113,2026,Funcional,319007.35,1
+EQ-1623,Topadora,Salta,97,2026,Funcional,439061.15,1
+EQ-1624,Motoniveladora,Córdoba,113,2006,Requiere_Reparacion,207578.1,1
+EQ-1625,Cargadora frontal,Mendoza,64,2000,Funcional,48627.19,0
+EQ-1626,Topadora,Santa Fe,66,2007,Averia_Grave,123505.58,1
+EQ-1627,Cargadora frontal,Buenos Aires,95,2023,Requiere_Reparacion,213840.22,1
+EQ-1628,Cargadora frontal,Buenos Aires,74,2021,Requiere_Reparacion,177349.95,1
+EQ-1629,Retroexcavadora,Santa Fe,53,2002,Funcional,46812.84,0
+EQ-1630,Motoniveladora,Santa Fe,36,2004,Requiere_Reparacion,41605.87,0
+EQ-1631,Cargadora frontal,Buenos Aires,59,2015,Requiere_Reparacion,125552.1,1
+EQ-1632,Topadora,Salta,8,2017,Funcional,21089.99,0
+EQ-1633,Motoniveladora,Mendoza,24,2026,Averia_Grave,105673.42,1
+EQ-1634,Topadora,Santa Fe,89,2020,Requiere_Reparacion,275673.89,1
+EQ-1635,Retroexcavadora,Salta,105,2005,Averia_Grave,145641.95,1
+EQ-1636,Cargadora frontal,Salta,13,2001,Funcional,23065.29,0
+EQ-1637,Motoniveladora,Salta,12,2017,Funcional,25853.78,0
+EQ-1638,Cargadora frontal,Córdoba,11,2014,Averia_Grave,14153.06,0
+EQ-1639,Excavadora,Salta,95,2024,Averia_Grave,410747.49,1
+EQ-1640,Excavadora,Santa Fe,38,2015,Requiere_Reparacion,86078.0,0
+EQ-1641,Rodillo compactador,Mendoza,40,2013,Funcional,28884.77,0
+EQ-1642,Motoniveladora,Salta,2,2008,Averia_Grave,731.9,0
+EQ-1643,Retroexcavadora,Buenos Aires,117,2002,Funcional,94777.0,0
+EQ-1644,Cargadora frontal,Santa Fe,53,2023,Requiere_Reparacion,121026.14,1
+EQ-1645,Motoniveladora,Buenos Aires,96,2022,Requiere_Reparacion,264292.33,1
+EQ-1646,Excavadora,Córdoba,85,2004,Funcional,78931.78,0
+EQ-1647,Retroexcavadora,Santa Fe,18,2019,Funcional,29777.93,0
+EQ-1648,Cargadora frontal,Salta,97,2009,Funcional,114274.7,1
+EQ-1649,Topadora,Salta,67,2011,Averia_Grave,176980.6,1
+EQ-1650,Topadora,Córdoba,73,2022,Requiere_Reparacion,311145.31,1
+EQ-1651,Excavadora,Córdoba,25,2022,Requiere_Reparacion,68019.35,0
+EQ-1652,Motoniveladora,Santa Fe,102,2005,Averia_Grave,172725.89,1
+EQ-1653,Motoniveladora,Salta,112,2008,Requiere_Reparacion,204903.28,1
+EQ-1654,Cargadora frontal,Salta,49,2022,Requiere_Reparacion,122632.16,1
+EQ-1655,Motoniveladora,Córdoba,12,2024,Requiere_Reparacion,30594.64,0
+EQ-1656,Excavadora,Buenos Aires,102,2002,Requiere_Reparacion,128194.66,1
+EQ-1657,Topadora,Mendoza,107,2022,Requiere_Reparacion,384369.07,1
+EQ-1658,Topadora,Córdoba,61,2013,Averia_Grave,181437.91,1
+EQ-1659,Topadora,Buenos Aires,70,2015,Averia_Grave,213809.19,1
+EQ-1660,Excavadora,Buenos Aires,27,2002,Requiere_Reparacion,32457.18,0
+EQ-1661,Cargadora frontal,Santa Fe,9,2018,Requiere_Reparacion,18445.77,0
+EQ-1662,Cargadora frontal,Córdoba,114,2018,Averia_Grave,256634.23,1
+EQ-1663,Excavadora,Santa Fe,58,2017,Funcional,104253.05,1
+EQ-1664,Cargadora frontal,Córdoba,33,2021,Averia_Grave,68343.65,0
+EQ-1665,Cargadora frontal,Mendoza,84,2025,Funcional,186124.73,1
+EQ-1666,Retroexcavadora,Mendoza,4,2022,Averia_Grave,14641.84,0
+EQ-1667,Rodillo compactador,Santa Fe,10,2020,Averia_Grave,10968.45,0
+EQ-1668,Rodillo compactador,Buenos Aires,30,2026,Requiere_Reparacion,45386.8,0
+EQ-1669,Cargadora frontal,Santa Fe,55,2018,Funcional,79161.37,0
+EQ-1670,Rodillo compactador,Mendoza,45,2018,Averia_Grave,78605.14,0
+EQ-1671,Rodillo compactador,Córdoba,23,2014,Requiere_Reparacion,20522.88,0
+EQ-1672,Cargadora frontal,Córdoba,43,2020,Requiere_Reparacion,75319.83,0
+EQ-1673,Excavadora,Santa Fe,41,2001,Requiere_Reparacion,38739.03,0
+EQ-1674,Rodillo compactador,Córdoba,63,2013,Requiere_Reparacion,62343.64,0
+EQ-1675,Rodillo compactador,Santa Fe,68,2011,Requiere_Reparacion,58997.63,0
+EQ-1676,Topadora,Córdoba,106,2024,Funcional,363911.67,1
+EQ-1678,Retroexcavadora,Mendoza,36,2017,Averia_Grave,68443.51,0
+EQ-1679,Topadora,Santa Fe,109,2004,Funcional,172603.75,1
+EQ-1680,Cargadora frontal,Santa Fe,63,2023,Requiere_Reparacion,147137.08,1
+EQ-1681,Topadora,Mendoza,23,2023,Requiere_Reparacion,110289.07,1
+EQ-1682,Motoniveladora,Córdoba,41,2006,Averia_Grave,65426.32,0
+EQ-1683,Motoniveladora,Buenos Aires,90,2023,Requiere_Reparacion,253813.52,1
+EQ-1684,Rodillo compactador,Salta,99,2013,Averia_Grave,167701.67,1
+EQ-1685,Retroexcavadora,Buenos Aires,45,2026,Funcional,81721.9,0
+EQ-1686,Cargadora frontal,Santa Fe,19,2019,Requiere_Reparacion,37380.39,0
+EQ-1687,Retroexcavadora,Córdoba,24,2000,Averia_Grave,21466.52,0
+EQ-1688,Retroexcavadora,Córdoba,13,2005,Averia_Grave,13803.31,0
+EQ-1689,Topadora,Buenos Aires,84,2010,Requiere_Reparacion,171312.23,1
+EQ-1690,Motoniveladora,Salta,61,2005,Requiere_Reparacion,122114.83,1
+EQ-1691,Rodillo compactador,Santa Fe,55,2003,Requiere_Reparacion,48119.37,0
+EQ-1692,Topadora,Córdoba,81,2026,Funcional,299967.07,1
+EQ-1693,Cargadora frontal,Mendoza,100,2023,Averia_Grave,286412.44,1
+EQ-1694,Retroexcavadora,Buenos Aires,96,2011,Averia_Grave,106083.25,1
+EQ-1695,Motoniveladora,Santa Fe,17,2005,Requiere_Reparacion,25359.53,0
+EQ-1696,Rodillo compactador,Santa Fe,71,2004,Funcional,47760.23,0
+EQ-1697,Retroexcavadora,Santa Fe,106,2024,Requiere_Reparacion,194936.86,1
+EQ-1698,Motoniveladora,Buenos Aires,93,2008,Funcional,126315.82,1
+EQ-1699,Retroexcavadora,Salta,40,2000,Averia_Grave,44829.68,0
+EQ-1700,Topadora,Córdoba,48,2010,Requiere_Reparacion,123353.42,1
+EQ-1701,Excavadora,Mendoza,107,2012,Funcional,164467.13,1
+EQ-1702,Excavadora,Mendoza,4,2016,Requiere_Reparacion,4423.15,0
+EQ-1703,Rodillo compactador,Córdoba,64,2009,Averia_Grave,68960.89,0
+EQ-1704,Excavadora,Buenos Aires,14,2024,Funcional,34079.99,0
+EQ-1705,Topadora,Córdoba,108,2017,Requiere_Reparacion,308338.08,1
+EQ-1706,Topadora,Salta,5,2026,Requiere_Reparacion,25740.56,0
+EQ-1707,Topadora,Salta,3,2009,Funcional,3986.89,0
+EQ-1708,Topadora,Salta,40,2017,Requiere_Reparacion,173646.04,1
+EQ-1709,Excavadora,Córdoba,25,2009,Requiere_Reparacion,36940.67,0
+EQ-1710,Excavadora,Mendoza,60,2018,Funcional,140044.42,1
+EQ-1711,Retroexcavadora,Buenos Aires,36,2020,Funcional,50984.01,0
+EQ-1712,Retroexcavadora,Mendoza,43,2008,Averia_Grave,67904.88,0
+EQ-1713,Topadora,Santa Fe,68,2025,Requiere_Reparacion,261490.82,1
+EQ-1714,Rodillo compactador,Mendoza,68,2023,Requiere_Reparacion,115860.43,1
+EQ-1715,Cargadora frontal,Mendoza,113,2024,Requiere_Reparacion,316828.89,1
+EQ-1716,Topadora,Salta,58,2005,Averia_Grave,148818.72,1
+EQ-1717,Cargadora frontal,Santa Fe,68,2019,Averia_Grave,197289.11,1
+EQ-1718,Retroexcavadora,Córdoba,82,2002,Averia_Grave,97746.46,0
+EQ-1719,Retroexcavadora,Santa Fe,21,2002,Requiere_Reparacion,21857.09,0
+EQ-1720,Cargadora frontal,Buenos Aires,81,2026,Requiere_Reparacion,231609.16,1
+EQ-1721,Motoniveladora,Buenos Aires,104,2004,Requiere_Reparacion,198916.25,1
+EQ-1722,Rodillo compactador,Santa Fe,39,2023,Requiere_Reparacion,51592.45,0
+EQ-1723,Cargadora frontal,Salta,22,2011,Requiere_Reparacion,35151.2,0
+EQ-1724,Rodillo compactador,Santa Fe,42,2008,Funcional,20804.35,0
+EQ-1725,Cargadora frontal,Mendoza,34,2001,Requiere_Reparacion,40271.41,0
+EQ-1726,Rodillo compactador,Buenos Aires,71,2018,Requiere_Reparacion,106642.23,1
+EQ-1727,Topadora,Santa Fe,104,2019,Funcional,307401.72,1
+EQ-1729,Retroexcavadora,Córdoba,16,2021,Averia_Grave,37874.06,0
+EQ-1730,Motoniveladora,Buenos Aires,38,2008,Requiere_Reparacion,71797.89,0
+EQ-1731,Rodillo compactador,Buenos Aires,83,2014,Averia_Grave,109463.61,1
+EQ-1732,Topadora,Salta,40,2007,Requiere_Reparacion,101990.06,1
+EQ-1733,Rodillo compactador,Mendoza,71,2015,Averia_Grave,148592.43,1
+EQ-1734,Topadora,Córdoba,84,2003,Averia_Grave,172022.0,1
+EQ-1735,Topadora,Córdoba,40,2012,Funcional,75431.65,0
+EQ-1736,Rodillo compactador,Buenos Aires,78,2014,Averia_Grave,97969.95,0
+EQ-1737,Cargadora frontal,Salta,48,2015,Funcional,69428.62,0
+EQ-1738,Motoniveladora,Buenos Aires,17,2012,Requiere_Reparacion,31201.23,0
+EQ-1739,Motoniveladora,Mendoza,45,2017,Averia_Grave,156680.93,1
+EQ-1740,Excavadora,Córdoba,53,2013,Requiere_Reparacion,99003.4,0
+EQ-1741,Retroexcavadora,Córdoba,1,2007,Requiere_Reparacion,0.0,0
+EQ-1742,Rodillo compactador,Córdoba,108,2005,Requiere_Reparacion,101308.52,1
+EQ-1743,Retroexcavadora,Salta,64,2017,Funcional,79280.64,0
+EQ-1744,Motoniveladora,Buenos Aires,5,2025,Funcional,14321.29,0
+EQ-1745,Excavadora,Córdoba,105,2020,Funcional,216686.13,1
+EQ-1746,Topadora,Córdoba,103,2017,Funcional,273097.82,1
+EQ-1747,Topadora,Córdoba,2,2024,Requiere_Reparacion,13219.38,0
+EQ-1748,Retroexcavadora,Buenos Aires,20,2024,Requiere_Reparacion,42083.99,0
+EQ-1749,Rodillo compactador,Salta,44,2013,Requiere_Reparacion,51023.08,0
+EQ-1750,Rodillo compactador,Córdoba,61,2002,Requiere_Reparacion,34904.91,0
+EQ-1751,Topadora,Santa Fe,88,2017,Funcional,231316.81,1
+EQ-1752,Topadora,Córdoba,51,2016,Funcional,127883.76,1
+EQ-1753,Cargadora frontal,Salta,74,2007,Averia_Grave,141807.92,1
+EQ-1754,Retroexcavadora,Córdoba,2,2022,Averia_Grave,4746.09,0
+EQ-1755,Cargadora frontal,Córdoba,80,2023,Requiere_Reparacion,169597.06,1
+EQ-1756,Excavadora,Córdoba,110,2008,Funcional,143455.7,1
+EQ-1757,Retroexcavadora,Córdoba,64,2012,Averia_Grave,73357.88,0
+EQ-1758,Cargadora frontal,Buenos Aires,55,2005,Averia_Grave,74492.95,0
+EQ-1759,Cargadora frontal,Mendoza,36,2004,Requiere_Reparacion,58991.33,0
+EQ-1760,Cargadora frontal,Buenos Aires,115,2007,Funcional,106543.31,1
+EQ-1761,Retroexcavadora,Córdoba,4,2009,Funcional,4291.25,0
+EQ-1762,Retroexcavadora,Córdoba,35,2007,Requiere_Reparacion,33769.34,0
+EQ-1763,Motoniveladora,Córdoba,17,2004,Averia_Grave,26045.75,0
+EQ-1764,Cargadora frontal,Mendoza,104,2012,Requiere_Reparacion,158525.41,1
+EQ-1766,Topadora,Salta,111,2008,Requiere_Reparacion,240208.39,1
+EQ-1767,Cargadora frontal,Córdoba,80,2014,Averia_Grave,149032.76,1
+EQ-1768,Retroexcavadora,Salta,67,2007,Requiere_Reparacion,65971.74,0
+EQ-1769,Motoniveladora,Buenos Aires,63,2019,Averia_Grave,265710.93,1
+EQ-1770,Excavadora,Santa Fe,25,2017,Requiere_Reparacion,56144.29,0
+EQ-1771,Retroexcavadora,Mendoza,68,2025,Requiere_Reparacion,162819.62,1
+EQ-1772,Retroexcavadora,Santa Fe,83,2001,Requiere_Reparacion,51671.52,0
+EQ-1773,Retroexcavadora,Salta,116,2023,Requiere_Reparacion,235501.82,1
+EQ-1774,Retroexcavadora,Córdoba,66,2009,Averia_Grave,78268.54,0
+EQ-1775,Rodillo compactador,Buenos Aires,113,2001,Requiere_Reparacion,83401.47,0
+EQ-1776,Motoniveladora,Mendoza,114,2018,Requiere_Reparacion,292969.57,1
+EQ-1777,Excavadora,Buenos Aires,63,2004,Requiere_Reparacion,91442.73,0
+EQ-1778,Motoniveladora,Mendoza,53,2004,Requiere_Reparacion,97292.43,0
+EQ-1779,Excavadora,Mendoza,18,2026,Requiere_Reparacion,47927.84,0
+EQ-1780,Rodillo compactador,Salta,33,2005,Averia_Grave,36468.59,0
+EQ-1781,Motoniveladora,Santa Fe,106,2014,Requiere_Reparacion,196308.4,1
+EQ-1782,Retroexcavadora,Salta,17,2005,Requiere_Reparacion,11334.79,0
+EQ-1783,Motoniveladora,Buenos Aires,48,2003,Requiere_Reparacion,72016.99,0
+EQ-1784,Topadora,Santa Fe,84,2000,Funcional,99928.06,0
+EQ-1785,Rodillo compactador,Buenos Aires,29,2000,Requiere_Reparacion,17687.52,0
+EQ-1787,Excavadora,Mendoza,78,2011,Requiere_Reparacion,153297.33,1
+EQ-1788,Motoniveladora,Salta,4,2001,Averia_Grave,984.98,0
+EQ-1789,Retroexcavadora,Mendoza,30,2009,Averia_Grave,39816.83,0
+EQ-1790,Rodillo compactador,Córdoba,89,2007,Averia_Grave,74304.97,0
+EQ-1791,Cargadora frontal,Buenos Aires,104,2015,Requiere_Reparacion,179887.7,1
+EQ-1792,Topadora,Salta,112,2026,Requiere_Reparacion,581198.39,1
+EQ-1793,Retroexcavadora,Santa Fe,103,2018,Averia_Grave,160827.32,1
+EQ-1794,Excavadora,Buenos Aires,9,2024,Requiere_Reparacion,30743.53,0
+EQ-1795,Retroexcavadora,Salta,88,2005,Requiere_Reparacion,94642.04,0
+EQ-1796,Excavadora,Salta,14,2005,Requiere_Reparacion,16302.99,0
+EQ-1797,Topadora,Santa Fe,10,2020,Averia_Grave,42153.32,0
+EQ-1798,Excavadora,Mendoza,84,2008,Funcional,126416.22,1
+EQ-1799,Retroexcavadora,Buenos Aires,58,2022,Requiere_Reparacion,102625.76,1
+EQ-1800,Cargadora frontal,Buenos Aires,78,2012,Funcional,106576.26,1
+EQ-1801,Motoniveladora,Córdoba,103,2005,Requiere_Reparacion,143210.32,1
+EQ-1802,Retroexcavadora,Mendoza,9,2022,Requiere_Reparacion,21289.66,0
+EQ-1803,Retroexcavadora,Buenos Aires,64,2014,Requiere_Reparacion,65575.82,0
+EQ-1804,Excavadora,Buenos Aires,101,2021,Requiere_Reparacion,267707.74,1
+EQ-1805,Motoniveladora,Mendoza,53,2012,Averia_Grave,130589.19,1
+EQ-1806,Motoniveladora,Mendoza,63,2003,Averia_Grave,121537.76,1
+EQ-1807,Motoniveladora,Mendoza,60,2018,Requiere_Reparacion,139478.46,1
+EQ-1808,Retroexcavadora,Mendoza,109,2003,Averia_Grave,106673.51,1
+EQ-1809,Motoniveladora,Salta,6,2017,Requiere_Reparacion,24180.97,0
+EQ-1810,Topadora,Mendoza,106,2011,Averia_Grave,299254.24,1
+EQ-1811,Excavadora,Santa Fe,98,2021,Funcional,203556.49,1
+EQ-1813,Rodillo compactador,Córdoba,50,2010,Requiere_Reparacion,43223.28,0
+EQ-1814,Retroexcavadora,Buenos Aires,62,2023,Funcional,99008.72,0
+EQ-1815,Topadora,Mendoza,45,2002,Requiere_Reparacion,78467.81,0
+EQ-1816,Motoniveladora,Córdoba,31,2002,Funcional,30123.0,0
+EQ-1817,Excavadora,Salta,106,2026,Requiere_Reparacion,352917.4,1
+EQ-1819,Motoniveladora,Salta,87,2012,Funcional,173664.73,1
+EQ-1820,Excavadora,Buenos Aires,13,2004,Averia_Grave,24748.75,0
+EQ-1821,Excavadora,Mendoza,95,2007,Requiere_Reparacion,153094.21,1
+EQ-1822,Rodillo compactador,Santa Fe,80,2018,Averia_Grave,113307.16,1
+EQ-1823,Excavadora,Santa Fe,120,2022,Requiere_Reparacion,307036.47,1
+EQ-1824,Topadora,Córdoba,17,2024,Funcional,52016.37,0
+EQ-1825,Rodillo compactador,Salta,65,2011,Requiere_Reparacion,58703.94,0
+EQ-1826,Topadora,Córdoba,62,2012,Requiere_Reparacion,159788.69,1
+EQ-1827,Motoniveladora,Salta,65,2004,Funcional,105900.68,1
+EQ-1828,Topadora,Santa Fe,7,2002,Averia_Grave,7145.11,0
+EQ-1829,Cargadora frontal,Buenos Aires,57,2011,Requiere_Reparacion,72188.34,0
+EQ-1830,Topadora,Salta,36,2015,Averia_Grave,146827.59,1
+EQ-1831,Retroexcavadora,Buenos Aires,75,2002,Requiere_Reparacion,69671.12,0
+EQ-1832,Topadora,Córdoba,28,2011,Requiere_Reparacion,62374.24,0
+EQ-1833,Cargadora frontal,Salta,53,2017,Funcional,73279.3,0
+EQ-1834,Motoniveladora,Salta,75,2021,Averia_Grave,298069.74,1
+EQ-1836,Motoniveladora,Santa Fe,95,2009,Funcional,130334.81,1
+EQ-1837,Topadora,Mendoza,86,2010,Funcional,168755.65,1
+EQ-1838,Excavadora,Córdoba,7,2023,Requiere_Reparacion,15366.16,0
+EQ-1839,Excavadora,Mendoza,8,2018,Averia_Grave,21896.75,0
+EQ-1840,Cargadora frontal,Santa Fe,103,2007,Averia_Grave,149214.53,1
+EQ-1841,Retroexcavadora,Buenos Aires,34,2018,Averia_Grave,68882.54,0
+EQ-1842,Motoniveladora,Santa Fe,104,2004,Averia_Grave,183341.98,1
+EQ-1843,Rodillo compactador,Santa Fe,60,2012,Averia_Grave,83244.42,0
+EQ-1845,Rodillo compactador,Córdoba,33,2026,Requiere_Reparacion,63783.91,0
+EQ-1846,Cargadora frontal,Santa Fe,80,2000,Funcional,47610.91,0
+EQ-1847,Retroexcavadora,Buenos Aires,14,2023,Funcional,21258.19,0
+EQ-1848,Cargadora frontal,Buenos Aires,49,2007,Requiere_Reparacion,66935.91,0
+EQ-1849,Cargadora frontal,Mendoza,42,2000,Funcional,42330.94,0
+EQ-1850,Motoniveladora,Córdoba,19,2017,Averia_Grave,59670.72,0
+EQ-1851,Motoniveladora,Mendoza,43,2018,Averia_Grave,151511.8,1
+EQ-1852,Excavadora,Santa Fe,64,2003,Requiere_Reparacion,72362.79,0
+EQ-1853,Retroexcavadora,Santa Fe,82,2001,Averia_Grave,71501.79,0
+EQ-1855,Motoniveladora,Santa Fe,105,2011,Funcional,176363.61,1
+EQ-1856,Topadora,Salta,106,2003,Requiere_Reparacion,183413.53,1
+EQ-1857,Retroexcavadora,Salta,84,2018,Funcional,122395.41,1
+EQ-1858,Cargadora frontal,Córdoba,111,2002,Requiere_Reparacion,118137.0,1
+EQ-1859,Cargadora frontal,Mendoza,52,2021,Funcional,98439.89,0
+EQ-1860,Rodillo compactador,Salta,99,2023,Funcional,174948.07,1
+EQ-1861,Rodillo compactador,Buenos Aires,88,2019,Funcional,97227.08,0
+EQ-1862,Excavadora,Mendoza,68,2025,Averia_Grave,269995.22,1
+EQ-1863,Topadora,Santa Fe,22,2025,Funcional,82100.07,0
+EQ-1864,Retroexcavadora,Salta,67,2001,Requiere_Reparacion,53382.8,0
+EQ-1865,Topadora,Santa Fe,109,2009,Requiere_Reparacion,262152.36,1
+EQ-1866,Retroexcavadora,Salta,119,2020,Requiere_Reparacion,196161.62,1
+EQ-1867,Motoniveladora,Buenos Aires,54,2009,Requiere_Reparacion,96455.14,0
+EQ-1868,Rodillo compactador,Buenos Aires,30,2019,Funcional,29697.4,0
+EQ-1869,Motoniveladora,Salta,90,2020,Requiere_Reparacion,340317.51,1
+EQ-1870,Rodillo compactador,Santa Fe,10,2026,Requiere_Reparacion,6361.44,0
+EQ-1871,Motoniveladora,Santa Fe,19,2008,Requiere_Reparacion,26791.05,0
+EQ-1872,Excavadora,Buenos Aires,68,2009,Requiere_Reparacion,115837.23,1
+EQ-1873,Cargadora frontal,Córdoba,119,2000,Requiere_Reparacion,100661.64,1
+EQ-1874,Topadora,Salta,40,2007,Requiere_Reparacion,98146.4,0
+EQ-1875,Retroexcavadora,Córdoba,54,2007,Funcional,49268.84,0
+EQ-1876,Motoniveladora,Santa Fe,39,2012,Requiere_Reparacion,81541.65,0
+EQ-1877,Excavadora,Córdoba,53,2011,Funcional,62425.08,0
+EQ-1878,Topadora,Córdoba,1,2023,Requiere_Reparacion,8946.08,0
+EQ-1879,Rodillo compactador,Buenos Aires,72,2020,Requiere_Reparacion,110832.09,1
+EQ-1880,Motoniveladora,Salta,72,2019,Funcional,144530.38,1
+EQ-1881,Retroexcavadora,Salta,38,2000,Funcional,21283.9,0
+EQ-1882,Excavadora,Buenos Aires,32,2012,Requiere_Reparacion,55224.44,0
+EQ-1883,Excavadora,Córdoba,92,2019,Requiere_Reparacion,255337.36,1
+EQ-1884,Topadora,Santa Fe,23,2006,Averia_Grave,65860.87,0
+EQ-1885,Cargadora frontal,Córdoba,6,2011,Averia_Grave,7762.66,0
+EQ-1886,Excavadora,Mendoza,5,2019,Averia_Grave,13047.62,0
+EQ-1887,Cargadora frontal,Córdoba,106,2021,Requiere_Reparacion,209494.61,1
+EQ-1888,Retroexcavadora,Buenos Aires,44,2023,Funcional,62437.56,0
+EQ-1889,Motoniveladora,Córdoba,13,2011,Requiere_Reparacion,33498.98,0
+EQ-1890,Retroexcavadora,Santa Fe,106,2010,Requiere_Reparacion,115155.12,1
+EQ-1891,Excavadora,Buenos Aires,18,2010,Requiere_Reparacion,22145.2,0
+EQ-1892,Excavadora,Salta,41,2018,Requiere_Reparacion,93553.36,0
+EQ-1893,Topadora,Buenos Aires,3,2011,Funcional,3252.09,0
+EQ-1894,Rodillo compactador,Buenos Aires,82,2010,Funcional,47162.77,0
+EQ-1895,Motoniveladora,Santa Fe,84,2004,Funcional,91460.35,0
+EQ-1896,Topadora,Santa Fe,91,2012,Funcional,174505.14,1
+EQ-1897,Cargadora frontal,Córdoba,32,2006,Averia_Grave,33462.27,0
+EQ-1898,Topadora,Córdoba,40,2014,Funcional,103008.1,1
+EQ-1899,Rodillo compactador,Buenos Aires,113,2023,Requiere_Reparacion,203296.15,1
+EQ-1900,Retroexcavadora,Mendoza,99,2020,Averia_Grave,193256.87,1
+EQ-1901,Cargadora frontal,Córdoba,5,2012,Requiere_Reparacion,6225.27,0
+EQ-1902,Cargadora frontal,Buenos Aires,84,2026,Requiere_Reparacion,193449.25,1
+EQ-1903,Rodillo compactador,Córdoba,98,2026,Requiere_Reparacion,200191.43,1
+EQ-1905,Excavadora,Córdoba,77,2020,Requiere_Reparacion,181065.15,1
+EQ-1906,Excavadora,Salta,1,2009,Averia_Grave,0.0,0
+EQ-1907,Excavadora,Córdoba,4,2023,Averia_Grave,11243.96,0
+EQ-1908,Motoniveladora,Buenos Aires,5,2010,Averia_Grave,8765.19,0
+EQ-1909,Motoniveladora,Córdoba,20,2006,Averia_Grave,29539.14,0
+EQ-1910,Topadora,Córdoba,119,2003,Requiere_Reparacion,194516.92,1
+EQ-1911,Motoniveladora,Buenos Aires,77,2022,Averia_Grave,259629.59,1
+EQ-1912,Topadora,Santa Fe,94,2008,Requiere_Reparacion,169100.44,1
+EQ-1913,Motoniveladora,Córdoba,36,2021,Requiere_Reparacion,95913.29,0
+EQ-1914,Rodillo compactador,Mendoza,113,2002,Averia_Grave,78964.32,0
+EQ-1915,Excavadora,Santa Fe,24,2013,Averia_Grave,58488.51,0
+EQ-1916,Cargadora frontal,Santa Fe,109,2011,Averia_Grave,186936.8,1
+EQ-1917,Excavadora,Santa Fe,4,2011,Requiere_Reparacion,5692.9,0
+EQ-1918,Retroexcavadora,Buenos Aires,3,2004,Requiere_Reparacion,388.68,0
+EQ-1919,Retroexcavadora,Mendoza,10,2001,Funcional,5052.81,0
+EQ-1920,Cargadora frontal,Buenos Aires,96,2009,Requiere_Reparacion,142256.14,1
+EQ-1921,Retroexcavadora,Mendoza,31,2012,Averia_Grave,62023.26,0
+EQ-1922,Cargadora frontal,Salta,55,2021,Averia_Grave,177140.8,1
+EQ-1923,Rodillo compactador,Mendoza,57,2012,Requiere_Reparacion,70790.57,0
+EQ-1924,Retroexcavadora,Santa Fe,95,2006,Requiere_Reparacion,96867.54,0
+EQ-1926,Motoniveladora,Salta,1,2016,Funcional,9887.88,0
+EQ-1927,Retroexcavadora,Córdoba,47,2011,Funcional,50286.88,0
+EQ-1928,Motoniveladora,Santa Fe,35,2024,Averia_Grave,114994.11,1
+EQ-1930,Topadora,Salta,91,2015,Averia_Grave,335088.26,1
+EQ-1931,Motoniveladora,Salta,12,2001,Funcional,15053.84,0
+EQ-1932,Retroexcavadora,Buenos Aires,96,2005,Averia_Grave,99737.62,0
+EQ-1933,Topadora,Salta,9,2022,Requiere_Reparacion,29114.44,0
+EQ-1934,Topadora,Buenos Aires,75,2009,Requiere_Reparacion,192931.1,1
+EQ-1935,Motoniveladora,Santa Fe,47,2011,Requiere_Reparacion,119844.78,1
+EQ-1936,Motoniveladora,Salta,37,2015,Averia_Grave,132023.67,1
+EQ-1937,Retroexcavadora,Mendoza,58,2001,Averia_Grave,56695.02,0
+EQ-1938,Cargadora frontal,Salta,38,2013,Requiere_Reparacion,71614.88,0
+EQ-1940,Excavadora,Córdoba,117,2004,Funcional,113461.99,1
+EQ-1941,Motoniveladora,Córdoba,98,2011,Averia_Grave,199758.8,1
+EQ-1942,Excavadora,Córdoba,53,2012,Requiere_Reparacion,95436.82,0
+EQ-1943,Topadora,Mendoza,61,2005,Requiere_Reparacion,126606.3,1
+EQ-1944,Motoniveladora,Santa Fe,54,2014,Requiere_Reparacion,99432.05,0
+EQ-1945,Retroexcavadora,Mendoza,96,2020,Requiere_Reparacion,170668.29,1
+EQ-1946,Motoniveladora,Santa Fe,67,2007,Averia_Grave,144498.75,1
+EQ-1947,Motoniveladora,Córdoba,57,2026,Averia_Grave,240707.36,1
+EQ-1948,Topadora,Buenos Aires,50,2016,Averia_Grave,204088.18,1
+EQ-1949,Motoniveladora,Santa Fe,46,2020,Averia_Grave,128724.26,1
+EQ-1950,Excavadora,Salta,67,2001,Averia_Grave,129793.01,1
+EQ-1951,Topadora,Salta,83,2020,Requiere_Reparacion,268755.3,1
+EQ-1952,Cargadora frontal,Córdoba,52,2009,Averia_Grave,64585.71,0
+EQ-1953,Motoniveladora,Santa Fe,97,2019,Funcional,209683.1,1
+EQ-1954,Retroexcavadora,Mendoza,100,2021,Requiere_Reparacion,168047.26,1
+EQ-1955,Topadora,Mendoza,52,2006,Averia_Grave,129362.88,1
+EQ-1957,Cargadora frontal,Santa Fe,21,2001,Funcional,20504.72,0
+EQ-1958,Cargadora frontal,Buenos Aires,112,2016,Requiere_Reparacion,181744.89,1
+EQ-1959,Cargadora frontal,Buenos Aires,36,2020,Requiere_Reparacion,76572.05,0
+EQ-1960,Excavadora,Mendoza,68,2011,Averia_Grave,144254.05,1
+EQ-1961,Topadora,Buenos Aires,35,2004,Requiere_Reparacion,65956.36,0
+EQ-1962,Topadora,Córdoba,54,2008,Funcional,89635.78,0
+EQ-1963,Motoniveladora,Santa Fe,41,2010,Requiere_Reparacion,68345.94,0
+EQ-1964,Rodillo compactador,Mendoza,85,2024,Requiere_Reparacion,125336.48,1
+EQ-1965,Rodillo compactador,Santa Fe,10,2003,Funcional,11631.56,0
+EQ-1967,Retroexcavadora,Mendoza,109,2017,Requiere_Reparacion,147584.56,1
+EQ-1968,Retroexcavadora,Salta,68,2006,Funcional,65973.6,0
+EQ-1969,Topadora,Salta,66,2023,Requiere_Reparacion,243097.16,1
+EQ-1970,Motoniveladora,Mendoza,84,2024,Requiere_Reparacion,348745.38,1
+EQ-1971,Rodillo compactador,Santa Fe,24,2010,Averia_Grave,27679.84,0
+EQ-1972,Topadora,Salta,90,2020,Requiere_Reparacion,338561.15,1
+EQ-1973,Rodillo compactador,Santa Fe,27,2020,Funcional,33383.03,0
+EQ-1974,Retroexcavadora,Buenos Aires,82,2018,Averia_Grave,174977.3,1
+EQ-1975,Cargadora frontal,Salta,37,2005,Requiere_Reparacion,42289.25,0
+EQ-1976,Motoniveladora,Córdoba,90,2001,Funcional,83384.99,0
+EQ-1977,Topadora,Salta,95,2009,Averia_Grave,279091.16,1
+EQ-1978,Retroexcavadora,Córdoba,26,2003,Funcional,13123.72,0
+EQ-1979,Motoniveladora,Salta,75,2007,Averia_Grave,142730.16,1
+EQ-1980,Rodillo compactador,Santa Fe,60,2017,Averia_Grave,69603.52,0
+EQ-1981,Cargadora frontal,Santa Fe,36,2015,Averia_Grave,77121.17,0
+EQ-1982,Cargadora frontal,Córdoba,71,2005,Averia_Grave,99084.33,0
+EQ-1983,Motoniveladora,Salta,120,2000,Funcional,152024.37,1
+EQ-1984,Rodillo compactador,Buenos Aires,1,2006,Averia_Grave,0.0,0
+EQ-1985,Cargadora frontal,Santa Fe,115,2012,Requiere_Reparacion,178591.74,1
+EQ-1986,Rodillo compactador,Córdoba,103,2021,Requiere_Reparacion,141887.36,1
+EQ-1987,Rodillo compactador,Santa Fe,64,2009,Requiere_Reparacion,44343.46,0
+EQ-1988,Excavadora,Córdoba,74,2007,Funcional,85543.44,0
+EQ-1989,Excavadora,Mendoza,45,2014,Funcional,74444.37,0
+EQ-1990,Topadora,Córdoba,16,2001,Funcional,19759.38,0
+EQ-1991,Cargadora frontal,Buenos Aires,69,2006,Funcional,66199.98,0
+EQ-1992,Retroexcavadora,Buenos Aires,98,2000,Funcional,61297.43,0
+EQ-1993,Excavadora,Mendoza,28,2014,Averia_Grave,62622.04,0
+EQ-1994,Cargadora frontal,Córdoba,87,2011,Requiere_Reparacion,119405.83,1
+EQ-1995,Rodillo compactador,Córdoba,90,2015,Averia_Grave,103467.02,1
+EQ-1996,Motoniveladora,Mendoza,91,2016,Averia_Grave,300770.22,1
+EQ-1997,Cargadora frontal,Córdoba,41,2010,Averia_Grave,58669.94,0
+EQ-1998,Topadora,Córdoba,48,2023,Requiere_Reparacion,165554.95,1
+EQ-1999,Excavadora,Córdoba,50,2024,Averia_Grave,183376.27,1
+EQ-2000,Excavadora,Córdoba,103,2002,Averia_Grave,157517.18,1
+EQ-2001,Topadora,Mendoza,109,2024,Averia_Grave,579909.13,1
+EQ-2002,Motoniveladora,Santa Fe,50,2005,Averia_Grave,81072.59,0
+EQ-2003,Retroexcavadora,Salta,117,2006,Requiere_Reparacion,128526.35,1
+EQ-2004,Retroexcavadora,Mendoza,69,2014,Requiere_Reparacion,100640.54,1
+EQ-2005,Rodillo compactador,Buenos Aires,47,2000,Averia_Grave,29774.12,0
+EQ-2006,Motoniveladora,Córdoba,1,2009,Requiere_Reparacion,0.0,0
+EQ-2007,Retroexcavadora,Córdoba,74,2005,Averia_Grave,65830.41,0
+EQ-2008,Motoniveladora,Santa Fe,78,2013,Funcional,106380.14,1
+EQ-2009,Rodillo compactador,Córdoba,117,2021,Funcional,130679.14,1
+EQ-2010,Cargadora frontal,Salta,87,2024,Requiere_Reparacion,294456.85,1
+EQ-2011,Retroexcavadora,Córdoba,4,2005,Funcional,0.0,0
+EQ-2012,Retroexcavadora,Santa Fe,69,2014,Averia_Grave,122642.19,1
+EQ-2013,Motoniveladora,Buenos Aires,90,2012,Funcional,155475.09,1
+EQ-2014,Topadora,Salta,60,2011,Averia_Grave,162045.03,1
+EQ-2016,Excavadora,Mendoza,98,2026,Averia_Grave,388077.75,1
+EQ-2017,Retroexcavadora,Córdoba,74,2010,Requiere_Reparacion,64876.34,0
+EQ-2018,Rodillo compactador,Buenos Aires,82,2001,Funcional,46696.33,0
+EQ-2019,Rodillo compactador,Mendoza,56,2024,Funcional,73939.65,0
+EQ-2020,Retroexcavadora,Santa Fe,34,2025,Requiere_Reparacion,74459.21,0
+EQ-2021,Excavadora,Salta,63,2008,Averia_Grave,107905.53,1
+EQ-2022,Cargadora frontal,Mendoza,116,2013,Averia_Grave,225820.65,1
+EQ-2023,Cargadora frontal,Santa Fe,73,2023,Requiere_Reparacion,152681.69,1
+EQ-2024,Cargadora frontal,Salta,85,2013,Requiere_Reparacion,135709.64,1
+EQ-2025,Motoniveladora,Salta,15,2012,Funcional,27386.7,0
+EQ-2026,Retroexcavadora,Santa Fe,119,2024,Requiere_Reparacion,210420.04,1
+EQ-2027,Cargadora frontal,Buenos Aires,30,2022,Requiere_Reparacion,75306.45,0
+EQ-2028,Topadora,Buenos Aires,117,2013,Funcional,238447.12,1
+EQ-2029,Cargadora frontal,Santa Fe,54,2004,Requiere_Reparacion,60073.19,0
+EQ-2031,Cargadora frontal,Buenos Aires,108,2018,Funcional,163557.82,1
+EQ-2032,Excavadora,Buenos Aires,91,2007,Funcional,96892.12,0
+EQ-2033,Motoniveladora,Mendoza,110,2014,Funcional,205235.52,1
+EQ-2034,Rodillo compactador,Mendoza,74,2017,Funcional,76719.23,0
+EQ-2035,Topadora,Buenos Aires,102,2002,Funcional,125991.07,1
+EQ-2036,Topadora,Santa Fe,21,2015,Requiere_Reparacion,73168.27,0
+EQ-2037,Cargadora frontal,Buenos Aires,9,2019,Funcional,11829.88,0
+EQ-2038,Motoniveladora,Mendoza,66,2005,Averia_Grave,122853.01,1
+EQ-2039,Topadora,Salta,98,2014,Averia_Grave,363079.27,1
+EQ-2040,Retroexcavadora,Salta,92,2019,Averia_Grave,181858.36,1
+EQ-2041,Excavadora,Santa Fe,64,2001,Requiere_Reparacion,69262.43,0
+EQ-2042,Topadora,Mendoza,63,2017,Funcional,164654.86,1
+EQ-2043,Rodillo compactador,Salta,74,2007,Funcional,48228.45,0
+EQ-2044,Rodillo compactador,Mendoza,105,2010,Funcional,86487.07,0
+EQ-2045,Excavadora,Santa Fe,102,2017,Averia_Grave,253665.42,1
+EQ-2046,Topadora,Mendoza,14,2000,Averia_Grave,18039.36,0
+EQ-2047,Retroexcavadora,Santa Fe,72,2000,Requiere_Reparacion,52261.91,0
+EQ-2048,Cargadora frontal,Salta,46,2012,Requiere_Reparacion,104510.27,1
+EQ-2049,Rodillo compactador,Santa Fe,96,2025,Requiere_Reparacion,151954.14,1
+EQ-2050,Cargadora frontal,Salta,61,2000,Funcional,43803.38,0
+EQ-2051,Excavadora,Buenos Aires,119,2021,Averia_Grave,326417.0,1
+EQ-2052,Excavadora,Buenos Aires,52,2002,Funcional,60764.29,0
+EQ-2053,Retroexcavadora,Buenos Aires,82,2013,Requiere_Reparacion,122577.43,1
+EQ-2054,Topadora,Santa Fe,14,2011,Requiere_Reparacion,31541.36,0
+EQ-2055,Rodillo compactador,Mendoza,112,2012,Funcional,107114.63,1
+EQ-2056,Retroexcavadora,Córdoba,19,2002,Requiere_Reparacion,18728.9,0
+EQ-2057,Rodillo compactador,Buenos Aires,46,2020,Averia_Grave,74432.56,0
+EQ-2058,Rodillo compactador,Salta,101,2007,Funcional,80003.79,0
+EQ-2059,Retroexcavadora,Mendoza,117,2020,Requiere_Reparacion,230399.84,1
+EQ-2060,Retroexcavadora,Mendoza,59,2017,Requiere_Reparacion,109753.13,1
+EQ-2062,Cargadora frontal,Santa Fe,6,2008,Funcional,0.0,0
+EQ-2063,Motoniveladora,Buenos Aires,118,2017,Funcional,233816.32,1
+EQ-2064,Rodillo compactador,Buenos Aires,2,2026,Funcional,1903.25,0
+EQ-2065,Cargadora frontal,Salta,4,2024,Requiere_Reparacion,11433.29,0
+EQ-2066,Cargadora frontal,Córdoba,57,2024,Averia_Grave,175385.28,1
+EQ-2067,Rodillo compactador,Mendoza,1,2005,Averia_Grave,0.0,0
+EQ-2068,Topadora,Mendoza,20,2015,Averia_Grave,80140.05,0
+EQ-2069,Excavadora,Córdoba,76,2010,Requiere_Reparacion,136117.31,1
+EQ-2070,Retroexcavadora,Córdoba,85,2026,Averia_Grave,244900.05,1
+EQ-2071,Excavadora,Mendoza,36,2025,Requiere_Reparacion,134100.55,1
+EQ-2072,Cargadora frontal,Buenos Aires,96,2023,Funcional,189495.26,1
+EQ-2073,Retroexcavadora,Santa Fe,73,2004,Requiere_Reparacion,55086.61,0
+EQ-2074,Retroexcavadora,Salta,28,2008,Requiere_Reparacion,34905.64,0
+EQ-2075,Rodillo compactador,Mendoza,86,2019,Averia_Grave,156117.43,1
+EQ-2076,Retroexcavadora,Mendoza,72,2020,Requiere_Reparacion,127345.44,1
+EQ-2077,Retroexcavadora,Buenos Aires,98,2009,Funcional,112923.84,1
+EQ-2079,Excavadora,Córdoba,28,2003,Funcional,36092.41,0
+EQ-2080,Motoniveladora,Córdoba,37,2018,Averia_Grave,100435.35,1
+EQ-2081,Rodillo compactador,Buenos Aires,41,2012,Averia_Grave,49360.44,0
+EQ-2082,Motoniveladora,Salta,107,2013,Averia_Grave,400269.96,1
+EQ-2083,Excavadora,Buenos Aires,88,2022,Averia_Grave,269172.2,1
+EQ-2084,Rodillo compactador,Mendoza,66,2000,Funcional,37633.62,0
+EQ-2085,Motoniveladora,Santa Fe,65,2020,Requiere_Reparacion,176920.04,1
+EQ-2086,Cargadora frontal,Mendoza,107,2007,Averia_Grave,159432.95,1
+EQ-2087,Rodillo compactador,Córdoba,54,2025,Averia_Grave,116716.36,1
+EQ-2088,Cargadora frontal,Córdoba,28,2025,Funcional,63917.79,0
+EQ-2089,Excavadora,Mendoza,17,2013,Funcional,31185.96,0
+EQ-2090,Motoniveladora,Córdoba,40,2008,Requiere_Reparacion,59352.59,0
+EQ-2091,Topadora,Mendoza,79,2006,Requiere_Reparacion,140589.41,1
+EQ-2092,Excavadora,Buenos Aires,57,2004,Requiere_Reparacion,73202.1,0
+EQ-2093,Rodillo compactador,Buenos Aires,51,2026,Averia_Grave,85191.88,0
+EQ-2094,Excavadora,Mendoza,58,2005,Averia_Grave,117906.77,1
+EQ-2095,Motoniveladora,Mendoza,117,2012,Requiere_Reparacion,221955.01,1
+EQ-2096,Rodillo compactador,Buenos Aires,120,2012,Funcional,79996.31,0
+EQ-2097,Topadora,Salta,20,2018,Requiere_Reparacion,74068.31,0
+EQ-2098,Topadora,Buenos Aires,14,2022,Requiere_Reparacion,40125.93,0
+EQ-2099,Rodillo compactador,Salta,30,2015,Funcional,24318.14,0
+EQ-2100,Excavadora,Mendoza,103,2020,Funcional,275282.22,1
+EQ-2101,Topadora,Salta,56,2015,Requiere_Reparacion,160542.61,1
+EQ-2102,Rodillo compactador,Salta,104,2011,Funcional,85510.28,0
+EQ-2103,Excavadora,Córdoba,78,2004,Requiere_Reparacion,97119.4,0
+EQ-2104,Motoniveladora,Mendoza,67,2005,Funcional,92225.32,0
+EQ-2105,Topadora,Córdoba,34,2011,Funcional,66070.69,0
+EQ-2106,Excavadora,Santa Fe,42,2001,Funcional,35240.67,0
+EQ-2107,Rodillo compactador,Córdoba,18,2008,Requiere_Reparacion,9787.7,0
+EQ-2108,Motoniveladora,Santa Fe,63,2012,Requiere_Reparacion,125228.87,1
+EQ-2109,Excavadora,Salta,34,2012,Requiere_Reparacion,76419.33,0
+EQ-2110,Excavadora,Santa Fe,36,2021,Funcional,64669.75,0
+EQ-2111,Excavadora,Buenos Aires,5,2026,Averia_Grave,36332.85,0
+EQ-2112,Rodillo compactador,Córdoba,96,2019,Requiere_Reparacion,113635.66,1
+EQ-2113,Topadora,Mendoza,113,2002,Requiere_Reparacion,198871.05,1
+EQ-2114,Topadora,Santa Fe,60,2011,Requiere_Reparacion,121704.43,1
+EQ-2115,Rodillo compactador,Santa Fe,65,2019,Averia_Grave,83171.31,0
+EQ-2116,Excavadora,Santa Fe,112,2016,Averia_Grave,260098.36,1
+EQ-2117,Topadora,Córdoba,62,2012,Requiere_Reparacion,132392.54,1
+EQ-2118,Cargadora frontal,Santa Fe,75,2011,Requiere_Reparacion,97212.35,0
+EQ-2119,Cargadora frontal,Mendoza,52,2010,Funcional,52959.44,0
+EQ-2120,Rodillo compactador,Salta,62,2015,Requiere_Reparacion,79069.21,0
+EQ-2121,Rodillo compactador,Mendoza,63,2004,Requiere_Reparacion,36094.84,0
+EQ-2122,Topadora,Salta,86,2013,Funcional,180875.3,1
+EQ-2123,Cargadora frontal,Salta,73,2005,Averia_Grave,110509.35,1
+EQ-2124,Cargadora frontal,Buenos Aires,61,2018,Averia_Grave,158442.33,1
+EQ-2125,Rodillo compactador,Córdoba,10,2023,Funcional,20168.95,0
+EQ-2126,Excavadora,Córdoba,109,2013,Averia_Grave,242558.92,1
+EQ-2127,Excavadora,Buenos Aires,107,2010,Requiere_Reparacion,161841.1,1
+EQ-2128,Cargadora frontal,Buenos Aires,23,2025,Requiere_Reparacion,62591.69,0
+EQ-2129,Motoniveladora,Mendoza,36,2017,Averia_Grave,103177.51,1
+EQ-2130,Excavadora,Córdoba,117,2011,Requiere_Reparacion,226909.03,1
+EQ-2131,Rodillo compactador,Buenos Aires,39,2000,Requiere_Reparacion,25553.95,0
+EQ-2132,Topadora,Córdoba,98,2000,Requiere_Reparacion,140701.45,1
+EQ-2133,Cargadora frontal,Córdoba,95,2005,Funcional,78190.93,0
+EQ-2135,Retroexcavadora,Buenos Aires,2,2019,Requiere_Reparacion,6033.22,0
+EQ-2136,Rodillo compactador,Mendoza,58,2013,Requiere_Reparacion,63434.66,0
+EQ-2137,Cargadora frontal,Salta,68,2026,Funcional,159655.85,1
+EQ-2138,Motoniveladora,Santa Fe,101,2014,Funcional,219241.79,1
+EQ-2139,Cargadora frontal,Mendoza,27,2024,Averia_Grave,94980.45,0
+EQ-2140,Retroexcavadora,Salta,37,2014,Funcional,53996.27,0
+EQ-2141,Rodillo compactador,Salta,22,2009,Requiere_Reparacion,15834.22,0
+EQ-2142,Topadora,Buenos Aires,92,2019,Averia_Grave,358684.05,1
+EQ-2143,Topadora,Salta,120,2012,Averia_Grave,424980.06,1
+EQ-2144,Cargadora frontal,Buenos Aires,17,2007,Funcional,30638.32,0
+EQ-2145,Retroexcavadora,Buenos Aires,28,2012,Averia_Grave,51027.39,0
+EQ-2146,Retroexcavadora,Santa Fe,37,2017,Averia_Grave,65454.54,0
+EQ-2147,Excavadora,Mendoza,107,2010,Requiere_Reparacion,191179.5,1
+EQ-2148,Topadora,Buenos Aires,54,2019,Averia_Grave,228451.32,1
+EQ-2149,Topadora,Córdoba,34,2026,Averia_Grave,205824.86,1
+EQ-2150,Topadora,Córdoba,39,2011,Requiere_Reparacion,74350.54,0
+EQ-2151,Excavadora,Córdoba,72,2007,Requiere_Reparacion,126580.59,1
+EQ-2152,Excavadora,Salta,47,2010,Averia_Grave,107826.73,1
+EQ-2153,Topadora,Córdoba,17,2022,Averia_Grave,67524.86,0
+EQ-2154,Cargadora frontal,Córdoba,99,2004,Requiere_Reparacion,96043.6,0
+EQ-2155,Rodillo compactador,Buenos Aires,51,2026,Averia_Grave,94192.38,0
+EQ-2156,Retroexcavadora,Buenos Aires,31,2011,Averia_Grave,49597.71,0
+EQ-2157,Retroexcavadora,Buenos Aires,88,2022,Averia_Grave,183584.57,1
+EQ-2158,Cargadora frontal,Santa Fe,90,2021,Averia_Grave,231841.05,1
+EQ-2159,Rodillo compactador,Santa Fe,19,2021,Funcional,29210.82,0
+EQ-2160,Retroexcavadora,Santa Fe,9,2024,Funcional,13543.67,0
+EQ-2161,Rodillo compactador,Salta,6,2004,Requiere_Reparacion,627.28,0
+EQ-2162,Excavadora,Santa Fe,92,2016,Requiere_Reparacion,167597.57,1
+EQ-2163,Retroexcavadora,Buenos Aires,76,2002,Requiere_Reparacion,65519.27,0
+EQ-2164,Topadora,Córdoba,96,2008,Averia_Grave,296601.13,1
+EQ-2165,Topadora,Córdoba,76,2001,Averia_Grave,142974.98,1
+EQ-2166,Topadora,Salta,49,2018,Requiere_Reparacion,174993.13,1
+EQ-2167,Excavadora,Córdoba,71,2016,Averia_Grave,174642.04,1
+EQ-2168,Topadora,Buenos Aires,87,2019,Funcional,228026.09,1
+EQ-2169,Topadora,Mendoza,48,2004,Requiere_Reparacion,94098.49,0
+EQ-2170,Topadora,Santa Fe,110,2008,Funcional,171024.15,1
+EQ-2171,Motoniveladora,Buenos Aires,108,2018,Requiere_Reparacion,306762.77,1
+EQ-2172,Rodillo compactador,Mendoza,97,2022,Requiere_Reparacion,143077.95,1
+EQ-2173,Topadora,Córdoba,120,2023,Averia_Grave,488404.44,1
+EQ-2174,Rodillo compactador,Salta,47,2001,Requiere_Reparacion,29267.28,0
+EQ-2175,Excavadora,Salta,14,2010,Requiere_Reparacion,22023.69,0
+EQ-2176,Rodillo compactador,Córdoba,59,2000,Funcional,29309.74,0
+EQ-2177,Motoniveladora,Santa Fe,90,2022,Funcional,211916.73,1
+EQ-2178,Retroexcavadora,Santa Fe,94,2003,Averia_Grave,82484.19,0
+EQ-2179,Cargadora frontal,Mendoza,47,2022,Averia_Grave,135212.84,1
+EQ-2180,Retroexcavadora,Buenos Aires,36,2004,Requiere_Reparacion,25769.27,0
+EQ-2181,Rodillo compactador,Córdoba,54,2000,Funcional,28806.59,0
+EQ-2182,Excavadora,Buenos Aires,97,2023,Requiere_Reparacion,275602.63,1
+EQ-2183,Cargadora frontal,Mendoza,8,2011,Requiere_Reparacion,18981.98,0
+EQ-2184,Cargadora frontal,Buenos Aires,40,2011,Requiere_Reparacion,60498.54,0
+EQ-2185,Cargadora frontal,Santa Fe,28,2017,Funcional,28798.91,0
+EQ-2186,Excavadora,Mendoza,97,2007,Requiere_Reparacion,124886.49,1
+EQ-2187,Excavadora,Salta,57,2018,Funcional,111026.69,1
+EQ-2188,Excavadora,Córdoba,11,2011,Requiere_Reparacion,10340.97,0
+EQ-2189,Retroexcavadora,Buenos Aires,32,2007,Funcional,24893.44,0
+EQ-2190,Cargadora frontal,Mendoza,6,2010,Requiere_Reparacion,9754.42,0
+EQ-2191,Retroexcavadora,Buenos Aires,58,2000,Requiere_Reparacion,45778.99,0
+EQ-2192,Retroexcavadora,Buenos Aires,120,2008,Funcional,93420.69,0
+EQ-2193,Excavadora,Salta,69,2015,Requiere_Reparacion,161840.0,1
+EQ-2194,Excavadora,Salta,105,2003,Requiere_Reparacion,145406.3,1
+EQ-2195,Cargadora frontal,Mendoza,90,2003,Averia_Grave,139492.22,1
+EQ-2196,Rodillo compactador,Salta,106,2017,Averia_Grave,180082.09,1
+EQ-2197,Excavadora,Buenos Aires,38,2011,Funcional,50399.44,0
+EQ-2198,Topadora,Buenos Aires,115,2003,Averia_Grave,284566.6,1
+EQ-2199,Cargadora frontal,Córdoba,29,2020,Averia_Grave,54578.46,0
+EQ-2200,Excavadora,Buenos Aires,53,2020,Requiere_Reparacion,125124.04,1
+EQ-2201,Retroexcavadora,Salta,82,2000,Requiere_Reparacion,52283.83,0
+EQ-2202,Motoniveladora,Buenos Aires,35,2005,Requiere_Reparacion,61163.55,0
+EQ-2203,Motoniveladora,Santa Fe,32,2009,Funcional,37076.52,0
+EQ-2204,Retroexcavadora,Salta,16,2019,Averia_Grave,35799.39,0
+EQ-2205,Retroexcavadora,Mendoza,1,2001,Requiere_Reparacion,0.0,0
+EQ-2206,Rodillo compactador,Córdoba,61,2021,Requiere_Reparacion,81470.36,0
+EQ-2207,Motoniveladora,Santa Fe,119,2008,Requiere_Reparacion,195847.62,1
+EQ-2208,Topadora,Santa Fe,27,2003,Funcional,41539.38,0
+EQ-2209,Excavadora,Mendoza,53,2023,Funcional,143894.58,1
+EQ-2210,Motoniveladora,Santa Fe,113,2002,Requiere_Reparacion,149970.75,1
+EQ-2211,Rodillo compactador,Córdoba,93,2003,Requiere_Reparacion,72681.99,0
+EQ-2212,Rodillo compactador,Mendoza,1,2025,Averia_Grave,408.44,0
+EQ-2213,Cargadora frontal,Salta,61,2014,Requiere_Reparacion,119661.84,1
+EQ-2215,Motoniveladora,Buenos Aires,30,2018,Averia_Grave,82370.48,0
+EQ-2216,Retroexcavadora,Santa Fe,30,2017,Funcional,40870.26,0
+EQ-2217,Retroexcavadora,Salta,74,2016,Requiere_Reparacion,108125.78,1
+EQ-2218,Topadora,Salta,24,2000,Averia_Grave,46942.7,0
+EQ-2219,Excavadora,Santa Fe,31,2014,Funcional,42305.6,0
+EQ-2220,Excavadora,Buenos Aires,28,2007,Funcional,23025.59,0
+EQ-2221,Topadora,Santa Fe,43,2021,Funcional,148796.29,1
+EQ-2222,Motoniveladora,Salta,79,2013,Funcional,150539.81,1
+EQ-2223,Motoniveladora,Salta,48,2003,Requiere_Reparacion,88805.52,0
+EQ-2224,Retroexcavadora,Buenos Aires,40,2023,Funcional,70426.96,0
+EQ-2225,Retroexcavadora,Córdoba,63,2007,Requiere_Reparacion,65840.54,0
+EQ-2226,Cargadora frontal,Santa Fe,74,2007,Funcional,61945.91,0
+EQ-2227,Topadora,Buenos Aires,2,2025,Funcional,9352.16,0
+EQ-2228,Topadora,Salta,107,2020,Requiere_Reparacion,416200.3,1
+EQ-2229,Excavadora,Buenos Aires,110,2023,Funcional,243000.66,1
+EQ-2230,Topadora,Mendoza,73,2017,Averia_Grave,265792.86,1
+EQ-2231,Cargadora frontal,Salta,69,2024,Requiere_Reparacion,208134.03,1
+EQ-2232,Motoniveladora,Mendoza,84,2003,Funcional,113754.32,1
+EQ-2233,Topadora,Mendoza,53,2016,Funcional,115444.79,1
+EQ-2234,Motoniveladora,Córdoba,44,2007,Requiere_Reparacion,71447.51,0
+EQ-2235,Cargadora frontal,Salta,43,2010,Requiere_Reparacion,64199.68,0
+EQ-2236,Rodillo compactador,Santa Fe,20,2006,Averia_Grave,12878.87,0
+EQ-2237,Excavadora,Buenos Aires,101,2005,Requiere_Reparacion,159090.85,1
+EQ-2238,Excavadora,Córdoba,39,2011,Requiere_Reparacion,99894.54,0
+EQ-2239,Retroexcavadora,Córdoba,35,2024,Requiere_Reparacion,74040.15,0
+EQ-2240,Topadora,Santa Fe,116,2017,Averia_Grave,380459.65,1
+EQ-2241,Excavadora,Córdoba,61,2009,Requiere_Reparacion,101647.08,1
+EQ-2242,Cargadora frontal,Santa Fe,75,2011,Funcional,82585.96,0
+EQ-2243,Retroexcavadora,Santa Fe,30,2014,Averia_Grave,45576.44,0
+EQ-2244,Motoniveladora,Córdoba,34,2006,Averia_Grave,59332.76,0
+EQ-2245,Rodillo compactador,Mendoza,88,2014,Requiere_Reparacion,77069.91,0
+EQ-2246,Rodillo compactador,Córdoba,55,2018,Averia_Grave,85186.5,0
+EQ-2247,Cargadora frontal,Mendoza,18,2006,Averia_Grave,20835.0,0
+EQ-2248,Excavadora,Córdoba,101,2015,Funcional,189530.19,1
+EQ-2249,Motoniveladora,Salta,49,2019,Averia_Grave,182083.72,1
+EQ-2250,Retroexcavadora,Córdoba,81,2014,Requiere_Reparacion,88898.39,0
+EQ-2251,Cargadora frontal,Buenos Aires,41,2007,Requiere_Reparacion,55291.5,0
+EQ-2252,Cargadora frontal,Buenos Aires,68,2014,Requiere_Reparacion,83541.16,0
+EQ-2253,Excavadora,Salta,94,2021,Averia_Grave,293013.21,1
+EQ-2254,Cargadora frontal,Salta,107,2005,Requiere_Reparacion,140834.69,1
+EQ-2255,Excavadora,Córdoba,25,2015,Requiere_Reparacion,59519.65,0
+EQ-2257,Rodillo compactador,Santa Fe,110,2008,Requiere_Reparacion,63330.59,0
+EQ-2258,Cargadora frontal,Buenos Aires,78,2010,Averia_Grave,125456.74,1
+EQ-2259,Motoniveladora,Santa Fe,18,2023,Averia_Grave,67196.64,0
+EQ-2260,Topadora,Mendoza,23,2009,Funcional,51711.03,0
+EQ-2261,Motoniveladora,Salta,25,2016,Averia_Grave,99381.2,0
+EQ-2262,Topadora,Salta,13,2004,Averia_Grave,40576.54,0
+EQ-2263,Motoniveladora,Buenos Aires,91,2025,Requiere_Reparacion,383135.91,1
+EQ-2264,Cargadora frontal,Córdoba,116,2016,Funcional,148075.24,1
+EQ-2265,Motoniveladora,Santa Fe,63,2020,Requiere_Reparacion,208892.83,1
+EQ-2266,Motoniveladora,Buenos Aires,72,2016,Funcional,127522.18,1
+EQ-2267,Rodillo compactador,Santa Fe,93,2009,Requiere_Reparacion,68018.83,0
+EQ-2268,Rodillo compactador,Buenos Aires,50,2009,Requiere_Reparacion,46392.65,0
+EQ-2270,Topadora,Buenos Aires,71,2023,Requiere_Reparacion,297011.25,1
+EQ-2271,Excavadora,Córdoba,37,2003,Averia_Grave,53821.31,0
+EQ-2272,Excavadora,Mendoza,8,2022,Averia_Grave,35102.47,0
+EQ-2273,Excavadora,Buenos Aires,69,2022,Funcional,151859.56,1
+EQ-2274,Retroexcavadora,Salta,99,2002,Funcional,67664.82,0
+EQ-2275,Excavadora,Córdoba,9,2002,Averia_Grave,5355.96,0
+EQ-2276,Retroexcavadora,Buenos Aires,26,2018,Averia_Grave,48442.41,0
+EQ-2277,Excavadora,Córdoba,32,2022,Requiere_Reparacion,79759.8,0
+EQ-2278,Motoniveladora,Mendoza,97,2010,Requiere_Reparacion,205646.92,1
+EQ-2279,Retroexcavadora,Buenos Aires,61,2017,Requiere_Reparacion,92435.03,0
+EQ-2280,Rodillo compactador,Buenos Aires,65,2026,Averia_Grave,136738.65,1
+EQ-2281,Rodillo compactador,Salta,78,2008,Averia_Grave,95103.88,0
+EQ-2282,Retroexcavadora,Santa Fe,34,2006,Funcional,26239.78,0
+EQ-2283,Excavadora,Córdoba,86,2026,Funcional,206785.71,1
+EQ-2284,Rodillo compactador,Mendoza,4,2007,Funcional,7447.58,0
+EQ-2285,Rodillo compactador,Salta,14,2012,Averia_Grave,11954.44,0
+EQ-2286,Rodillo compactador,Córdoba,98,2011,Averia_Grave,108472.52,1
+EQ-2287,Topadora,Santa Fe,79,2014,Averia_Grave,264981.82,1
+EQ-2288,Rodillo compactador,Buenos Aires,22,2007,Funcional,9301.74,0
+EQ-2289,Topadora,Córdoba,53,2018,Requiere_Reparacion,166069.75,1
+EQ-2290,Retroexcavadora,Santa Fe,7,2018,Funcional,9658.86,0
+EQ-2291,Retroexcavadora,Buenos Aires,81,2005,Requiere_Reparacion,85974.85,0
+EQ-2292,Excavadora,Salta,91,2012,Funcional,160855.6,1
+EQ-2293,Excavadora,Salta,34,2001,Averia_Grave,58947.15,0
+EQ-2294,Rodillo compactador,Córdoba,43,2005,Funcional,36112.09,0
+EQ-2295,Rodillo compactador,Córdoba,29,2026,Requiere_Reparacion,59143.09,0
+EQ-2296,Rodillo compactador,Buenos Aires,47,2013,Averia_Grave,58693.73,0
+EQ-2297,Excavadora,Santa Fe,33,2016,Requiere_Reparacion,67614.88,0
+EQ-2298,Retroexcavadora,Buenos Aires,30,2023,Funcional,53909.56,0
+EQ-2299,Excavadora,Córdoba,52,2019,Averia_Grave,169574.9,1
+EQ-2300,Topadora,Santa Fe,104,2021,Requiere_Reparacion,413489.84,1
+EQ-2301,Excavadora,Mendoza,92,2019,Requiere_Reparacion,287130.54,1
+EQ-2302,Motoniveladora,Santa Fe,36,2013,Requiere_Reparacion,71693.4,0
+EQ-2303,Cargadora frontal,Córdoba,114,2017,Averia_Grave,246906.36,1
+EQ-2304,Topadora,Mendoza,26,2007,Requiere_Reparacion,52859.99,0
+EQ-2305,Topadora,Mendoza,110,2024,Requiere_Reparacion,495429.17,1
+EQ-2306,Motoniveladora,Mendoza,38,2004,Requiere_Reparacion,59688.25,0
+EQ-2307,Excavadora,Santa Fe,65,2023,Funcional,148394.51,1
+EQ-2308,Motoniveladora,Salta,25,2023,Averia_Grave,112107.19,1
+EQ-2309,Excavadora,Córdoba,92,2003,Funcional,97236.61,0
+EQ-2310,Cargadora frontal,Salta,39,2019,Requiere_Reparacion,84823.7,0
+EQ-2311,Excavadora,Córdoba,105,2026,Requiere_Reparacion,361852.82,1
+EQ-2312,Motoniveladora,Córdoba,10,2015,Funcional,22569.91,0
+EQ-2313,Cargadora frontal,Santa Fe,61,2009,Requiere_Reparacion,80377.34,0
+EQ-2314,Motoniveladora,Santa Fe,20,2023,Requiere_Reparacion,71305.03,0
+EQ-2315,Excavadora,Mendoza,107,2013,Requiere_Reparacion,263437.21,1
+EQ-2316,Motoniveladora,Córdoba,51,2003,Funcional,60066.88,0
+EQ-2317,Motoniveladora,Salta,81,2006,Averia_Grave,207566.68,1
+EQ-2318,Retroexcavadora,Córdoba,106,2018,Averia_Grave,200523.64,1
+EQ-2319,Topadora,Santa Fe,65,2012,Requiere_Reparacion,154424.94,1
+EQ-2320,Rodillo compactador,Salta,7,2005,Requiere_Reparacion,5473.28,0
+EQ-2321,Motoniveladora,Santa Fe,27,2021,Funcional,58770.32,0
+EQ-2322,Motoniveladora,Mendoza,26,2003,Funcional,30157.32,0
+EQ-2323,Retroexcavadora,Salta,110,2005,Requiere_Reparacion,112641.32,1
+EQ-2324,Cargadora frontal,Salta,110,2012,Averia_Grave,197014.42,1
+EQ-2325,Rodillo compactador,Santa Fe,58,2001,Averia_Grave,35178.39,0
+EQ-2326,Rodillo compactador,Santa Fe,107,2010,Requiere_Reparacion,98278.51,0
+EQ-2327,Retroexcavadora,Buenos Aires,30,2024,Averia_Grave,72608.87,0
+EQ-2328,Excavadora,Santa Fe,82,2025,Requiere_Reparacion,228224.89,1
+EQ-2329,Motoniveladora,Salta,48,2023,Funcional,151268.29,1
+EQ-2330,Motoniveladora,Santa Fe,29,2008,Requiere_Reparacion,46578.84,0
+EQ-2332,Topadora,Buenos Aires,51,2022,Averia_Grave,205361.61,1
+EQ-2333,Excavadora,Córdoba,41,2010,Requiere_Reparacion,62245.03,0
+EQ-2334,Rodillo compactador,Córdoba,26,2020,Requiere_Reparacion,31221.87,0
+EQ-2335,Cargadora frontal,Salta,41,2003,Requiere_Reparacion,48267.62,0
+EQ-2336,Cargadora frontal,Santa Fe,16,2018,Averia_Grave,38977.62,0
+EQ-2337,Retroexcavadora,Buenos Aires,117,2015,Requiere_Reparacion,193860.18,1
+EQ-2338,Rodillo compactador,Buenos Aires,46,2024,Requiere_Reparacion,81515.93,0
+EQ-2339,Motoniveladora,Salta,13,2002,Funcional,14862.27,0
+EQ-2340,Motoniveladora,Salta,70,2011,Averia_Grave,225988.87,1
+EQ-2341,Retroexcavadora,Mendoza,106,2026,Requiere_Reparacion,204648.22,1
+EQ-2342,Retroexcavadora,Buenos Aires,44,2010,Funcional,38124.07,0
+EQ-2343,Cargadora frontal,Buenos Aires,102,2017,Averia_Grave,245475.94,1
+EQ-2344,Rodillo compactador,Buenos Aires,74,2004,Funcional,36325.39,0
+EQ-2345,Cargadora frontal,Mendoza,89,2019,Requiere_Reparacion,218480.78,1
+EQ-2346,Excavadora,Mendoza,36,2007,Requiere_Reparacion,50714.95,0
+EQ-2347,Excavadora,Salta,5,2015,Requiere_Reparacion,12407.6,0
+EQ-2348,Rodillo compactador,Buenos Aires,42,2023,Requiere_Reparacion,62155.61,0
+EQ-2349,Excavadora,Buenos Aires,111,2017,Funcional,189981.49,1
+EQ-2350,Cargadora frontal,Salta,95,2012,Funcional,115154.23,1
+EQ-2351,Cargadora frontal,Salta,95,2005,Funcional,95309.15,0
+EQ-2352,Rodillo compactador,Mendoza,106,2009,Funcional,74146.02,0
+EQ-2353,Rodillo compactador,Buenos Aires,45,2022,Averia_Grave,91989.63,0
+EQ-2354,Retroexcavadora,Buenos Aires,39,2005,Requiere_Reparacion,35819.76,0
+EQ-2355,Excavadora,Buenos Aires,112,2017,Requiere_Reparacion,285251.82,1
+EQ-2356,Retroexcavadora,Mendoza,69,2013,Requiere_Reparacion,90090.5,0
+EQ-2357,Retroexcavadora,Salta,36,2008,Averia_Grave,34951.57,0
+EQ-2358,Excavadora,Mendoza,34,2019,Funcional,70761.44,0
+EQ-2359,Cargadora frontal,Córdoba,106,2009,Funcional,140453.06,1
+EQ-2360,Excavadora,Mendoza,7,2007,Requiere_Reparacion,7411.51,0
+EQ-2361,Cargadora frontal,Buenos Aires,8,2014,Requiere_Reparacion,13825.78,0
+EQ-2362,Rodillo compactador,Salta,89,2020,Averia_Grave,169976.86,1
+EQ-2364,Motoniveladora,Mendoza,21,2017,Averia_Grave,66549.98,0
+EQ-2365,Rodillo compactador,Salta,119,2017,Funcional,154301.66,1
+EQ-2366,Motoniveladora,Santa Fe,52,2021,Funcional,109170.42,1
+EQ-2367,Retroexcavadora,Santa Fe,88,2007,Funcional,61286.31,0
+EQ-2369,Motoniveladora,Salta,11,2013,Averia_Grave,34486.89,0
+EQ-2370,Excavadora,Mendoza,23,2017,Averia_Grave,68915.3,0
+EQ-2371,Motoniveladora,Buenos Aires,92,2017,Funcional,164226.9,1
+EQ-2372,Rodillo compactador,Salta,12,2004,Averia_Grave,13492.89,0
+EQ-2373,Motoniveladora,Buenos Aires,72,2021,Requiere_Reparacion,174349.58,1
+EQ-2374,Retroexcavadora,Santa Fe,42,2009,Averia_Grave,54681.29,0
+EQ-2375,Rodillo compactador,Buenos Aires,45,2023,Requiere_Reparacion,74315.69,0
+EQ-2376,Topadora,Mendoza,115,2019,Funcional,352655.23,1
+EQ-2377,Topadora,Santa Fe,73,2026,Funcional,279198.82,1
+EQ-2379,Topadora,Mendoza,43,2014,Requiere_Reparacion,162441.4,1
+EQ-2380,Cargadora frontal,Mendoza,46,2005,Requiere_Reparacion,63382.31,0
+EQ-2381,Excavadora,Córdoba,83,2010,Requiere_Reparacion,139823.27,1
+EQ-2382,Retroexcavadora,Salta,5,2023,Requiere_Reparacion,13231.35,0
+EQ-2383,Topadora,Santa Fe,29,2010,Averia_Grave,83034.74,0
+EQ-2384,Retroexcavadora,Buenos Aires,73,2001,Funcional,47492.19,0
+EQ-2385,Excavadora,Buenos Aires,75,2006,Funcional,96393.21,0
+EQ-2386,Topadora,Córdoba,12,2016,Averia_Grave,38808.63,0
+EQ-2387,Topadora,Mendoza,95,2016,Requiere_Reparacion,343735.08,1
+EQ-2388,Topadora,Santa Fe,66,2026,Funcional,248508.36,1
+EQ-2389,Topadora,Córdoba,29,2025,Funcional,85929.21,0
+EQ-2390,Topadora,Santa Fe,91,2014,Funcional,199912.5,1
+EQ-2391,Retroexcavadora,Salta,119,2014,Funcional,154628.75,1
+EQ-2392,Excavadora,Santa Fe,51,2021,Funcional,106863.04,1
+EQ-2393,Cargadora frontal,Buenos Aires,35,2001,Funcional,25831.43,0
+EQ-2394,Excavadora,Buenos Aires,36,2016,Averia_Grave,84190.59,0
+EQ-2395,Retroexcavadora,Santa Fe,72,2012,Averia_Grave,96184.48,0
+EQ-2396,Cargadora frontal,Santa Fe,6,2021,Averia_Grave,3596.32,0
+EQ-2397,Topadora,Salta,59,2021,Requiere_Reparacion,255901.02,1
+EQ-2398,Excavadora,Santa Fe,3,2017,Requiere_Reparacion,809.71,0
+EQ-2399,Excavadora,Mendoza,5,2017,Averia_Grave,14678.0,0
+EQ-2400,Rodillo compactador,Santa Fe,52,2018,Averia_Grave,78190.33,0
+EQ-2401,Motoniveladora,Córdoba,90,2015,Requiere_Reparacion,220156.08,1
+EQ-2402,Cargadora frontal,Mendoza,107,2006,Funcional,87560.27,0
+EQ-2403,Rodillo compactador,Mendoza,11,2007,Requiere_Reparacion,9243.77,0
+EQ-2404,Cargadora frontal,Mendoza,30,2020,Requiere_Reparacion,67063.07,0
+EQ-2405,Retroexcavadora,Buenos Aires,51,2016,Requiere_Reparacion,71378.48,0
+EQ-2406,Rodillo compactador,Mendoza,69,2006,Funcional,53175.86,0
+EQ-2407,Retroexcavadora,Córdoba,119,2023,Averia_Grave,254084.16,1
+EQ-2408,Rodillo compactador,Mendoza,83,2026,Requiere_Reparacion,128448.31,1
+EQ-2409,Retroexcavadora,Mendoza,65,2016,Requiere_Reparacion,107661.58,1
+EQ-2410,Motoniveladora,Mendoza,8,2006,Funcional,9940.28,0
+EQ-2411,Cargadora frontal,Salta,10,2025,Averia_Grave,18443.84,0
+EQ-2412,Motoniveladora,Santa Fe,19,2006,Averia_Grave,34640.03,0
+EQ-2413,Topadora,Buenos Aires,80,2011,Funcional,174562.75,1
+EQ-2414,Cargadora frontal,Mendoza,40,2023,Requiere_Reparacion,83755.52,0
+EQ-2415,Retroexcavadora,Mendoza,29,2014,Requiere_Reparacion,49263.89,0
+EQ-2416,Retroexcavadora,Buenos Aires,81,2006,Averia_Grave,86845.34,0
+EQ-2417,Cargadora frontal,Buenos Aires,98,2002,Funcional,85124.24,0
+EQ-2418,Excavadora,Córdoba,53,2009,Averia_Grave,93638.13,0
+EQ-2419,Excavadora,Salta,106,2018,Requiere_Reparacion,274093.07,1
+EQ-2420,Retroexcavadora,Santa Fe,89,2019,Funcional,110253.01,1
+EQ-2421,Excavadora,Salta,86,2006,Funcional,92648.29,0
+EQ-2422,Rodillo compactador,Salta,105,2004,Funcional,93922.07,0
+EQ-2423,Motoniveladora,Santa Fe,23,2018,Funcional,45729.38,0
+EQ-2424,Rodillo compactador,Mendoza,92,2004,Requiere_Reparacion,67876.77,0
+EQ-2425,Retroexcavadora,Córdoba,115,2001,Averia_Grave,119806.62,1
+EQ-2426,Cargadora frontal,Buenos Aires,120,2013,Funcional,179808.22,1
+EQ-2427,Motoniveladora,Córdoba,70,2015,Averia_Grave,220585.25,1
+EQ-2428,Retroexcavadora,Santa Fe,91,2006,Funcional,60986.46,0
+EQ-2429,Rodillo compactador,Buenos Aires,107,2005,Requiere_Reparacion,79211.91,0
+EQ-2430,Excavadora,Córdoba,103,2006,Averia_Grave,140748.96,1
+EQ-2432,Cargadora frontal,Mendoza,100,2000,Requiere_Reparacion,81163.7,0
+EQ-2433,Motoniveladora,Salta,46,2000,Averia_Grave,77447.47,0
+EQ-2434,Excavadora,Salta,88,2010,Funcional,129820.71,1
+EQ-2435,Retroexcavadora,Córdoba,50,2000,Funcional,27099.16,0
+EQ-2436,Cargadora frontal,Santa Fe,97,2008,Requiere_Reparacion,119552.29,1
+EQ-2437,Cargadora frontal,Salta,98,2015,Funcional,168623.34,1
+EQ-2438,Rodillo compactador,Santa Fe,113,2000,Requiere_Reparacion,75980.86,0
+EQ-2439,Topadora,Córdoba,71,2016,Funcional,173943.73,1
+EQ-2440,Motoniveladora,Córdoba,58,2016,Averia_Grave,141407.43,1
+EQ-2441,Retroexcavadora,Mendoza,20,2015,Averia_Grave,42534.09,0
+EQ-2442,Motoniveladora,Santa Fe,77,2016,Averia_Grave,199214.8,1
+EQ-2443,Motoniveladora,Salta,68,2021,Averia_Grave,328280.67,1
+EQ-2444,Excavadora,Salta,62,2001,Funcional,88870.34,0
+EQ-2445,Cargadora frontal,Buenos Aires,82,2004,Funcional,74091.47,0
+EQ-2446,Topadora,Mendoza,103,2008,Requiere_Reparacion,261455.01,1
+EQ-2447,Rodillo compactador,Córdoba,18,2018,Requiere_Reparacion,16435.77,0
+EQ-2448,Cargadora frontal,Santa Fe,52,2023,Requiere_Reparacion,115847.52,1
+EQ-2449,Rodillo compactador,Córdoba,87,2024,Requiere_Reparacion,152256.03,1
+EQ-2450,Excavadora,Córdoba,99,2015,Requiere_Reparacion,212986.67,1
+EQ-2451,Topadora,Córdoba,94,2011,Funcional,155934.71,1
+EQ-2452,Topadora,Buenos Aires,96,2011,Requiere_Reparacion,225959.22,1
+EQ-2453,Motoniveladora,Mendoza,103,2001,Requiere_Reparacion,108894.96,1
+EQ-2454,Retroexcavadora,Buenos Aires,116,2012,Requiere_Reparacion,158664.71,1
+EQ-2455,Rodillo compactador,Córdoba,73,2013,Averia_Grave,73480.17,0
+EQ-2456,Retroexcavadora,Buenos Aires,30,2005,Requiere_Reparacion,30929.26,0
+EQ-2457,Topadora,Buenos Aires,68,2020,Averia_Grave,330215.83,1
+EQ-2458,Topadora,Córdoba,86,2021,Averia_Grave,333879.92,1
+EQ-2459,Retroexcavadora,Salta,13,2008,Funcional,19369.68,0
+EQ-2460,Motoniveladora,Salta,91,2024,Requiere_Reparacion,334115.16,1
+EQ-2461,Retroexcavadora,Córdoba,66,2002,Requiere_Reparacion,55315.89,0
+EQ-2462,Excavadora,Santa Fe,113,2024,Requiere_Reparacion,288153.92,1
+EQ-2463,Retroexcavadora,Salta,26,2020,Funcional,38269.5,0
+EQ-2464,Cargadora frontal,Córdoba,109,2006,Averia_Grave,132416.76,1
+EQ-2465,Retroexcavadora,Salta,54,2017,Averia_Grave,101776.12,1
+EQ-2466,Excavadora,Buenos Aires,69,2008,Funcional,85199.66,0
+EQ-2467,Excavadora,Córdoba,80,2021,Funcional,161854.13,1
+EQ-2468,Rodillo compactador,Córdoba,70,2004,Funcional,40369.52,0
+EQ-2469,Motoniveladora,Buenos Aires,109,2006,Averia_Grave,211820.82,1
+EQ-2470,Excavadora,Salta,21,2008,Requiere_Reparacion,33581.4,0
+EQ-2471,Topadora,Salta,88,2005,Funcional,152147.47,1
+EQ-2472,Motoniveladora,Córdoba,117,2008,Averia_Grave,241902.02,1
+EQ-2473,Retroexcavadora,Salta,27,2016,Requiere_Reparacion,33532.58,0
+EQ-2474,Excavadora,Mendoza,31,2017,Requiere_Reparacion,80433.33,0
+EQ-2475,Motoniveladora,Salta,58,2014,Requiere_Reparacion,164522.87,1
+EQ-2476,Retroexcavadora,Salta,87,2005,Requiere_Reparacion,92216.14,0
+EQ-2477,Cargadora frontal,Santa Fe,116,2005,Requiere_Reparacion,139849.19,1
+EQ-2478,Excavadora,Buenos Aires,96,2024,Funcional,200608.05,1
+EQ-2479,Motoniveladora,Salta,96,2006,Requiere_Reparacion,146328.75,1
+EQ-2480,Motoniveladora,Mendoza,53,2002,Averia_Grave,93902.8,0
+EQ-2481,Cargadora frontal,Salta,78,2012,Requiere_Reparacion,119670.3,1
+EQ-2482,Topadora,Salta,26,2000,Averia_Grave,53042.15,0
+EQ-2483,Excavadora,Buenos Aires,56,2009,Requiere_Reparacion,97043.67,0
+EQ-2484,Excavadora,Santa Fe,23,2023,Averia_Grave,81442.54,0
+EQ-2485,Retroexcavadora,Buenos Aires,4,2007,Funcional,4763.49,0
+EQ-2487,Excavadora,Salta,97,2013,Funcional,155854.89,1
+EQ-2488,Motoniveladora,Salta,62,2009,Funcional,104094.63,1
+EQ-2489,Cargadora frontal,Salta,2,2017,Funcional,10754.42,0
+EQ-2490,Retroexcavadora,Salta,11,2016,Funcional,15660.81,0
+EQ-2491,Retroexcavadora,Mendoza,14,2008,Averia_Grave,24905.83,0
+EQ-2492,Excavadora,Santa Fe,87,2006,Averia_Grave,133096.61,1
+EQ-2493,Topadora,Salta,25,2024,Averia_Grave,150593.39,1
+EQ-2494,Cargadora frontal,Santa Fe,31,2004,Funcional,24539.82,0
+EQ-2495,Retroexcavadora,Mendoza,104,2025,Averia_Grave,240794.8,1
+EQ-2496,Excavadora,Córdoba,106,2012,Averia_Grave,216644.9,1
+EQ-2497,Rodillo compactador,Mendoza,92,2026,Requiere_Reparacion,151533.32,1
+EQ-2498,Topadora,Salta,38,2009,Requiere_Reparacion,85424.58,0
+EQ-2499,Motoniveladora,Mendoza,70,2015,Requiere_Reparacion,174645.7,1
+EQ-2500,Topadora,Santa Fe,25,2016,Funcional,56004.85,0

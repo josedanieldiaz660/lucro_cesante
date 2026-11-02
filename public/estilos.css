@@ -1,0 +1,5 @@
+.fila-negro { background-color: #212529 !important; color: white !important; font-weight: bold; }
+.fila-rojo { background-color: #f8d7da !important; color: #842029 !important; }
+.fila-verde { background-color: #d1e7dd !important; color: #0f5132 !important; }
+.table-container { max-height: 60vh; overflow-y: auto; }
+.nota { font-size: .85rem; color: #555; }
