@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Panel de Control y Predicción - Maquinaria Vial (demostración)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/estilos.css" rel="stylesheet">
+    <style>
+        /* Personalización de colores basada en las imágenes (Dark & Yellow) */
+        :root {
+            --bs-primary: #f2b705;
+            --bs-primary-rgb: 242, 183, 5;
+            --bs-body-bg: #14181f;
+            --bs-body-color: #ece8dd;
+        }
+        body { background-color: var(--bs-body-bg); }
+        .card { background-color: #1c222c; border-color: #323b49; }
+        .card-header { border-bottom-color: #323b49; }
+        
+        /* Botones y Menú */
+        .btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); color: #1d2430; font-weight: bold; }
+        .btn-primary:hover { background-color: #d98e04; border-color: #d98e04; color: #1d2430; }
+        .app-navigation .nav-link { color: #ece8dd; margin-right: 5px; border-radius: 6px; }
+        .app-navigation .nav-link:hover { background-color: #323b49; }
+        .app-navigation .nav-link.active { background-color: var(--bs-primary); color: #1d2430 !important; font-weight: bold; }
+        
+        /* Estilos del Mapa Interactivo */
+        .map-container { display: flex; justify-content: center; padding: 20px; background: #181d24; border-radius: 8px; border: 1px solid #323b49; }
+        .map-group { cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .map-group:hover { transform: scale(1.15); z-index: 10; }
+        .map-group:hover circle { fill-opacity: 1; stroke: var(--bs-primary); stroke-width: 2px; }
+        .map-group:hover text.prov-name { font-size: 11px; fill: var(--bs-primary); }
+        
+        /* Tablas */
+        .table-dark { --bs-table-bg: #11151c; }
+        .fila-negro { background-color: rgba(255, 255, 255, 0.05); }
+        .fila-rojo { background-color: rgba(220, 53, 69, 0.15); }
+        .fila-verde { background-color: rgba(25, 135, 84, 0.1); }
+    </style>
 </head>
-<body class="bg-light">
+<body>
     <div class="container py-4">
-        <h2 class="mb-4 text-dark border-bottom pb-2">🚜 Sistema de Evaluación y Proyección de Flota (IA)</h2>
+        <!-- ENCABEZADO Y NAVEGACIÓN -->
+        <div class="p-4 mb-4 rounded" style="background-color: #0e1117; border-bottom: 6px solid var(--bs-primary);">
+            <small class="text-uppercase fw-bold" style="color: var(--bs-primary); letter-spacing: 0.1em;">Lucro Cesante · Pérdida Productiva</small>
+            <h1 class="mb-2 mt-2 fw-bold text-white">🚜 Sistema de Evaluación y Proyección de Flota (IA)</h1>
+            <p class="mb-0 text-muted">Cuánto le cuesta al Estado una máquina decomisada que no trabaja.</p>
+        </div>
 
         <nav class="nav nav-pills mb-4 app-navigation" aria-label="Secciones principales">
             <a class="nav-link active" href="/" aria-current="page">🚜 Panel de maquinaria</a>
-            <a class="nav-link" href="/gestion">📋 Gestión del proyecto</a>
+            <a class="nav-link" href="/gestion">📋 Bitácora y Distribución</a>
         </nav>
 
-        <div class="alert alert-warning small">
+        <div class="alert alert-warning small bg-warning text-dark border-0">
             <strong>Demostración experimental.</strong> Los modelos se entrenaron con datos <strong>simulados</strong>.
             El resultado no constituye una valoración pericial definitiva ni demuestra capacidad predictiva sobre pérdidas reales.
         </div>
@@ -39,69 +76,73 @@
         {% endif %}
 
         <!-- SECCIÓN 1: FORMULARIO DE PREDICCIÓN INDIVIDUAL -->
-        <div class="card shadow-sm mb-4 border-primary">
-            <div class="card-header bg-primary text-white fw-bold">
-                🔍 Evaluación Pericial de Caso Individual (Doble Predicción y Coincidencia)
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold border-bottom-0">
+                🔍 Datos de la Pericia (Evaluación Individual)
             </div>
             <div class="card-body">
                 <form method="POST" action="/predecir_caso" novalidate>
-                    {# se conservan la proyección y los filtros del tablero #}
                     <input type="hidden" name="meses_proyeccion" value="{{ meses_proyeccion }}">
                     <input type="hidden" name="cantidad_registros" value="{{ cantidad_registros }}">
                     {% for t in tipos_sel %}<input type="hidden" name="tipos" value="{{ t }}">{% endfor %}
                     {% for p in prov_sel %}<input type="hidden" name="provincias" value="{{ p }}">{% endfor %}
+                    
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <label class="form-label fw-bold small">Tipo de Equipo:</label>
-                            <select name="tipo_equipo" class="form-select form-select-sm" required>
+                            <label class="form-label fw-bold small text-muted">Tipo de Equipo:</label>
+                            <select name="tipo_equipo" class="form-select bg-dark text-white border-secondary" required>
                                 {% for t in meta.categorias.tipo_equipo %}
                                 <option value="{{ t }}" {% if valores.tipo_equipo == t %}selected{% endif %}>{{ t }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label fw-bold small">Provincia / Jurisdicción:</label>
-                            <select name="provincia" class="form-select form-select-sm" required>
+                            <label class="form-label fw-bold small text-muted">Provincia / Jurisdicción:</label>
+                            <select name="provincia" class="form-select bg-dark text-white border-secondary" required>
                                 {% for p in meta.categorias.provincia %}
                                 <option value="{{ p }}" {% if valores.provincia == p %}selected{% endif %}>{{ p }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label fw-bold small">Meses Inactividad:</label>
-                            <input type="number" step="any" name="meses_inactividad" class="form-control form-control-sm" min="{{ meta.rangos.meses_inactividad[0] }}" max="{{ meta.rangos.meses_inactividad[1] }}" value="{{ valores.meses_inactividad }}" required>
+                            <label class="form-label fw-bold small text-muted">Meses Inactividad:</label>
+                            <input type="number" step="any" name="meses_inactividad" class="form-control bg-dark text-white border-secondary" min="{{ meta.rangos.meses_inactividad[0] }}" max="{{ meta.rangos.meses_inactividad[1] }}" value="{{ valores.meses_inactividad }}" required>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label fw-bold small">Año Fabricación:</label>
-                            <input type="number" step="any" name="anio_fabricacion" class="form-control form-control-sm" min="{{ meta.rangos.anio_fabricacion[0] }}" max="{{ meta.rangos.anio_fabricacion[1] }}" value="{{ valores.anio_fabricacion }}" required>
+                            <label class="form-label fw-bold small text-muted">Año Fabricación:</label>
+                            <input type="number" step="any" name="anio_fabricacion" class="form-control bg-dark text-white border-secondary" min="{{ meta.rangos.anio_fabricacion[0] }}" max="{{ meta.rangos.anio_fabricacion[1] }}" value="{{ valores.anio_fabricacion }}" required>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label fw-bold small">Estado del Motor:</label>
-                            <select name="estado_motor" class="form-select form-select-sm" required>
+                            <label class="form-label fw-bold small text-muted">Estado del Motor:</label>
+                            <select name="estado_motor" class="form-select bg-dark text-white border-secondary" required>
                                 {% for e in meta.categorias.estado_motor %}
                                 <option value="{{ e }}" {% if valores.estado_motor == e %}selected{% endif %}>{{ e }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
-                    <div class="mt-3 text-end">
-                        <button type="submit" class="btn btn-primary btn-sm fw-bold px-4" {% if not sistema_ok %}disabled{% endif %}>Ejecutar Predicción Individual</button>
+                    <div class="mt-4 text-end">
+                        <button type="submit" class="btn btn-primary w-100 py-2 fs-5" {% if not sistema_ok %}disabled{% endif %}>Calcular lucro cesante individual</button>
                     </div>
                 </form>
 
                 {% if resultado %}
-                <hr>
-                <div class="alert alert-{{ resultado.color_alerta }} mt-3 mb-0">
-                    <h5 class="alert-heading fw-bold">Resultado de la Evaluación Individual:</h5>
-                    <p class="mb-1"><strong>Pérdida estimada / Lucro Cesante (Regresión):</strong> ${{ "{:,.2f}".format(resultado.pred_usd) }} USD</p>
-                    <p class="mb-1"><strong>Alerta por Umbral (Regresión &ge; ${{ "{:,.0f}".format(resultado.umbral) }}):</strong>
-                        {% if resultado.alerta_regresion %}CRÍTICO (&ge; ${{ "{:,.0f}".format(resultado.umbral) }}){% else %}NORMAL (&lt; ${{ "{:,.0f}".format(resultado.umbral) }}){% endif %}</p>
-                    <p class="mb-1"><strong>Alerta por Clasificador Directo:</strong>
-                        {% if resultado.alerta_clasificador == 1 %}CRÍTICO (Clase 1){% else %}NORMAL (Clase 0){% endif %}</p>
-                    <p class="mb-1"><strong>Distancia al umbral:</strong> {{ "{:+,.0f}".format(resultado.distancia_umbral) }} USD
-                        {% if resultado.cerca_umbral %}<span class="badge text-bg-warning">cerca del umbral (&le; 1 MAE = ${{ "{:,.0f}".format(resultado.banda) }})</span>{% endif %}</p>
-                    <hr>
-                    <p class="mb-2"><strong>Análisis de Acuerdo / Desacuerdo:</strong> <span class="badge bg-dark">{{ resultado.acuerdo }}</span></p>
+                <hr class="border-secondary mt-4">
+                <div class="alert alert-{{ 'danger' if resultado.alerta_regresion else 'success' }} bg-opacity-10 mt-3 mb-0 border-{{ 'danger' if resultado.alerta_regresion else 'success' }}">
+                    <h5 class="alert-heading fw-bold mb-3">Resultado de la Evaluación Individual:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Pérdida estimada (IA):</strong> <span class="fs-5 fw-bold">${{ "{:,.2f}".format(resultado.pred_usd) }} USD</span></p>
+                            <p class="mb-1"><strong>Distancia al umbral:</strong> {{ "{:+,.0f}".format(resultado.distancia_umbral) }} USD
+                                {% if resultado.cerca_umbral %}<span class="badge text-bg-warning">Cerca del umbral</span>{% endif %}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Alerta Regresión:</strong> {% if resultado.alerta_regresion %}<span class="badge bg-danger">CRÍTICO</span>{% else %}<span class="badge bg-success">NORMAL</span>{% endif %}</p>
+                            <p class="mb-1"><strong>Alerta Clasificador:</strong> {% if resultado.alerta_clasificador == 1 %}<span class="badge bg-danger">CRÍTICO</span>{% else %}<span class="badge bg-success">NORMAL</span>{% endif %}</p>
+                        </div>
+                    </div>
+                    <hr class="border-secondary opacity-25">
+                    <p class="mb-2"><strong>Acuerdo de Modelos:</strong> <span class="badge bg-dark border">{{ resultado.acuerdo }}</span></p>
                     <p class="mb-0 small"><strong>Interpretación:</strong> {{ resultado.interpretacion }}</p>
                 </div>
                 {% endif %}
@@ -110,63 +151,130 @@
 
         <!-- SECCIÓN 2: TABLERO GENERAL DE FLOTA E INVENTARIO -->
         {% if sistema_ok %}
-        <form method="GET" action="/" class="bg-white p-3 shadow-sm rounded mb-4">
-            <div class="row align-items-center mb-3 bg-light p-3 rounded border">
-                <div class="col-md-8 d-flex align-items-center">
-                    <label class="me-3 fw-bold text-primary text-nowrap">📅 Proyectar inactividad a futuro:</label>
-                    <input type="range" class="form-range me-3" name="meses_proyeccion" min="0" max="{{ meta.rangos.meses_inactividad[1] }}" step="1" value="{{ meses_proyeccion }}" oninput="document.getElementById('valProy').innerText = this.value">
-                    <span class="fw-bold text-dark text-nowrap">+<span id="valProy">{{ meses_proyeccion }}</span> meses</span>
-                </div>
-                <div class="col-md-4 text-end">
-                    <label for="cantidad_registros" class="form-label small fw-bold mb-1">Registros a mostrar</label>
-                    <select class="form-select form-select-sm d-inline-block selector-cantidad" id="cantidad_registros" name="cantidad_registros">
-                        <option value="100" {% if cantidad_registros == '100' %}selected{% endif %}>100 registros</option>
-                        <option value="250" {% if cantidad_registros == '250' %}selected{% endif %}>250 registros</option>
-                        <option value="500" {% if cantidad_registros == '500' %}selected{% endif %}>500 registros</option>
-                        <option value="1000" {% if cantidad_registros == '1000' %}selected{% endif %}>1.000 registros</option>
-                        <option value="todos" {% if cantidad_registros == 'todos' %}selected{% endif %}>Todos los disponibles</option>
-                    </select>
-                    <button type="submit" class="btn btn-dark fw-bold px-4 mt-2">Simular Proyección</button>
-                    <a href="/" class="btn btn-outline-secondary ms-2 mt-2">Restablecer</a>
-                </div>
-            </div>
-
-            <div class="row pt-2">
-                <div class="col-md-6">
-                    <label class="fw-bold text-secondary mb-2 small">TIPO DE MAQUINARIA (* Múltiple selección):</label>
-                    <div class="d-flex flex-wrap gap-3">
-                        {% for t in meta.categorias.tipo_equipo %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="tipos" value="{{ t }}" id="tipo_{{ loop.index }}" {% if t in tipos_sel %}checked{% endif %}>
-                            <label class="form-check-label small" for="tipo_{{ loop.index }}">{{ t }}</label>
-                        </div>
-                        {% endfor %}
+        
+        <!-- Filtros del Tablero -->
+        <form method="GET" action="/" class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="row align-items-center mb-3 p-3 rounded" style="background-color: #11151c;">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <label class="me-3 fw-bold" style="color: var(--bs-primary);">📅 Proyectar inactividad a futuro:</label>
+                        <input type="range" class="form-range me-3" name="meses_proyeccion" min="0" max="{{ meta.rangos.meses_inactividad[1] }}" step="1" value="{{ meses_proyeccion }}" oninput="document.getElementById('valProy').innerText = this.value">
+                        <span class="fw-bold text-white text-nowrap">+<span id="valProy">{{ meses_proyeccion }}</span> meses</span>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <label for="cantidad_registros" class="form-label small fw-bold mb-1 text-muted">Registros a mostrar</label>
+                        <select class="form-select form-select-sm d-inline-block selector-cantidad bg-dark text-white border-secondary w-auto" id="cantidad_registros" name="cantidad_registros">
+                            <option value="100" {% if cantidad_registros == '100' %}selected{% endif %}>100 registros</option>
+                            <option value="250" {% if cantidad_registros == '250' %}selected{% endif %}>250 registros</option>
+                            <option value="500" {% if cantidad_registros == '500' %}selected{% endif %}>500 registros</option>
+                            <option value="1000" {% if cantidad_registros == '1000' %}selected{% endif %}>1.000 registros</option>
+                            <option value="todos" {% if cantidad_registros == 'todos' %}selected{% endif %}>Todos</option>
+                        </select>
+                        <button type="submit" class="btn btn-outline-light btn-sm fw-bold px-3 ms-2 mt-1">Simular</button>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <label class="fw-bold text-secondary mb-2 small">JURISDICCIÓN / PROVINCIA (* Múltiple selección):</label>
-                    <div class="d-flex flex-wrap gap-3">
-                        {% for p in meta.categorias.provincia %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="provincias" value="{{ p }}" id="prov_{{ loop.index }}" {% if p in prov_sel %}checked{% endif %}>
-                            <label class="form-check-label small" for="prov_{{ loop.index }}">{{ p }}</label>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="fw-bold text-muted mb-2 small text-uppercase">Tipo de maquinaria:</label>
+                        <div class="d-flex flex-wrap gap-3">
+                            {% for t in meta.categorias.tipo_equipo %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="tipos" value="{{ t }}" id="tipo_{{ loop.index }}" {% if t in tipos_sel %}checked{% endif %}>
+                                <label class="form-check-label small" for="tipo_{{ loop.index }}">{{ t }}</label>
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold text-muted mb-2 small text-uppercase">Jurisdicción / Provincia:</label>
+                        <div class="d-flex flex-wrap gap-3">
+                            {% for p in meta.categorias.provincia %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="provincias" value="{{ p }}" id="prov_{{ loop.index }}" {% if p in prov_sel %}checked{% endif %}>
+                                <label class="form-check-label small" for="prov_{{ loop.index }}">{{ p }}</label>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
 
         {% if aviso_tablero %}
-        <div class="alert alert-secondary small">{{ aviso_tablero }}</div>
+        <div class="alert alert-secondary small bg-dark text-white border-secondary">{{ aviso_tablero }}</div>
         {% endif %}
 
-        <div class="card shadow-sm border-0">
+        <!-- MAPA INTERACTIVO DE IMPACTO EN FLOTA -->
+        <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header fw-bold text-uppercase" style="background-color: #11151c; border-left: 4px solid var(--bs-primary);">
+                📍 Dónde se pierde: Mapa de impacto por jurisdicción (Inventario filtrado)
+            </div>
+            <div class="card-body p-0">
+                <div class="row g-0">
+                    <div class="col-md-5 map-container">
+                        <!-- Posiciones estáticas en el SVG para las provincias del dataset -->
+                        {% set pos = {'Buenos Aires':[157,176],'Córdoba':[113,115],'Santa Fe':[155,110],'Mendoza':[57,153],'Salta':[98,36]} %}
+                        <svg viewBox="0 0 260 410" style="width:100%; max-height:400px;" role="img">
+                            <!-- Silueta base -->
+                            <polygon fill="#2b3035" stroke="#495057" stroke-width="1.2" stroke-linejoin="round" points="96,4 132,5 163,28 185,37 192,66 213,72 235,46 239,54 228,67 211,80 192,101 185,128 182,152 199,164 203,181 193,194 179,202 136,204 138,224 102,232 120,248 103,278 73,296 93,312 72,330 55,357 62,367 100,396 60,396 60,365 16,343 19,302 23,266 22,240 25,206 36,170 43,140 46,98 55,74 62,56 79,26 85,8"/>
+                            
+                            <!-- Generación dinámica de nodos según 'registros' filtrados -->
+                            {% set max_lucro = namespace(value=1) %}
+                            {% for p in meta.categorias.provincia %}
+                                {% set eq_prov = registros|selectattr('provincia', 'equalto', p)|list %}
+                                {% set lucro_p = eq_prov|sum(attribute='lucro') %}
+                                {% if lucro_p > max_lucro.value %}{% set max_lucro.value = lucro_p %}{% endif %}
+                            {% endfor %}
+
+                            {% for p in meta.categorias.provincia %}
+                                {% set maq_prov = registros|selectattr('provincia', 'equalto', p)|list %}
+                                {% set n = maq_prov|length %}
+                                {% if n > 0 and p in pos %}
+                                    {% set total_p = maq_prov|sum(attribute='lucro') %}
+                                    {% set criticos = maq_prov|selectattr('alerta_regresion', 'equalto', 1)|list|length %}
+                                    <!-- Escala del radio del círculo basado en la proporción de lucro -->
+                                    {% set r = 8 + 15 * ((total_p / max_lucro.value) ** 0.5) %}
+                                    
+                                    <g class="map-group" style="transform-origin: {{pos[p][0]}}px {{pos[p][1]}}px;">
+                                        <title>{{ p }}: {{ n }} equipo(s) | Lucro Total Estimado: USD {{ "{:,.0f}".format(total_p) }}</title>
+                                        <circle cx="{{ pos[p][0] }}" cy="{{ pos[p][1] }}" r="{{ '%.1f'|format(r) }}" fill="{% if criticos > 0 %}#dc3545{% else %}#d98e04{% endif %}" fill-opacity="0.85" stroke="#fff" stroke-width="1"/>
+                                        <text class="prov-name" x="{{ pos[p][0] }}" y="{{ pos[p][1]+r+12 }}" text-anchor="middle" font-size="10" font-weight="700" fill="#ece8dd">{{ p }}</text>
+                                        <text x="{{ pos[p][0] }}" y="{{ pos[p][1]+3 }}" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">{{ '%.0f'|format(total_p/1000) }}k</text>
+                                    </g>
+                                {% endif %}
+                            {% endfor %}
+                        </svg>
+                    </div>
+                    <div class="col-md-7 p-4 d-flex flex-column justify-content-center">
+                        <h4 class="fw-bold mb-3">Distribución de la pérdida</h4>
+                        <p class="text-muted small mb-4">El tamaño del círculo en el mapa es proporcional al lucro cesante acumulado de la flota filtrada en esa provincia. Los nodos en rojo indican que al menos una máquina superó el umbral crítico en la proyección.</p>
+                        
+                        <div class="row g-2 text-center">
+                            <div class="col-6">
+                                <div class="p-3 bg-dark rounded border border-secondary">
+                                    <span class="d-block text-muted small text-uppercase">Equipos en vista</span>
+                                    <span class="fs-3 fw-bold text-white">{{ registros|length }}</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-dark rounded border border-secondary">
+                                    <span class="d-block text-muted small text-uppercase">Pérdida Proyectada</span>
+                                    <span class="fs-4 fw-bold" style="color: var(--bs-primary);">USD {{ "{:,.0f}".format(registros|sum(attribute='lucro')) }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLA DE INVENTARIO -->
+        <div class="card shadow-sm border-0 mb-4">
             <div class="card-body p-0">
                 <div class="table-responsive table-container">
-                    <table class="table table-hover align-middle mb-0 text-center">
-                        <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
+                    <table class="table table-hover table-dark align-middle mb-0 text-center">
+                        <thead style="position: sticky; top: 0; z-index: 1;">
                             <tr>
                                 <th>#</th>
                                 <th>ID Máquina</th>
@@ -182,16 +290,7 @@
                         </thead>
                         <tbody>
                             {% for maq in registros %}
-                            {% if maq.color == 'dark' %}
-                                {% set clase_fila = 'fila-negro' %}
-                            {% elif maq.color == 'danger' %}
-                                {% set clase_fila = 'fila-rojo' %}
-                            {% elif maq.color == 'warning' %}
-                                {% set clase_fila = 'table-warning' %}
-                            {% else %}
-                                {% set clase_fila = 'fila-verde' %}
-                            {% endif %}
-                            <tr class="{{ clase_fila }}">
+                            <tr class="{% if maq.color == 'danger' %}fila-rojo{% elif maq.color == 'warning' %}table-warning text-dark{% elif maq.color == 'success' %}fila-verde{% else %}fila-negro{% endif %}">
                                 <td>{{ loop.index }}</td>
                                 <td class="fw-bold">{{ maq.id_maquina }}</td>
                                 <td>{{ maq.tipo_equipo }}</td>
@@ -212,78 +311,84 @@
             </div>
         </div>
         <div class="mt-2 text-end text-muted small">
-            Mostrando <strong>{{ registros|length }}</strong> de <strong>{{ total_disponibles }}</strong> equipos que coinciden con los filtros.
+            Mostrando <strong>{{ registros|length }}</strong> de <strong>{{ total_disponibles }}</strong> equipos.
             {% if cantidad_registros == 'todos' %}Se muestran todos los disponibles.{% else %}Límite seleccionado: {{ cantidad_registros }}.{% endif %}
         </div>
 
-        <!-- NUEVO: COMPARACIÓN DE LOS DOS MODELOS EN LA FLOTA. La tabla original permanece intacta. -->
-        <div class="card shadow-sm mt-4 border-primary" id="comparacion-flota">
-            <div class="card-header bg-white fw-bold text-primary">📊 Comparación metodológica de predicciones por maquinaria</div>
+        <!-- COMPARACIÓN DE MODELOS EN FLOTA -->
+        <div class="card shadow-sm mt-4">
+            <div class="card-header fw-bold text-uppercase" style="background-color: #11151c; border-left: 4px solid var(--bs-primary);">
+                📊 Detalle por equipo y comparación metodológica
+            </div>
             <div class="card-body">
                 {% set total_coinciden = registros|selectattr('coincide_modelos')|list|length %}
                 {% set total_desacuerdos = registros|length - total_coinciden %}
-                <div class="row g-3 mb-3">
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Equipos comparados</span><strong>{{ registros|length }}</strong></div></div>
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Coincidencias</span><strong class="text-success">{{ total_coinciden }}</strong></div></div>
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Desacuerdos</span><strong class="text-warning">{{ total_desacuerdos }}</strong></div></div>
-                </div>
-                <p class="small text-muted">Ambas predicciones se ejecutan sobre las mismas variables de cada equipo. La alerta por regresión se obtiene comparando la estimación con el umbral de USD {{ "{:,.0f}".format(meta.umbral_usd) }}. La otra alerta proviene directamente del clasificador guardado.</p>
+                
+                <p class="small text-muted mb-4">Si ambos modelos coinciden en "CRÍTICO", el equipo es candidato a subasta anticipada. Si discrepan, el caso requiere revisión pericial.</p>
+                
                 <div class="table-responsive">
-                    <table class="table table-sm table-hover align-middle text-center">
-                        <thead class="table-dark"><tr><th>ID máquina</th><th>Tipo</th><th>Provincia</th><th>Regresión + umbral</th><th>Clasificador directo</th><th>Comparación</th></tr></thead>
+                    <table class="table table-sm table-hover table-dark align-middle text-center mb-0">
+                        <thead>
+                            <tr class="text-muted text-uppercase" style="font-size: 0.75rem;">
+                                <th>ID máquina</th><th>Tipo</th><th>Provincia</th><th>Regresión + umbral</th><th>Clasificador directo</th><th>Comparación</th>
+                            </tr>
+                        </thead>
                         <tbody>
                         {% for maq in registros %}
-                            <tr><td class="fw-bold">{{ maq.id_maquina }}</td><td>{{ maq.tipo_equipo }}</td><td>{{ maq.provincia }}</td>
-                                <td>{% if maq.alerta_regresion == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
-                                <td>{% if maq.alerta_clasificador == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
-                                <td>{% if maq.coincide_modelos %}<span class="badge text-bg-success">✓ COINCIDENCIA</span>{% else %}<span class="badge text-bg-warning">! DESACUERDO · revisar</span>{% endif %}</td>
+                            <tr>
+                                <td class="fw-bold">{{ maq.id_maquina }}</td><td>{{ maq.tipo_equipo }}</td><td>{{ maq.provincia }}</td>
+                                <td>{% if maq.alerta_regresion == 1 %}<span class="badge bg-danger rounded-pill px-3">CRÍTICO</span>{% else %}<span class="badge bg-success rounded-pill px-3">NORMAL</span>{% endif %}</td>
+                                <td>{% if maq.alerta_clasificador == 1 %}<span class="badge bg-danger rounded-pill px-3">CRÍTICO</span>{% else %}<span class="badge bg-success rounded-pill px-3">NORMAL</span>{% endif %}</td>
+                                <td>{% if maq.coincide_modelos %}<span class="badge bg-transparent border border-success text-success">✓ COINCIDEN</span>{% else %}<span class="badge bg-warning text-dark">! DESACUERDO</span>{% endif %}</td>
                             </tr>
-                        {% else %}<tr><td colspan="6" class="text-muted py-3">No hay equipos para comparar con los filtros seleccionados.</td></tr>{% endfor %}
+                        {% else %}<tr><td colspan="6" class="text-muted py-3">No hay equipos para comparar.</td></tr>{% endfor %}
                         </tbody>
                     </table>
                 </div>
-                <div class="alert alert-info small mb-0">Esta comparación muestra predicciones para el inventario. No identifica falsos positivos ni falsos negativos porque para esos conceptos se necesita conocer la clase real de cada equipo. Las métricas de test que se muestran a continuación sí se calculan contra etiquetas reales.</div>
             </div>
         </div>
 
-        <!-- NUEVO: TABLA INTEGRADORA DE MÉTRICAS DEL CONJUNTO DE TEST -->
-        <div class="card shadow-sm mt-4" id="metricas-integradas">
-            <div class="card-header bg-white fw-bold">📈 Evaluación comparativa sobre el conjunto de test</div>
+        <!-- MÉTRICAS DE TEST -->
+        <div class="card shadow-sm mt-4 bg-dark border-secondary" id="metricas-integradas">
+            <div class="card-header bg-dark text-white fw-bold border-bottom border-secondary">
+                📈 Evaluación comparativa sobre el conjunto de test
+            </div>
             <div class="card-body">
                 {% set mc = meta.metricas_test.clasificador_directo %}
                 {% set mr = meta.metricas_test.regresion_mas_umbral %}
-                <p class="small text-muted">Resultados del conjunto de test reservado ({{ meta.filas.test }} casos). No confundir con las predicciones del inventario de flota.</p>
-                <div class="table-responsive"><table class="table table-bordered table-sm text-center align-middle">
-                    <thead class="table-dark"><tr><th>Métrica</th><th>Clasificador directo</th><th>Regresión + umbral</th></tr></thead>
-                    <tbody>
-                    <tr><th>Accuracy</th><td>{{ "%.2f"|format(mc.Accuracy * 100) }}%</td><td>{{ "%.2f"|format(mr.Accuracy * 100) }}%</td></tr>
-                    <tr><th>Precision</th><td>{{ "%.2f"|format(mc.Precision * 100) }}%</td><td>{{ "%.2f"|format(mr.Precision * 100) }}%</td></tr>
-                    <tr><th>Recall</th><td>{{ "%.2f"|format(mc.Recall * 100) }}%</td><td>{{ "%.2f"|format(mr.Recall * 100) }}%</td></tr>
-                    <tr><th>F1</th><td>{{ "%.2f"|format(mc.F1 * 100) }}%</td><td>{{ "%.2f"|format(mr.F1 * 100) }}%</td></tr>
-                    <tr><th>Falsos positivos (FP)</th><td>{{ mc.FP|int }}</td><td>{{ mr.FP|int }}</td></tr>
-                    <tr><th>Falsos negativos (FN)</th><td>{{ mc.FN|int }}</td><td>{{ mr.FN|int }}</td></tr>
-                    <tr><th>Costo relativo (5·FN + FP)</th><td>{{ mc.Costo|int }}</td><td>{{ mr.Costo|int }}</td></tr>
-                    </tbody>
-                </table></div>
-                <p class="small mb-0"><strong>Lectura:</strong> en estos resultados de test, la regresión más umbral presenta {{ "%.2f"|format((mr.Recall-mc.Recall)*100) }} puntos porcentuales más de recall y {{ (mc.FN-mr.FN)|int }} falsos negativos menos. La recomendación depende del costo relativo adoptado (FN=5 y FP=1), que es un supuesto didáctico.</p>
+                <p class="small text-muted">Resultados del conjunto de test reservado ({{ meta.filas.test }} casos). No confundir con las predicciones del inventario.</p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-dark table-sm text-center align-middle mb-3">
+                        <thead><tr style="background-color: #11151c;"><th>Métrica</th><th>Clasificador directo</th><th>Regresión + umbral</th></tr></thead>
+                        <tbody>
+                            <tr><th>Accuracy</th><td>{{ "%.2f"|format(mc.Accuracy * 100) }}%</td><td>{{ "%.2f"|format(mr.Accuracy * 100) }}%</td></tr>
+                            <tr><th>Precision</th><td>{{ "%.2f"|format(mc.Precision * 100) }}%</td><td>{{ "%.2f"|format(mr.Precision * 100) }}%</td></tr>
+                            <tr><th>Recall</th><td>{{ "%.2f"|format(mc.Recall * 100) }}%</td><td>{{ "%.2f"|format(mr.Recall * 100) }}%</td></tr>
+                            <tr><th>F1</th><td>{{ "%.2f"|format(mc.F1 * 100) }}%</td><td>{{ "%.2f"|format(mr.F1 * 100) }}%</td></tr>
+                            <tr><th>Falsos positivos (FP)</th><td>{{ mc.FP|int }}</td><td>{{ mr.FP|int }}</td></tr>
+                            <tr><th>Falsos negativos (FN)</th><td>{{ mc.FN|int }}</td><td>{{ mr.FN|int }}</td></tr>
+                            <tr><th>Costo relativo (5·FN + FP)</th><td>{{ mc.Costo|int }}</td><td>{{ mr.Costo|int }}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="small mb-0 text-muted"><strong>Lectura:</strong> La recomendación depende del costo relativo adoptado (FN=5 y FP=1).</p>
             </div>
         </div>
         {% endif %}
 
-        <div class="card shadow-sm mt-4">
-            <div class="card-body small">
-                <h2 class="h6">Limitaciones y cuándo no usar esta herramienta</h2>
+        <div class="card shadow-sm mt-4 bg-transparent border-secondary">
+            <div class="card-body small text-muted">
+                <h2 class="h6 text-white">Limitaciones y cuándo no usar esta herramienta</h2>
                 <ul class="mb-2">
                     <li>Los datos son <strong>simulados</strong>: las métricas valen dentro de la simulación, no sobre pérdidas reales.</li>
-                    <li>El umbral (USD {{ "{:,.0f}".format(meta.umbral_usd) }}) y los costos (falso negativo = {{ meta.costos_relativos.falso_negativo }}, falso positivo = {{ meta.costos_relativos.falso_positivo }}) son supuestos didácticos.</li>
-                    <li>En el tablero, <strong>solo el «Lucro Cesante Estimado» proviene del modelo</strong> de regresión; el valor de mercado, el costo de puesta en marcha y el dictamen son una simulación visual con valores de referencia supuestos.</li>
-                    <li>Cerca del umbral una diferencia pequeña puede cambiar la alerta; las discrepancias entre los dos sistemas requieren revisión humana.</li>
-                    <li>No usar como dictamen pericial, con equipos reales sin validar el modelo, ni con valores fuera de los rangos indicados.</li>
+                    <li>El umbral (USD {{ "{:,.0f}".format(meta.umbral_usd) }}) y los costos son supuestos didácticos.</li>
+                    <li>En el tablero, <strong>solo el «Lucro Cesante Estimado» proviene del modelo</strong> de regresión.</li>
                 </ul>
-                <p class="mb-0 nota">La aplicación solo carga los Pipelines entrenados en el notebook y ejecuta <code>predict</code>; no entrena ni acepta archivos.</p>
+                <p class="mb-0">La aplicación solo carga los Pipelines entrenados en el notebook y ejecuta <code>predict</code>; no entrena ni acepta archivos.</p>
             </div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
