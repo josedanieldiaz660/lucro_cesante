@@ -11,6 +11,11 @@
     <div class="container py-4">
         <h2 class="mb-4 text-dark border-bottom pb-2">🚜 Sistema de Evaluación y Proyección de Flota (IA)</h2>
 
+        <nav class="nav nav-pills mb-4 app-navigation" aria-label="Secciones principales">
+            <a class="nav-link active" href="/" aria-current="page">🚜 Panel de maquinaria</a>
+            <a class="nav-link" href="/gestion">📋 Gestión del proyecto</a>
+        </nav>
+
         <div class="alert alert-warning small">
             <strong>Demostración experimental.</strong> Los modelos se entrenaron con datos <strong>simulados</strong>.
             El resultado no constituye una valoración pericial definitiva ni demuestra capacidad predictiva sobre pérdidas reales.
@@ -42,6 +47,7 @@
                 <form method="POST" action="/predecir_caso" novalidate>
                     {# se conservan la proyección y los filtros del tablero #}
                     <input type="hidden" name="meses_proyeccion" value="{{ meses_proyeccion }}">
+                    <input type="hidden" name="cantidad_registros" value="{{ cantidad_registros }}">
                     {% for t in tipos_sel %}<input type="hidden" name="tipos" value="{{ t }}">{% endfor %}
                     {% for p in prov_sel %}<input type="hidden" name="provincias" value="{{ p }}">{% endfor %}
                     <div class="row g-3">
@@ -112,8 +118,16 @@
                     <span class="fw-bold text-dark text-nowrap">+<span id="valProy">{{ meses_proyeccion }}</span> meses</span>
                 </div>
                 <div class="col-md-4 text-end">
-                    <button type="submit" class="btn btn-dark fw-bold px-4">Simular Proyección</button>
-                    <a href="/" class="btn btn-outline-secondary ms-2">Restablecer</a>
+                    <label for="cantidad_registros" class="form-label small fw-bold mb-1">Registros a mostrar</label>
+                    <select class="form-select form-select-sm d-inline-block selector-cantidad" id="cantidad_registros" name="cantidad_registros">
+                        <option value="100" {% if cantidad_registros == '100' %}selected{% endif %}>100 registros</option>
+                        <option value="250" {% if cantidad_registros == '250' %}selected{% endif %}>250 registros</option>
+                        <option value="500" {% if cantidad_registros == '500' %}selected{% endif %}>500 registros</option>
+                        <option value="1000" {% if cantidad_registros == '1000' %}selected{% endif %}>1.000 registros</option>
+                        <option value="todos" {% if cantidad_registros == 'todos' %}selected{% endif %}>Todos los disponibles</option>
+                    </select>
+                    <button type="submit" class="btn btn-dark fw-bold px-4 mt-2">Simular Proyección</button>
+                    <a href="/" class="btn btn-outline-secondary ms-2 mt-2">Restablecer</a>
                 </div>
             </div>
 
@@ -197,7 +211,63 @@
                 </div>
             </div>
         </div>
-        <div class="mt-2 text-end text-muted small">Total evaluadas: <strong>{{ registros|length }}</strong> equipos (muestra de hasta 100).</div>
+        <div class="mt-2 text-end text-muted small">
+            Mostrando <strong>{{ registros|length }}</strong> de <strong>{{ total_disponibles }}</strong> equipos que coinciden con los filtros.
+            {% if cantidad_registros == 'todos' %}Se muestran todos los disponibles.{% else %}Límite seleccionado: {{ cantidad_registros }}.{% endif %}
+        </div>
+
+        <!-- NUEVO: COMPARACIÓN DE LOS DOS MODELOS EN LA FLOTA. La tabla original permanece intacta. -->
+        <div class="card shadow-sm mt-4 border-primary" id="comparacion-flota">
+            <div class="card-header bg-white fw-bold text-primary">📊 Comparación metodológica de predicciones por maquinaria</div>
+            <div class="card-body">
+                {% set total_coinciden = registros|selectattr('coincide_modelos')|list|length %}
+                {% set total_desacuerdos = registros|length - total_coinciden %}
+                <div class="row g-3 mb-3">
+                    <div class="col-md-4"><div class="comparacion-indicador"><span>Equipos comparados</span><strong>{{ registros|length }}</strong></div></div>
+                    <div class="col-md-4"><div class="comparacion-indicador"><span>Coincidencias</span><strong class="text-success">{{ total_coinciden }}</strong></div></div>
+                    <div class="col-md-4"><div class="comparacion-indicador"><span>Desacuerdos</span><strong class="text-warning">{{ total_desacuerdos }}</strong></div></div>
+                </div>
+                <p class="small text-muted">Ambas predicciones se ejecutan sobre las mismas variables de cada equipo. La alerta por regresión se obtiene comparando la estimación con el umbral de USD {{ "{:,.0f}".format(meta.umbral_usd) }}. La otra alerta proviene directamente del clasificador guardado.</p>
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover align-middle text-center">
+                        <thead class="table-dark"><tr><th>ID máquina</th><th>Tipo</th><th>Provincia</th><th>Regresión + umbral</th><th>Clasificador directo</th><th>Comparación</th></tr></thead>
+                        <tbody>
+                        {% for maq in registros %}
+                            <tr><td class="fw-bold">{{ maq.id_maquina }}</td><td>{{ maq.tipo_equipo }}</td><td>{{ maq.provincia }}</td>
+                                <td>{% if maq.alerta_regresion == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
+                                <td>{% if maq.alerta_clasificador == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
+                                <td>{% if maq.coincide_modelos %}<span class="badge text-bg-success">✓ COINCIDENCIA</span>{% else %}<span class="badge text-bg-warning">! DESACUERDO · revisar</span>{% endif %}</td>
+                            </tr>
+                        {% else %}<tr><td colspan="6" class="text-muted py-3">No hay equipos para comparar con los filtros seleccionados.</td></tr>{% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert alert-info small mb-0">Esta comparación muestra predicciones para el inventario. No identifica falsos positivos ni falsos negativos porque para esos conceptos se necesita conocer la clase real de cada equipo. Las métricas de test que se muestran a continuación sí se calculan contra etiquetas reales.</div>
+            </div>
+        </div>
+
+        <!-- NUEVO: TABLA INTEGRADORA DE MÉTRICAS DEL CONJUNTO DE TEST -->
+        <div class="card shadow-sm mt-4" id="metricas-integradas">
+            <div class="card-header bg-white fw-bold">📈 Evaluación comparativa sobre el conjunto de test</div>
+            <div class="card-body">
+                {% set mc = meta.metricas_test.clasificador_directo %}
+                {% set mr = meta.metricas_test.regresion_mas_umbral %}
+                <p class="small text-muted">Resultados del conjunto de test reservado ({{ meta.filas.test }} casos). No confundir con las predicciones del inventario de flota.</p>
+                <div class="table-responsive"><table class="table table-bordered table-sm text-center align-middle">
+                    <thead class="table-dark"><tr><th>Métrica</th><th>Clasificador directo</th><th>Regresión + umbral</th></tr></thead>
+                    <tbody>
+                    <tr><th>Accuracy</th><td>{{ "%.2f"|format(mc.Accuracy * 100) }}%</td><td>{{ "%.2f"|format(mr.Accuracy * 100) }}%</td></tr>
+                    <tr><th>Precision</th><td>{{ "%.2f"|format(mc.Precision * 100) }}%</td><td>{{ "%.2f"|format(mr.Precision * 100) }}%</td></tr>
+                    <tr><th>Recall</th><td>{{ "%.2f"|format(mc.Recall * 100) }}%</td><td>{{ "%.2f"|format(mr.Recall * 100) }}%</td></tr>
+                    <tr><th>F1</th><td>{{ "%.2f"|format(mc.F1 * 100) }}%</td><td>{{ "%.2f"|format(mr.F1 * 100) }}%</td></tr>
+                    <tr><th>Falsos positivos (FP)</th><td>{{ mc.FP|int }}</td><td>{{ mr.FP|int }}</td></tr>
+                    <tr><th>Falsos negativos (FN)</th><td>{{ mc.FN|int }}</td><td>{{ mr.FN|int }}</td></tr>
+                    <tr><th>Costo relativo (5·FN + FP)</th><td>{{ mc.Costo|int }}</td><td>{{ mr.Costo|int }}</td></tr>
+                    </tbody>
+                </table></div>
+                <p class="small mb-0"><strong>Lectura:</strong> en estos resultados de test, la regresión más umbral presenta {{ "%.2f"|format((mr.Recall-mc.Recall)*100) }} puntos porcentuales más de recall y {{ (mc.FN-mr.FN)|int }} falsos negativos menos. La recomendación depende del costo relativo adoptado (FN=5 y FP=1), que es un supuesto didáctico.</p>
+            </div>
+        </div>
         {% endif %}
 
         <div class="card shadow-sm mt-4">
@@ -214,5 +284,6 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

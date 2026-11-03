@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión del proyecto — Grupo 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/estilos.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <main class="container py-4">
+        <h2 class="mb-4 text-dark border-bottom pb-2">📋 Gestión y seguimiento del proyecto</h2>
+
+        <nav class="nav nav-pills mb-4 app-navigation" aria-label="Secciones principales">
+            <a class="nav-link" href="/">🚜 Panel de maquinaria</a>
+            <a class="nav-link active" href="/gestion" aria-current="page">📋 Gestión del proyecto</a>
+        </nav>
+
+        <div class="alert alert-info small">
+            <strong>Grupo {{ gestion.grupo }}.</strong>
+            Esta sección consulta la documentación del proyecto. Es independiente del panel de predicción:
+            no ejecuta los modelos ni modifica el inventario de maquinaria.
+        </div>
+
+        <section class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold">👥 Integrantes registrados</div>
+            <div class="card-body">
+                <div class="row g-3">
+                    {% for nombre in gestion.integrantes %}
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card h-100 border">
+                            <div class="card-body">
+                                <h6 class="fw-bold mb-1">{{ nombre }}</h6>
+                                <span class="badge text-bg-secondary">Integrante registrado</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <p class="text-muted mb-0">No se encontraron nombres en distribucion_tareas.md.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold">🧩 Distribución de tareas y entregables</div>
+            <div class="card-body">
+                {% for aviso in gestion.avisos_distribucion %}
+                <div class="alert alert-warning small">{{ aviso }}</div>
+                {% endfor %}
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover table-bordered align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                {% for encabezado in ['Integrante', 'Rol', 'Tareas / entregables', 'Archivos'] %}
+                                <th>{{ encabezado }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for fila in gestion.roles %}
+                            <tr>
+                                <td>{{ fila.get('Integrante', '') }}</td>
+                                <td>{{ fila.get('Rol', '') }}</td>
+                                <td>{{ fila.get('Tareas / entregables', '') }}</td>
+                                <td>{{ fila.get('Archivos', '') }}</td>
+                            </tr>
+                            {% else %}
+                            <tr><td colspan="4" class="text-muted">No se encontró la tabla de distribución.</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% if gestion.responsabilidades_compartidas %}
+                <div class="alert alert-secondary small mb-0">
+                    <strong>Responsabilidades compartidas:</strong> {{ gestion.responsabilidades_compartidas }}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <section class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold">📚 Bitácora de decisiones</div>
+            <div class="card-body">
+                {% for aviso in gestion.avisos_bitacora %}
+                <div class="alert alert-warning small">{{ aviso }}</div>
+                {% endfor %}
+                <div class="table-responsive gestion-tabla-bitacora">
+                    <table class="table table-sm table-striped table-bordered align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                {% for encabezado in ['Fecha', 'Decisión', 'Alternativas', 'Justificación', 'Resultado', 'Responsable'] %}
+                                <th>{{ encabezado }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for fila in gestion.bitacora %}
+                            <tr>
+                                <td>{{ fila.get('Fecha', '') }}</td>
+                                <td>{{ fila.get('Decisión', '') }}</td>
+                                <td>{{ fila.get('Alternativas', '') }}</td>
+                                <td>{{ fila.get('Justificación', '') }}</td>
+                                <td>{{ fila.get('Resultado', '') }}</td>
+                                <td>{{ fila.get('Responsable', '') }}</td>
+                            </tr>
+                            {% else %}
+                            <tr><td colspan="6" class="text-muted">No se encontraron decisiones en la bitácora.</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="small text-muted mb-0">Fuente: documentacion/distribucion_tareas.md y documentacion/bitacora_decisiones.md.</p>
+            <a href="/" class="btn btn-primary">Volver al panel de maquinaria</a>
+        </div>
+    </main>
+</body>
+</html>

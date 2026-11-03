@@ -3,3 +3,57 @@
 .fila-verde { background-color: #d1e7dd !important; color: #0f5132 !important; }
 .table-container { max-height: 60vh; overflow-y: auto; }
 .nota { font-size: .85rem; color: #555; }
+
+
+/* Componentes agregados: comparación metodológica y gestión del proyecto. */
+.comparacion-indicador {
+    min-height: 76px;
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+.comparacion-indicador span { color: #6c757d; font-size: .82rem; }
+.comparacion-indicador strong { font-size: 1.45rem; line-height: 1.3; }
+#gestion-proyecto .nav-link { font-size: .92rem; }
+#gestion-proyecto .table-responsive { max-height: 520px; overflow: auto; }
+#gestion-proyecto table { min-width: 720px; }
+#comparacion-flota table { min-width: 700px; }
+@media (max-width: 767px) {
+    #gestion-proyecto .card-body { padding: .85rem; }
+    .comparacion-indicador { min-height: 65px; }
+}
+
+
+/* Navegación entre módulos: panel predictivo y gestión documental independientes. */
+.app-navigation {
+    gap: .5rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: .75rem;
+}
+.app-navigation .nav-link {
+    border: 1px solid #dee2e6;
+    background: #fff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+.app-navigation .nav-link.active {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+.selector-cantidad {
+    max-width: 190px;
+    vertical-align: middle;
+}
+.gestion-tabla-bitacora {
+    max-height: 65vh;
+    overflow: auto;
+}
+.gestion-tabla-bitacora table {
+    min-width: 1100px;
+}

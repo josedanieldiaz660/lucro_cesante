@@ -5,6 +5,7 @@ Las reglas (umbral, categorías, rangos) se leen de modelos/metadata.json, escri
 """
 import json
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -25,6 +26,7 @@ RUTA_REG = BASE_DIR / "modelos" / "modelo_regresion_perdidas.joblib"
 RUTA_CLF = BASE_DIR / "modelos" / "modelo_clasificacion_perdidas.joblib"
 RUTA_META = BASE_DIR / "modelos" / "metadata.json"
 RUTA_CSV = BASE_DIR / "datos" / "dataset_maquinaria_preparado.csv"       # solo para el tablero de flota
+RUTA_DOCUMENTACION = BASE_DIR / "documentacion"
 
 # public/ se sirve en la raíz (/estilos.css); en Vercel lo entrega directamente el CDN.
 app = Flask(__name__, template_folder=str(BASE_DIR / "templates"), static_folder=str(BASE_DIR / "public"),
@@ -162,7 +164,7 @@ def predecir(caso, meta):
 # ---------------------------------------------------------------------------------------------------------
 PRECIOS_NUEVAS = {"Motoniveladora": 250000, "Excavadora": 220000, "Retroexcavadora": 150000,
                   "Cargadora frontal": 180000, "Rodillo compactador": 120000, "Topadora": 300000}
-MAX_FILAS_TABLERO = 100
+MAX_FILAS_TABLERO = 2440  # total de filas del dataset preparado
 ANIO_REFERENCIA = 2026
 
 
@@ -200,7 +202,28 @@ def parsear_filtros(args, meta):
             [p for p in args.getlist("provincias") if p in todas_p])
 
 
-def construir_inventario(proyeccion, tipos_sel, prov_sel):
+def parsear_cantidad(args):
+    """Cantidad visible seleccionable; 'todos' muestra todas las filas filtradas."""
+    valor = (args.get("cantidad_registros") or "100").strip().lower()
+    opciones = {"100": 100, "250": 250, "500": 500, "1000": 1000, "todos": None}
+    if valor not in opciones:
+        valor = "100"
+    return valor, opciones[valor]
+
+
+def contar_registros_filtrados(tipos_sel, prov_sel):
+    """Cuenta coincidencias antes del límite de visualización."""
+    if not RUTA_CSV.is_file():
+        return 0
+    try:
+        df = pd.read_csv(RUTA_CSV, usecols=["tipo_equipo", "provincia"])
+        return int((df["tipo_equipo"].isin(tipos_sel) & df["provincia"].isin(prov_sel)).sum())
+    except Exception:
+        app.logger.exception("No se pudo contar el inventario filtrado")
+        return 0
+
+
+def construir_inventario(proyeccion, tipos_sel, prov_sel, limite=100):
     """Devuelve (registros, aviso). Nunca rompe la página: si el CSV no está, informa y el resto sigue funcionando."""
     meta = SISTEMA["meta"]
     if not RUTA_CSV.is_file():
@@ -210,16 +233,24 @@ def construir_inventario(proyeccion, tipos_sel, prov_sel):
         cols = ["tipo_equipo", "provincia", "meses_inactividad", "anio_fabricacion", "estado_motor"]
         df = df[cols].copy()
         df["pos"] = range(1, len(df) + 1)                      # el ID no cambia al filtrar
-        df = df[df["tipo_equipo"].isin(tipos_sel) & df["provincia"].isin(prov_sel)].head(MAX_FILAS_TABLERO)
+        df = df[df["tipo_equipo"].isin(tipos_sel) & df["provincia"].isin(prov_sel)]
+        if limite is not None:
+            df = df.head(max(1, min(int(limite), MAX_FILAS_TABLERO)))
         if df.empty:
             return [], None
         df["meses_total"] = (df["meses_inactividad"] + proyeccion).clip(upper=meta["rangos"]["meses_inactividad"][1])
         X = df[cols].copy()
         X["meses_inactividad"] = df["meses_total"]
-        lucros = SISTEMA["reg"].predict(X[meta["predictores"]])
+        # Ambos Pipelines entrenados se ejecutan sobre exactamente las mismas filas.
+        X_modelo = X[meta["predictores"]]
+        lucros = SISTEMA["reg"].predict(X_modelo)
+        clases_directas = SISTEMA["clf"].predict(X_modelo)
         registros = []
-        for fila, lucro in zip(df.itertuples(), lucros):
+        for fila, lucro, clase_directa in zip(df.itertuples(), lucros, clases_directas):
             lucro = float(lucro)
+            alerta_regresion = int(lucro >= meta["umbral_usd"])
+            alerta_clasificador = int(clase_directa)
+            coincide_modelos = alerta_regresion == alerta_clasificador
             precio = PRECIOS_NUEVAS.get(fila.tipo_equipo, 200000)
             v_mercado = precio * (0.95 ** max(0, ANIO_REFERENCIA - fila.anio_fabricacion))
             base = {"Requiere_Reparacion": 15000, "Averia_Grave": 35000}.get(fila.estado_motor, 0)
@@ -229,11 +260,77 @@ def construir_inventario(proyeccion, tipos_sel, prov_sel):
                               "tipo_equipo": fila.tipo_equipo, "provincia": fila.provincia,
                               "meses_base": int(fila.meses_inactividad), "meses_proyectados": int(fila.meses_total),
                               "valor_mercado": v_mercado, "puesta_marcha": costo, "lucro": lucro,
-                              "veredicto": veredicto, "color": color})
+                              "veredicto": veredicto, "color": color,
+                              "alerta_regresion": alerta_regresion,
+                              "alerta_clasificador": alerta_clasificador,
+                              "coincide_modelos": coincide_modelos,
+                              "comparacion_modelos": "COINCIDENCIA" if coincide_modelos else "DESACUERDO"})
         return registros, None
     except Exception:  # noqa: BLE001
         app.logger.exception("Error al procesar el inventario")
         return [], "No se pudo procesar el inventario (ver registro del servidor)."
+
+
+def leer_tabla_markdown(texto):
+    """Extrae tablas Markdown sencillas sin dependencias adicionales."""
+    filas = []
+    for linea in texto.splitlines():
+        linea = linea.strip()
+        if not (linea.startswith("|") and linea.endswith("|")):
+            continue
+        celdas = [c.strip() for c in linea.strip("|").split("|")]
+        if celdas and all(re.fullmatch(r":?-{3,}:?", c.replace(" ", "")) for c in celdas):
+            continue
+        celdas = [re.sub(r"`([^`]*)`", r"\1", c) for c in celdas]
+        celdas = [c.replace("**", "").replace("_", "") for c in celdas]
+        filas.append(celdas)
+    if not filas:
+        return [], []
+    return filas[0], filas[1:]
+
+
+def cargar_documentacion():
+    """Lee directamente los documentos Markdown de documentacion/."""
+    resultado = {
+        "grupo": "Grupo 5", "integrantes": [], "roles": [], "bitacora": [],
+        "avisos_distribucion": [], "avisos_bitacora": [], "responsabilidades_compartidas": ""
+    }
+    ruta_tareas = RUTA_DOCUMENTACION / "distribucion_tareas.md"
+    ruta_bitacora = RUTA_DOCUMENTACION / "bitacora_decisiones.md"
+    try:
+        texto_tareas = ruta_tareas.read_text(encoding="utf-8")
+        match = re.search(r"Integrantes \(según la Entrega 1\):\s*(.+?)\.", texto_tareas)
+        if match:
+            resultado["integrantes"] = [n.strip() for n in match.group(1).split("·") if n.strip()]
+        encabezados, filas = leer_tabla_markdown(texto_tareas)
+        resultado["roles"] = [
+            dict(zip(encabezados, fila + [""] * max(0, len(encabezados) - len(fila))))
+            for fila in filas
+        ]
+        resultado["responsabilidades_compartidas"] = next(
+            (linea.replace("**Responsabilidades compartidas:**", "").strip()
+             for linea in texto_tareas.splitlines() if linea.startswith("**Responsabilidades compartidas:**")), ""
+        )
+        resultado["avisos_distribucion"] = [
+            linea.lstrip("> ").strip() for linea in texto_tareas.splitlines() if linea.startswith(">")
+        ]
+    except FileNotFoundError:
+        resultado["avisos_distribucion"].append("No se encontró documentacion/distribucion_tareas.md.")
+
+    try:
+        texto_bitacora = ruta_bitacora.read_text(encoding="utf-8")
+        encabezados, filas = leer_tabla_markdown(texto_bitacora)
+        resultado["bitacora"] = [
+            dict(zip(encabezados, fila + [""] * max(0, len(encabezados) - len(fila))))
+            for fila in filas
+        ]
+        resultado["avisos_bitacora"] = [
+            linea.lstrip("> ").strip() for linea in texto_bitacora.splitlines() if linea.startswith(">")
+        ]
+    except FileNotFoundError:
+        resultado["avisos_bitacora"].append("No se encontró documentacion/bitacora_decisiones.md.")
+    return resultado
+
 
 
 def contexto_base():
@@ -246,21 +343,30 @@ def contexto_base():
             "valores": {"tipo_equipo": "", "provincia": "", "meses_inactividad": "12", "anio_fabricacion": "2015",
                         "estado_motor": ""},
             "errores": [], "resultado": None, "registros": [], "aviso_tablero": None,
-            "meses_proyeccion": 0, "tipos_sel": [], "prov_sel": []}
+            "meses_proyeccion": 0, "tipos_sel": [], "prov_sel": [],
+            "cantidad_registros": "100", "limite_registros": 100, "total_disponibles": 0}
 
 
 def con_tablero(ctx, args):
     """Agrega al contexto los filtros y el inventario (si el sistema está operativo)."""
     if SISTEMA["ok"]:
         ctx["meses_proyeccion"], ctx["tipos_sel"], ctx["prov_sel"] = parsear_filtros(args, SISTEMA["meta"])
+        ctx["cantidad_registros"], ctx["limite_registros"] = parsear_cantidad(args)
+        ctx["total_disponibles"] = contar_registros_filtrados(ctx["tipos_sel"], ctx["prov_sel"])
         ctx["registros"], ctx["aviso_tablero"] = construir_inventario(
-            ctx["meses_proyeccion"], ctx["tipos_sel"], ctx["prov_sel"])
+            ctx["meses_proyeccion"], ctx["tipos_sel"], ctx["prov_sel"], ctx["limite_registros"])
     return ctx
 
 
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html", **con_tablero(contexto_base(), request.args))
+
+
+@app.route("/gestion", methods=["GET"])
+def gestion_proyecto():
+    """Página documental independiente: no ejecuta predict ni procesa el inventario."""
+    return render_template("gestion.html", gestion=cargar_documentacion())
 
 
 @app.route("/predecir_caso", methods=["POST"])

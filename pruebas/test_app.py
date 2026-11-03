@@ -182,5 +182,23 @@ class PruebasApp(unittest.TestCase):
                 entrenado = aplicacion.SISTEMA["meta"]["versiones"]["scikit-learn"]
                 self.assertEqual(aplicacion.SISTEMA["aviso"] is None, entrenado == sklearn.__version__)
 
+
+
+    def test_25_selector_cantidad_registros(self):
+        for cantidad, esperado in (("100", 100), ("250", 250), ("500", 500), ("1000", 1000), ("todos", 2440)):
+            r = self.c.get("/?cantidad_registros=" + cantidad)
+            self.assertEqual(r.status_code, 200)
+            self.assertIn(f"Mostrando <strong>{esperado}</strong>".encode(), r.data)
+        self.assertEqual(len(aplicacion.construir_inventario(0, aplicacion.SISTEMA["meta"]["categorias"]["tipo_equipo"],
+                         aplicacion.SISTEMA["meta"]["categorias"]["provincia"], None)[0]), 2440)
+
+    def test_26_gestion_lee_documentacion_y_es_independiente(self):
+        r = self.c.get("/gestion")
+        self.assertEqual(r.status_code, 200)
+        for texto in ("Maciel Fátima", "Díaz José", "Carrera Carla", "Sarmiento Rodrigo",
+                      "Bitácora de decisiones", "Alternativas", "(asignar nombre)", "(completar)"):
+            self.assertIn(texto.encode(), r.data)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
