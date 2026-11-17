@@ -2,288 +2,1925 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Panel de Control y Predicción - Maquinaria Vial (demostración)</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/estilos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LucroDash · Evaluación de Lucro Cesante y Pericia Vial</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Three.js & Chart.js & html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --bg-main: #0f1318;
+            --bg-panel: #161b22;
+            --bg-input: #0b0e13;
+            --border-color: #262e38;
+            --text-primary: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-yellow: #facc15;
+            --accent-yellow-hover: #eab308;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-coral: #ff6b5b;
+            --accent-cyan: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Top Bar */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1520px;
+            margin: 0 auto 18px auto;
+            padding: 12px 20px;
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-badge {
+            background: var(--accent-yellow);
+            color: #111;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+        }
+
+        .brand-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .brand-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn-pdf {
+            background: #1f2937;
+            color: var(--text-primary);
+            border: 1px solid #374151;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-pdf:hover {
+            background: #374151;
+            border-color: var(--accent-yellow);
+        }
+
+        /* Layout Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 335px 1fr;
+            gap: 20px;
+            max-width: 1520px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        @media (max-width: 1080px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Left Sidebar: DATOS DE LA PERICIA */
+        .pericia-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .pericia-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.18rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            color: #ffffff;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .field-group {
+            margin-bottom: 15px;
+        }
+
+        .field-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .form-control-dark, .form-select-dark {
+            width: 100%;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-control-dark:focus, .form-select-dark:focus {
+            border-color: var(--accent-yellow);
+        }
+
+        .d-none-custom { display: none; }
+
+        .row-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* Nuevo Item: Selector de varios equipos y provincias */
+        .multi-item-box {
+            background: rgba(11, 14, 19, 0.75);
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .multi-toggle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .multi-toggle-title {
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: var(--accent-yellow);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .switch-pill {
+            display: inline-flex;
+            background: #0b0e13;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .switch-pill button {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 6px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .switch-pill button.active {
+            background: var(--accent-yellow);
+            color: #111;
+        }
+
+        .multi-Checklists {
+            margin-top: 12px;
+            display: none;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+        }
+
+        .multi-Checklists.show {
+            display: block;
+        }
+
+        .checklist-subtitle {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checklist-subtitle a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+            font-size: 0.66rem;
+            cursor: pointer;
+        }
+
+        .chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .chip-check {
+            position: relative;
+        }
+
+        .chip-check input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .chip-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: #c9d1d9;
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+        }
+
+        .chip-check input:checked + .chip-label {
+            background: rgba(250, 204, 21, 0.16);
+            border-color: var(--accent-yellow);
+            color: var(--accent-yellow);
+            font-weight: 600;
+        }
+
+        .btn-calcular {
+            width: 100%;
+            background: var(--accent-yellow);
+            color: #0b0e13;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 6px;
+        }
+
+        .btn-calcular:hover {
+            background: var(--accent-yellow-hover);
+        }
+
+        .btn-calcular:active {
+            transform: scale(0.99);
+        }
+
+        .pericia-footnote {
+            margin-top: 12px;
+            font-size: 0.72rem;
+            line-height: 1.45;
+            color: #6e7681;
+        }
+
+        /* Right Content Area */
+        .main-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* Status Banner Top (Green / Red like Lovable screenshot) */
+        .umbral-banner {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(6, 78, 59, 0.25));
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 12px;
+            padding: 16px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .umbral-banner.critico {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(127, 29, 29, 0.28));
+            border-color: rgba(239, 68, 68, 0.45);
+        }
+
+        .umbral-banner-left h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .umbral-banner-left p {
+            font-size: 0.9rem;
+            color: #d1d5db;
+            margin-top: 2px;
+        }
+
+        .umbral-badge-pill {
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.4);
+        }
+
+        .umbral-banner.critico .umbral-badge-pill {
+            background: rgba(239, 68, 68, 0.22);
+            color: #f87171;
+            border-color: rgba(248, 113, 113, 0.45);
+        }
+
+        /* 3D Canvas Card */
+        .scene-card {
+            position: relative;
+            background: #1b222c;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 430px;
+        }
+
+        #canvas3d {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: grab;
+        }
+
+        #canvas3d:active {
+            cursor: grabbing;
+        }
+
+        .scene-pills-top {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .scene-pill {
+            background: rgba(15, 19, 24, 0.85);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #e5e7eb;
+            padding: 5px 11px;
+            border-radius: 6px;
+            font-size: 0.74rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-yellow { background: #facc15; }
+        .dot-red { background: #ef4444; }
+        .dot-orange { background: #f97316; }
+
+        .scene-floating-tags {
+            position: absolute;
+            right: 22px;
+            top: 32%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 18px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .tag-3d-value {
+            background: rgba(20, 24, 30, 0.9);
+            border: 2px solid var(--accent-yellow);
+            color: var(--accent-yellow);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+        }
+
+        .tag-3d-umbral {
+            background: rgba(28, 14, 18, 0.92);
+            border: 1.5px solid #ef4444;
+            color: #fca5a5;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .scene-hint-bottom {
+            position: absolute;
+            bottom: 12px;
+            right: 14px;
+            background: rgba(15, 19, 24, 0.82);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #9ca3af;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .scene-selector-bottom-left {
+            position: absolute;
+            bottom: 12px;
+            left: 14px;
+            z-index: 6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(15, 19, 24, 0.88);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+        }
+
+        .scene-selector-bottom-left select {
+            background: #0b0e13;
+            color: var(--accent-yellow);
+            border: 1px solid #374151;
+            border-radius: 5px;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            outline: none;
+        }
+
+        /* 3 Bottom KPI Mini-Cards: TERMÓMETRO, QUÉ SIGNIFICA, CUENTA REGRESIVA */
+        .kpi-trio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .kpi-trio {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mini-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+
+        .mini-card-header {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 10px;
+        }
+
+        .thermo-bar-bg {
+            width: 100%;
+            height: 10px;
+            background: #0b0e13;
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 8px 0;
+            border: 1px solid #262e38;
+        }
+
+        .thermo-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #facc15, #ef4444);
+            border-radius: 999px;
+            transition: width 0.4s ease;
+        }
+
+        .mini-card-value {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .mini-card-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-top: 4px;
+        }
+
+        /* Report & Charts Section (Dark Mode integrado al Dashboard) */
+        .report-section {
+            background: var(--bg-panel);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .report-brand {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-yellow);
+        }
+
+        .report-main-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        .report-meta-right {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .report-alert-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            background: rgba(239, 68, 68, 0.18);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.35);
+            margin-top: 4px;
+        }
+
+        .report-summary-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .report-summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-box {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 20px;
+        }
+
+        .summary-box h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .summary-tags {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            line-height: 1.65;
+        }
+
+        .total-loss-highlight {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .total-loss-highlight span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .total-loss-highlight strong {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--accent-yellow);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .comp-table th, .comp-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            color: #e5e7eb;
+        }
+
+        .comp-table th {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+        }
+
+        .comp-table td:last-child, .comp-table th:last-child {
+            text-align: right;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Identical Dual Charts Container in Dark Mode */
+        .charts-section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .charts-grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 960px) {
+            .charts-grid-2col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-box {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .chart-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .chart-box-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #e5e7eb;
+        }
+
+        .chart-canvas-wrap {
+            position: relative;
+            height: 270px;
+            width: 100%;
+        }
+
+        .chart-caption-bar {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: 0.84rem;
+            color: #d1d5db;
+            margin-bottom: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Detalle de Lotes Table Dark Mode */
+        .lotes-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .lotes-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.84rem;
+        }
+
+        .lotes-table th {
+            background: #0b0e13;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.73rem;
+            letter-spacing: 0.5px;
+            padding: 11px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lotes-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: #e5e7eb;
+        }
+
+        .lotes-table tr:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .lotes-table tr.row-selected {
+            background: rgba(250, 204, 21, 0.12);
+        }
+
+        .badge-critica {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.35);
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.72rem;
+        }
+
+        .badge-normal {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.72rem;
+        }
+
+        .nota-auditoria {
+            margin-top: 20px;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.28);
+            border-left: 4px solid #f59e0b;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            color: #fde68a;
+            line-height: 1.5;
+        }
+
+        .alert-error-box {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            color: #fca5a5;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
-<body class="bg-light">
-    <div class="container py-4">
-        <h2 class="mb-4 text-dark border-bottom pb-2">🚜 Sistema de Evaluación y Proyección de Flota (IA)</h2>
+<body>
 
-        <nav class="nav nav-pills mb-4 app-navigation" aria-label="Secciones principales">
-            <a class="nav-link active" href="/" aria-current="page">🚜 Panel de maquinaria</a>
-            <a class="nav-link" href="/gestion">📋 Gestión del proyecto</a>
-        </nav>
-
-        <div class="alert alert-warning small">
-            <strong>Demostración experimental.</strong> Los modelos se entrenaron con datos <strong>simulados</strong>.
-            El resultado no constituye una valoración pericial definitiva ni demuestra capacidad predictiva sobre pérdidas reales.
-        </div>
-
-        {% if not sistema_ok %}
-        <div class="alert alert-danger fw-bold">🛑 {{ error_sistema }}</div>
-        {% endif %}
-
-        {% if aviso_version %}
-        <div class="alert alert-warning small">⚠️ {{ aviso_version }}</div>
-        {% endif %}
-
-        {% if errores %}
-        <div class="alert alert-danger">
-            <strong>Revisá los datos ingresados:</strong>
-            <ul class="mb-0">
-                {% for err in errores %}<li>{{ err }}</li>{% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-
-        <!-- SECCIÓN 1: FORMULARIO DE PREDICCIÓN INDIVIDUAL -->
-        <div class="card shadow-sm mb-4 border-primary">
-            <div class="card-header bg-primary text-white fw-bold">
-                🔍 Evaluación Pericial de Caso Individual (Doble Predicción y Coincidencia)
-            </div>
-            <div class="card-body">
-                <form method="POST" action="/predecir_caso" novalidate>
-                    {# se conservan la proyección y los filtros del tablero #}
-                    <input type="hidden" name="meses_proyeccion" value="{{ meses_proyeccion }}">
-                    <input type="hidden" name="cantidad_registros" value="{{ cantidad_registros }}">
-                    {% for t in tipos_sel %}<input type="hidden" name="tipos" value="{{ t }}">{% endfor %}
-                    {% for p in prov_sel %}<input type="hidden" name="provincias" value="{{ p }}">{% endfor %}
-                    <div class="row g-3">
-                        <div class="col-md-3">
-                            <label class="form-label fw-bold small">Tipo de Equipo:</label>
-                            <select name="tipo_equipo" class="form-select form-select-sm" required>
-                                {% for t in meta.categorias.tipo_equipo %}
-                                <option value="{{ t }}" {% if valores.tipo_equipo == t %}selected{% endif %}>{{ t }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label fw-bold small">Provincia / Jurisdicción:</label>
-                            <select name="provincia" class="form-select form-select-sm" required>
-                                {% for p in meta.categorias.provincia %}
-                                <option value="{{ p }}" {% if valores.provincia == p %}selected{% endif %}>{{ p }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label fw-bold small">Meses Inactividad:</label>
-                            <input type="number" step="any" name="meses_inactividad" class="form-control form-control-sm" min="{{ meta.rangos.meses_inactividad[0] }}" max="{{ meta.rangos.meses_inactividad[1] }}" value="{{ valores.meses_inactividad }}" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label fw-bold small">Año Fabricación:</label>
-                            <input type="number" step="any" name="anio_fabricacion" class="form-control form-control-sm" min="{{ meta.rangos.anio_fabricacion[0] }}" max="{{ meta.rangos.anio_fabricacion[1] }}" value="{{ valores.anio_fabricacion }}" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label fw-bold small">Estado del Motor:</label>
-                            <select name="estado_motor" class="form-select form-select-sm" required>
-                                {% for e in meta.categorias.estado_motor %}
-                                <option value="{{ e }}" {% if valores.estado_motor == e %}selected{% endif %}>{{ e }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mt-3 text-end">
-                        <button type="submit" class="btn btn-primary btn-sm fw-bold px-4" {% if not sistema_ok %}disabled{% endif %}>Ejecutar Predicción Individual</button>
-                    </div>
-                </form>
-
-                {% if resultado %}
-                <hr>
-                <div class="alert alert-{{ resultado.color_alerta }} mt-3 mb-0">
-                    <h5 class="alert-heading fw-bold">Resultado de la Evaluación Individual:</h5>
-                    <p class="mb-1"><strong>Pérdida estimada / Lucro Cesante (Regresión):</strong> ${{ "{:,.2f}".format(resultado.pred_usd) }} USD</p>
-                    <p class="mb-1"><strong>Alerta por Umbral (Regresión &ge; ${{ "{:,.0f}".format(resultado.umbral) }}):</strong>
-                        {% if resultado.alerta_regresion %}CRÍTICO (&ge; ${{ "{:,.0f}".format(resultado.umbral) }}){% else %}NORMAL (&lt; ${{ "{:,.0f}".format(resultado.umbral) }}){% endif %}</p>
-                    <p class="mb-1"><strong>Alerta por Clasificador Directo:</strong>
-                        {% if resultado.alerta_clasificador == 1 %}CRÍTICO (Clase 1){% else %}NORMAL (Clase 0){% endif %}</p>
-                    <p class="mb-1"><strong>Distancia al umbral:</strong> {{ "{:+,.0f}".format(resultado.distancia_umbral) }} USD
-                        {% if resultado.cerca_umbral %}<span class="badge text-bg-warning">cerca del umbral (&le; 1 MAE = ${{ "{:,.0f}".format(resultado.banda) }})</span>{% endif %}</p>
-                    <hr>
-                    <p class="mb-2"><strong>Análisis de Acuerdo / Desacuerdo:</strong> <span class="badge bg-dark">{{ resultado.acuerdo }}</span></p>
-                    <p class="mb-0 small"><strong>Interpretación:</strong> {{ resultado.interpretacion }}</p>
-                </div>
-                {% endif %}
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-badge">LUCRODASH</span>
+            <div>
+                <div class="brand-title">Atlas de Impacto y Lucro Cesante · Maquinaria Vial</div>
+                <div class="brand-sub">Simulación 3D + Modelos Supervisados de Regresión y Clasificación Judicial</div>
             </div>
         </div>
+        <div class="topbar-actions">
+            <button type="button" class="btn-pdf" onclick="exportarInformePDF()">
+                <i class="bi bi-file-earmark-pdf-fill" style="color:#ef4444;"></i> Descargar Informe PDF
+            </button>
+        </div>
+    </header>
 
-        <!-- SECCIÓN 2: TABLERO GENERAL DE FLOTA E INVENTARIO -->
-        {% if sistema_ok %}
-        <form method="GET" action="/" class="bg-white p-3 shadow-sm rounded mb-4">
-            <div class="row align-items-center mb-3 bg-light p-3 rounded border">
-                <div class="col-md-8 d-flex align-items-center">
-                    <label class="me-3 fw-bold text-primary text-nowrap">📅 Proyectar inactividad a futuro:</label>
-                    <input type="range" class="form-range me-3" name="meses_proyeccion" min="0" max="{{ meta.rangos.meses_inactividad[1] }}" step="1" value="{{ meses_proyeccion }}" oninput="document.getElementById('valProy').innerText = this.value">
-                    <span class="fw-bold text-dark text-nowrap">+<span id="valProy">{{ meses_proyeccion }}</span> meses</span>
+    <div class="dashboard-grid">
+        <!-- PANEL IZQUIERDO: DATOS DE LA PERICIA -->
+        <aside class="pericia-card">
+            <div class="pericia-title">DATOS DE LA PERICIA</div>
+
+            {% if error %}
+            <div class="alert-error-box">
+                <strong><i class="bi bi-exclamation-triangle-fill"></i> Atención:</strong> {{ error }}
+            </div>
+            {% endif %}
+
+            <form method="POST" action="/" id="periciaForm">
+                <input type="hidden" name="modo_seleccion" id="modo_seleccion_input" value="{{ form_state.modo_seleccion }}">
+
+                <!-- Selector Individual Rápido -->
+                <div id="bloqueIndividual" class="{% if form_state.modo_seleccion == 'multiple' %}d-none-custom{% endif %}">
+                    <div class="field-group">
+                        <label class="field-label">TIPO DE EQUIPO</label>
+                        <select class="form-select-dark" name="tipo_individual" id="tipo_individual" onchange="actualizarVistaPrevia()">
+                            {% for t in ['Motoniveladora', 'Excavadora', 'Cargadora frontal', 'Rodillo compactador', 'Topadora'] %}
+                            <option value="{{ t }}" {% if form_state.tipo_individual == t %}selected{% endif %}>{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">PROVINCIA / JURISDICCIÓN</label>
+                        <select class="form-select-dark" name="provincia_individual" id="provincia_individual" onchange="actualizarVistaPrevia()">
+                            {% for p in ['Buenos Aires', 'Córdoba', 'Santa Fe', 'Mendoza', 'Salta'] %}
+                            <option value="{{ p }}" {% if form_state.provincia_individual == p %}selected{% endif %}>{{ p }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
-                <div class="col-md-4 text-end">
-                    <label for="cantidad_registros" class="form-label small fw-bold mb-1">Registros a mostrar</label>
-                    <select class="form-select form-select-sm d-inline-block selector-cantidad" id="cantidad_registros" name="cantidad_registros">
-                        <option value="100" {% if cantidad_registros == '100' %}selected{% endif %}>100 registros</option>
-                        <option value="250" {% if cantidad_registros == '250' %}selected{% endif %}>250 registros</option>
-                        <option value="500" {% if cantidad_registros == '500' %}selected{% endif %}>500 registros</option>
-                        <option value="1000" {% if cantidad_registros == '1000' %}selected{% endif %}>1.000 registros</option>
-                        <option value="todos" {% if cantidad_registros == 'todos' %}selected{% endif %}>Todos los disponibles</option>
+
+                <!-- NUEVO ÍTEM: SELECCIÓN MÚLTIPLE DE EQUIPOS Y PROVINCIAS (LOTE PERICIAL) -->
+                <div class="multi-item-box">
+                    <div class="multi-toggle-header" onclick="toggleModoSeleccion()">
+                        <span class="multi-toggle-title">
+                            <i class="bi bi-layers-fill"></i> Lote Múltiple (Equipos y Provincias)
+                        </span>
+                        <i class="bi bi-chevron-down" id="iconoMulti" style="color: var(--accent-yellow); font-size: 0.85rem;"></i>
+                    </div>
+
+                    <div class="switch-pill">
+                        <button type="button" id="btnModoIndiv" class="{% if form_state.modo_seleccion != 'multiple' %}active{% endif %}" onclick="setModoSeleccion('individual')">
+                            1 Equipo / Jurisdicción
+                        </button>
+                        <button type="button" id="btnModoMulti" class="{% if form_state.modo_seleccion == 'multiple' %}active{% endif %}" onclick="setModoSeleccion('multiple')">
+                            Varios Equipos y Provincias
+                        </button>
+                    </div>
+
+                    <div class="multi-Checklists {% if form_state.modo_seleccion == 'multiple' %}show{% endif %}" id="panelMultiChecklists">
+                        <div class="checklist-subtitle">
+                            <span>Seleccionar Equipos (<span id="countEquipos">0</span>)</span>
+                            <div>
+                                <a onclick="marcarTodos('tipo_equipo', true)">Todos</a> · 
+                                <a onclick="marcarTodos('tipo_equipo', false)">Ninguno</a>
+                            </div>
+                        </div>
+                        <div class="chips-container">
+                            {% for t in ['Motoniveladora', 'Excavadora', 'Cargadora frontal', 'Rodillo compactador', 'Topadora'] %}
+                            <label class="chip-check">
+                                <input type="checkbox" name="tipo_equipo" value="{{ t }}" 
+                                    {% if t in form_state.tipos_equipo %}checked{% endif %}
+                                    onchange="actualizarContadoresYPreview()">
+                                <span class="chip-label">{{ t }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+
+                        <div class="checklist-subtitle" style="margin-top: 8px;">
+                            <span>Seleccionar Provincias (<span id="countProvincias">0</span>)</span>
+                            <div>
+                                <a onclick="marcarTodos('provincia', true)">Todas</a> · 
+                                <a onclick="marcarTodos('provincia', false)">Ninguna</a>
+                            </div>
+                        </div>
+                        <div class="chips-container" style="margin-bottom: 2px;">
+                            {% for p in ['Buenos Aires', 'Córdoba', 'Santa Fe', 'Mendoza', 'Salta'] %}
+                            <label class="chip-check">
+                                <input type="checkbox" name="provincia" value="{{ p }}"
+                                    {% if p in form_state.provincias %}checked{% endif %}
+                                    onchange="actualizarContadoresYPreview()">
+                                <span class="chip-label">{{ p }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meses y Año -->
+                <div class="row-2col">
+                    <div class="field-group">
+                        <label class="field-label">MESES INACTIVIDAD</label>
+                        <input type="number" class="form-control-dark" name="meses" id="input_meses" 
+                               value="{{ form_state.meses }}" min="1" max="60" required oninput="actualizarVistaPrevia()">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">AÑO FABRICACIÓN</label>
+                        <input type="number" class="form-control-dark" name="anio_fabricacion" id="input_anio" 
+                               value="{{ form_state.anio_fabricacion }}" min="1990" max="2024" required oninput="actualizarVistaPrevia()">
+                    </div>
+                </div>
+
+                <!-- Estado del Motor -->
+                <div class="field-group">
+                    <label class="field-label">ESTADO DEL MOTOR</label>
+                    <select class="form-select-dark" name="estado_motor" id="input_motor" onchange="actualizarVistaPrevia()">
+                        <option value="Funcional" {% if form_state.estado_motor == 'Funcional' %}selected{% endif %}>Funcional</option>
+                        <option value="Requiere_Reparacion" {% if form_state.estado_motor == 'Requiere_Reparacion' %}selected{% endif %}>Requiere Reparacion</option>
+                        <option value="Averia_Grave" {% if form_state.estado_motor == 'Averia_Grave' %}selected{% endif %}>Averia Grave</option>
                     </select>
-                    <button type="submit" class="btn btn-dark fw-bold px-4 mt-2">Simular Proyección</button>
-                    <a href="/" class="btn btn-outline-secondary ms-2 mt-2">Restablecer</a>
+                </div>
+
+                <button type="submit" class="btn-calcular">
+                    <i class="bi bi-calculator-fill"></i> CALCULAR LUCRO CESANTE
+                </button>
+            </form>
+
+            <div class="pericia-footnote">
+                Vista previa interactiva en tiempo real. Al presionar <strong>Calcular Lucro Cesante</strong>, el servidor Flask ejecuta el pipeline de Machine Learning (<code>modelo_regresion_perdidas.joblib</code> y <code>modelo_clasificacion_perdidas.joblib</code>) sobre todos los equipos y provincias seleccionados.
+            </div>
+        </aside>
+
+        <!-- PANEL DERECHO: ESCENA 3D + GRÁFICOS LUCRODASH + INFORME -->
+        <main class="main-col">
+
+            <!-- Banner Superior de Umbral -->
+            <div class="umbral-banner" id="topUmbralBanner">
+                <div class="umbral-banner-left">
+                    <h1 id="bannerMontoPrincipal">USD 75.823</h1>
+                    <p id="bannerSubtexto">Le faltan USD 24.177 para llegar al umbral crítico de USD 100.000.</p>
+                </div>
+                <div>
+                    <span class="umbral-badge-pill" id="bannerEstadoBadge">DENTRO DE UMBRAL</span>
                 </div>
             </div>
 
-            <div class="row pt-2">
-                <div class="col-md-6">
-                    <label class="fw-bold text-secondary mb-2 small">TIPO DE MAQUINARIA (* Múltiple selección):</label>
-                    <div class="d-flex flex-wrap gap-3">
-                        {% for t in meta.categorias.tipo_equipo %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="tipos" value="{{ t }}" id="tipo_{{ loop.index }}" {% if t in tipos_sel %}checked{% endif %}>
-                            <label class="form-check-label small" for="tipo_{{ loop.index }}">{{ t }}</label>
-                        </div>
-                        {% endfor %}
-                    </div>
+            <!-- Escena 3D Interactiva -->
+            <div class="scene-card">
+                <div class="scene-pills-top">
+                    <div class="scene-pill"><span class="dot dot-yellow"></span> 1 fajo ≈ USD 10.000</div>
+                    <div class="scene-pill"><span class="dot dot-red"></span> Plano rojo = umbral</div>
+                    <div class="scene-pill"><span class="dot dot-orange"></span> Óxido y piezas sueltas = deterioro</div>
                 </div>
 
-                <div class="col-md-6">
-                    <label class="fw-bold text-secondary mb-2 small">JURISDICCIÓN / PROVINCIA (* Múltiple selección):</label>
-                    <div class="d-flex flex-wrap gap-3">
-                        {% for p in meta.categorias.provincia %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="provincias" value="{{ p }}" id="prov_{{ loop.index }}" {% if p in prov_sel %}checked{% endif %}>
-                            <label class="form-check-label small" for="prov_{{ loop.index }}">{{ p }}</label>
-                        </div>
-                        {% endfor %}
+                <div class="scene-floating-tags">
+                    <div class="tag-3d-value" id="tag3dMonto">USD 75.823</div>
+                    <div class="tag-3d-umbral" id="tag3dUmbral">UMBRAL USD 100.000</div>
+                </div>
+
+                <div class="scene-selector-bottom-left">
+                    <span style="color:#9ca3af;"><i class="bi bi-box-seam"></i> Unidad en visor 3D y detalle:</span>
+                    <select id="selectorMaquinaActiva" onchange="cambiarMaquinaActiva(this.value)">
+                    </select>
+                </div>
+
+                <div class="scene-hint-bottom">
+                    <i class="bi bi-arrows-move"></i> Arrastrá para girar · rueda para acercar
+                </div>
+
+                <canvas id="canvas3d"></canvas>
+            </div>
+
+            <!-- Trío de Tarjetas Inferiores (TERMÓMETRO / QUÉ SIGNIFICA / CUENTA REGRESIVA) -->
+            <div class="kpi-trio">
+                <div class="mini-card">
+                    <div class="mini-card-header"><i class="bi bi-speedometer2"></i> TERMÓMETRO</div>
+                    <div class="mini-card-value" id="kpiTermometroPct">75.8% del umbral</div>
+                    <div class="thermo-bar-bg">
+                        <div class="thermo-bar-fill" id="kpiTermometroBar" style="width: 75.8%;"></div>
                     </div>
+                    <div class="mini-card-desc" id="kpiTermometroDesc">Comparación directa contra el valor de reposición referencial (USD 100.000 por unidad).</div>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-header"><i class="bi bi-info-circle"></i> QUÉ SIGNIFICA</div>
+                    <div class="mini-card-value" id="kpiSignificaTitulo">4.800 horas perdidas</div>
+                    <div class="mini-card-desc" id="kpiSignificaDesc">Equivale a 600 jornadas laborales de obra pública paralizadas y sobrecosto por alquiler privado.</div>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-header"><i class="bi bi-hourglass-split"></i> CUENTA REGRESIVA</div>
+                    <div class="mini-card-value" id="kpiCuentaTitulo">En zona de alerta</div>
+                    <div class="mini-card-desc" id="kpiCuentaDesc">Cada mes adicional suma 200 hs operativas no aprovechadas en la jurisdicción seleccionada.</div>
                 </div>
             </div>
-        </form>
 
-        {% if aviso_tablero %}
-        <div class="alert alert-secondary small">{{ aviso_tablero }}</div>
-        {% endif %}
+            <!-- SECCIÓN DE GRÁFICOS E INFORME IDÉNTICO AL PDF LUCRODASH -->
+            <section class="report-section" id="areaInformeImprimible">
+                <div class="report-header">
+                    <div>
+                        <div class="report-brand">LucroDash</div>
+                        <div class="report-main-title">INFORME DE EVALUACIÓN · PÉRDIDA ECONÓMICA</div>
+                    </div>
+                    <div class="report-meta-right">
+                        <div id="reportFechaHora"></div>
+                        <div style="margin-top:2px;"><strong id="reportCantCriticos">1 lote(s) crítico(s) de 1</strong></div>
+                        <div class="report-alert-badge" id="reportNivelAlerta">Nivel de alerta: REVISIÓN REQUERIDA</div>
+                    </div>
+                </div>
 
-        <div class="card shadow-sm border-0">
-            <div class="card-body p-0">
-                <div class="table-responsive table-container">
-                    <table class="table table-hover align-middle mb-0 text-center">
-                        <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
+                <!-- Resumen del análisis + Comparativa de costos -->
+                <div class="report-summary-grid">
+                    <div class="summary-box">
+                        <h4>Resumen del análisis</h4>
+                        <div class="summary-tags">
+                            <div><strong>Equipos:</strong> <span id="repEquiposList">Motoniveladora</span></div>
+                            <div><strong>Provincias:</strong> <span id="repProvinciasList">Buenos Aires</span></div>
+                            <div>
+                                <strong>Inactividad:</strong> <span id="repMeses">24</span> meses · 
+                                <strong>Fabricación:</strong> <span id="repAnio">2015</span> · 
+                                <strong>Motor:</strong> <span id="repMotor">Requiere Reparacion</span>
+                            </div>
+                        </div>
+                        <div class="total-loss-highlight">
+                            <span>PÉRDIDA TOTAL ESTIMADA</span>
+                            <strong id="repPerdidaTotal">$3.223.551</strong>
+                        </div>
+                    </div>
+
+                    <div class="summary-box">
+                        <h4>Comparativa de costos</h4>
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Alternativa</th>
+                                    <th>Total estimado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Operación propia</td>
+                                    <td id="repCostoPropio">$144.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Alquiler de maquinaria</td>
+                                    <td id="repCostoAlquiler">$432.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Trabajo manual</td>
+                                    <td id="repCostoManual">$4.800.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Visualizaciones del análisis (LOS DOS GRÁFICOS IGUALES A LA IMAGEN/PDF) -->
+                <div class="charts-section-title">
+                    <span>Visualizaciones del análisis</span>
+                    <small style="color:#8b949e; font-family:'Inter', sans-serif; font-size:0.78rem; font-weight:500;">Hacé clic en cualquier barra o cambiá el selector para inspeccionar otro equipo</small>
+                </div>
+
+                <div class="charts-grid-2col">
+                    <!-- Gráfico 1: Pérdida por máquina · comparación de períodos -->
+                    <div class="chart-box">
+                        <div class="chart-box-header">
+                            <span class="chart-box-title">Pérdida por máquina · comparación de períodos</span>
+                        </div>
+                        <div class="chart-canvas-wrap">
+                            <canvas id="chartComparacionMaquinas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Gráfico 2: Detalle · Máquina seleccionada (Barra coral + punto celeste de horas con doble eje) -->
+                    <div class="chart-box">
+                        <div class="chart-box-header">
+                            <span class="chart-box-title" id="tituloGraficoDetalle">Detalle · Motoniveladora</span>
+                        </div>
+                        <div class="chart-canvas-wrap">
+                            <canvas id="chartDetalleMaquina"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leyenda resumen debajo de los gráficos como en el PDF -->
+                <div class="chart-caption-bar" id="leyendaDetalleInferior">
+                    <span><strong>Máquina seleccionada:</strong> Motoniveladora</span>
+                    <span><strong>Valor perdido:</strong> $3,2 M</span>
+                    <span><strong>Actividad no realizada:</strong> 4.800 h (600 jornadas no realizadas)</span>
+                </div>
+
+                <!-- Tabla Detalle de lotes -->
+                <h4 style="font-family:'Oswald', sans-serif; font-size:0.95rem; font-weight:700; letter-spacing:0.5px; color:#ffffff; margin-bottom:10px; text-transform:uppercase;">Detalle de lotes</h4>
+                <div class="lotes-table-wrap">
+                    <table class="lotes-table">
+                        <thead>
                             <tr>
-                                <th>#</th>
-                                <th>ID Máquina</th>
-                                <th>Tipo</th>
+                                <th>Lote</th>
+                                <th>Equipo</th>
                                 <th>Provincia</th>
-                                <th>Inactividad Base</th>
-                                <th>Inactividad Proyectada</th>
-                                <th>Valor Mercado</th>
-                                <th>Costo Puesta Marcha</th>
-                                <th>Lucro Cesante Estimado</th>
-                                <th>Dictamen y Viabilidad</th>
+                                <th>Meses</th>
+                                <th>Pérdida IA</th>
+                                <th>Alerta (Reg+Umbral)</th>
+                                <th>Alerta (Clasificador)</th>
+                                <th>Integración</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {% for maq in registros %}
-                            {% if maq.color == 'dark' %}
-                                {% set clase_fila = 'fila-negro' %}
-                            {% elif maq.color == 'danger' %}
-                                {% set clase_fila = 'fila-rojo' %}
-                            {% elif maq.color == 'warning' %}
-                                {% set clase_fila = 'table-warning' %}
-                            {% else %}
-                                {% set clase_fila = 'fila-verde' %}
-                            {% endif %}
-                            <tr class="{{ clase_fila }}">
-                                <td>{{ loop.index }}</td>
-                                <td class="fw-bold">{{ maq.id_maquina }}</td>
-                                <td>{{ maq.tipo_equipo }}</td>
-                                <td>{{ maq.provincia }}</td>
-                                <td>{{ maq.meses_base }} m</td>
-                                <td class="fw-bold text-decoration-underline">{{ maq.meses_proyectados }} m</td>
-                                <td>${{ "{:,.2f}".format(maq.valor_mercado) }}</td>
-                                <td>${{ "{:,.2f}".format(maq.puesta_marcha) }}</td>
-                                <td class="fw-bold">${{ "{:,.2f}".format(maq.lucro) }}</td>
-                                <td><span class="badge w-100 text-bg-{{ maq.color }} p-2" style="font-size: 0.75rem;">{{ maq.veredicto }}</span></td>
-                            </tr>
-                            {% else %}
-                            <tr><td colspan="10" class="text-center py-4 text-muted">No se cargaron registros o no hay coincidencias con los filtros.</td></tr>
-                            {% endfor %}
+                        <tbody id="tablaLotesBody">
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        <div class="mt-2 text-end text-muted small">
-            Mostrando <strong>{{ registros|length }}</strong> de <strong>{{ total_disponibles }}</strong> equipos que coinciden con los filtros.
-            {% if cantidad_registros == 'todos' %}Se muestran todos los disponibles.{% else %}Límite seleccionado: {{ cantidad_registros }}.{% endif %}
-        </div>
 
-        <!-- NUEVO: COMPARACIÓN DE LOS DOS MODELOS EN LA FLOTA. La tabla original permanece intacta. -->
-        <div class="card shadow-sm mt-4 border-primary" id="comparacion-flota">
-            <div class="card-header bg-white fw-bold text-primary">📊 Comparación metodológica de predicciones por maquinaria</div>
-            <div class="card-body">
-                {% set total_coinciden = registros|selectattr('coincide_modelos')|list|length %}
-                {% set total_desacuerdos = registros|length - total_coinciden %}
-                <div class="row g-3 mb-3">
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Equipos comparados</span><strong>{{ registros|length }}</strong></div></div>
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Coincidencias</span><strong class="text-success">{{ total_coinciden }}</strong></div></div>
-                    <div class="col-md-4"><div class="comparacion-indicador"><span>Desacuerdos</span><strong class="text-warning">{{ total_desacuerdos }}</strong></div></div>
+                <!-- Nota Metodológica AUD-04 -->
+                <div class="nota-auditoria">
+                    <strong>NOTA METODOLÓGICA AUD-04:</strong> Las predicciones y costos horarios comparativos son estimaciones basadas en supuestos fijos de mercado y peritaje documentados en el proyecto original. Funcionan como apoyo analítico y no reemplazan la pericia mecánica formal ni las decisiones de la autoridad judicial competente.
                 </div>
-                <p class="small text-muted">Ambas predicciones se ejecutan sobre las mismas variables de cada equipo. La alerta por regresión se obtiene comparando la estimación con el umbral de USD {{ "{:,.0f}".format(meta.umbral_usd) }}. La otra alerta proviene directamente del clasificador guardado.</p>
-                <div class="table-responsive">
-                    <table class="table table-sm table-hover align-middle text-center">
-                        <thead class="table-dark"><tr><th>ID máquina</th><th>Tipo</th><th>Provincia</th><th>Regresión + umbral</th><th>Clasificador directo</th><th>Comparación</th></tr></thead>
-                        <tbody>
-                        {% for maq in registros %}
-                            <tr><td class="fw-bold">{{ maq.id_maquina }}</td><td>{{ maq.tipo_equipo }}</td><td>{{ maq.provincia }}</td>
-                                <td>{% if maq.alerta_regresion == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
-                                <td>{% if maq.alerta_clasificador == 1 %}<span class="badge text-bg-danger">CRÍTICO (1)</span>{% else %}<span class="badge text-bg-success">NORMAL (0)</span>{% endif %}</td>
-                                <td>{% if maq.coincide_modelos %}<span class="badge text-bg-success">✓ COINCIDENCIA</span>{% else %}<span class="badge text-bg-warning">! DESACUERDO · revisar</span>{% endif %}</td>
-                            </tr>
-                        {% else %}<tr><td colspan="6" class="text-muted py-3">No hay equipos para comparar con los filtros seleccionados.</td></tr>{% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <div class="alert alert-info small mb-0">Esta comparación muestra predicciones para el inventario. No identifica falsos positivos ni falsos negativos porque para esos conceptos se necesita conocer la clase real de cada equipo. Las métricas de test que se muestran a continuación sí se calculan contra etiquetas reales.</div>
-            </div>
-        </div>
+            </section>
 
-        <!-- NUEVO: TABLA INTEGRADORA DE MÉTRICAS DEL CONJUNTO DE TEST -->
-        <div class="card shadow-sm mt-4" id="metricas-integradas">
-            <div class="card-header bg-white fw-bold">📈 Evaluación comparativa sobre el conjunto de test</div>
-            <div class="card-body">
-                {% set mc = meta.metricas_test.clasificador_directo %}
-                {% set mr = meta.metricas_test.regresion_mas_umbral %}
-                <p class="small text-muted">Resultados del conjunto de test reservado ({{ meta.filas.test }} casos). No confundir con las predicciones del inventario de flota.</p>
-                <div class="table-responsive"><table class="table table-bordered table-sm text-center align-middle">
-                    <thead class="table-dark"><tr><th>Métrica</th><th>Clasificador directo</th><th>Regresión + umbral</th></tr></thead>
-                    <tbody>
-                    <tr><th>Accuracy</th><td>{{ "%.2f"|format(mc.Accuracy * 100) }}%</td><td>{{ "%.2f"|format(mr.Accuracy * 100) }}%</td></tr>
-                    <tr><th>Precision</th><td>{{ "%.2f"|format(mc.Precision * 100) }}%</td><td>{{ "%.2f"|format(mr.Precision * 100) }}%</td></tr>
-                    <tr><th>Recall</th><td>{{ "%.2f"|format(mc.Recall * 100) }}%</td><td>{{ "%.2f"|format(mr.Recall * 100) }}%</td></tr>
-                    <tr><th>F1</th><td>{{ "%.2f"|format(mc.F1 * 100) }}%</td><td>{{ "%.2f"|format(mr.F1 * 100) }}%</td></tr>
-                    <tr><th>Falsos positivos (FP)</th><td>{{ mc.FP|int }}</td><td>{{ mr.FP|int }}</td></tr>
-                    <tr><th>Falsos negativos (FN)</th><td>{{ mc.FN|int }}</td><td>{{ mr.FN|int }}</td></tr>
-                    <tr><th>Costo relativo (5·FN + FP)</th><td>{{ mc.Costo|int }}</td><td>{{ mr.Costo|int }}</td></tr>
-                    </tbody>
-                </table></div>
-                <p class="small mb-0"><strong>Lectura:</strong> en estos resultados de test, la regresión más umbral presenta {{ "%.2f"|format((mr.Recall-mc.Recall)*100) }} puntos porcentuales más de recall y {{ (mc.FN-mr.FN)|int }} falsos negativos menos. La recomendación depende del costo relativo adoptado (FN=5 y FP=1), que es un supuesto didáctico.</p>
-            </div>
-        </div>
-        {% endif %}
-
-        <div class="card shadow-sm mt-4">
-            <div class="card-body small">
-                <h2 class="h6">Limitaciones y cuándo no usar esta herramienta</h2>
-                <ul class="mb-2">
-                    <li>Los datos son <strong>simulados</strong>: las métricas valen dentro de la simulación, no sobre pérdidas reales.</li>
-                    <li>El umbral (USD {{ "{:,.0f}".format(meta.umbral_usd) }}) y los costos (falso negativo = {{ meta.costos_relativos.falso_negativo }}, falso positivo = {{ meta.costos_relativos.falso_positivo }}) son supuestos didácticos.</li>
-                    <li>En el tablero, <strong>solo el «Lucro Cesante Estimado» proviene del modelo</strong> de regresión; el valor de mercado, el costo de puesta en marcha y el dictamen son una simulación visual con valores de referencia supuestos.</li>
-                    <li>Cerca del umbral una diferencia pequeña puede cambiar la alerta; las discrepancias entre los dos sistemas requieren revisión humana.</li>
-                    <li>No usar como dictamen pericial, con equipos reales sin validar el modelo, ni con valores fuera de los rangos indicados.</li>
-                </ul>
-                <p class="mb-0 nota">La aplicación solo carga los Pipelines entrenados en el notebook y ejecuta <code>predict</code>; no entrena ni acepta archivos.</p>
-            </div>
-        </div>
+        </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Datos del servidor Flask inyectados de forma segura sin alertas del linter de VS Code -->
+    <script id="server-results-data" type="application/json">
+        {{ resultados | tojson | safe if resultados else 'null' }}
+    </script>
+    <script>
+        const SERVER_RESULTS = JSON.parse(document.getElementById('server-results-data').textContent.trim() || 'null');
+    </script>
+
+    <script>
+        // Tarifas y parámetros base para previsualización instantánea y gráficos
+        const COSTOS_OP = { 'Motoniveladora': 30, 'Excavadora': 30, 'Cargadora frontal': 25, 'Rodillo compactador': 17, 'Topadora': 52 };
+        const COSTOS_ALQ = { 'Motoniveladora': 90, 'Excavadora': 90, 'Cargadora frontal': 55, 'Rodillo compactador': 47, 'Topadora': 140 };
+        const COSTOS_MAN = { 'Motoniveladora': 1000, 'Excavadora': 500, 'Cargadora frontal': 500, 'Rodillo compactador': 250, 'Topadora': 1000 };
+        const REPARACION_MOTOR = { 'Funcional': 0, 'Requiere_Reparacion': 15000, 'Averia_Grave': 35000 };
+        const FACTOR_PROV = { 'Buenos Aires': 1.0, 'Córdoba': 0.96, 'Santa Fe': 0.97, 'Mendoza': 0.94, 'Salta': 0.92 };
+        const UMBRAL_UNITARIO = 100000;
+
+        let estadoActual = {
+            filas: [],
+            indiceSeleccionado: 0
+        };
+
+        // Formateadores
+        function fmtPesos(val) {
+            return '$' + Math.round(val).toLocaleString('es-AR');
+        }
+
+        function fmtMillones(val) {
+            if (val >= 1000000) {
+                return '$' + (val / 1000000).toLocaleString('es-AR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' M';
+            }
+            return '$' + Math.round(val / 1000).toLocaleString('es-AR') + 'k';
+        }
+
+        // Control de modo Individual vs Lote Múltiple
+        function setModoSeleccion(modo) {
+            document.getElementById('modo_seleccion_input').value = modo;
+            const bIndiv = document.getElementById('bloqueIndividual');
+            const panelMulti = document.getElementById('panelMultiChecklists');
+            const btnIndiv = document.getElementById('btnModoIndiv');
+            const btnMulti = document.getElementById('btnModoMulti');
+
+            if (modo === 'multiple') {
+                bIndiv.classList.add('d-none-custom');
+                bIndiv.style.display = 'none';
+                panelMulti.classList.add('show');
+                btnIndiv.classList.remove('active');
+                btnMulti.classList.add('active');
+            } else {
+                bIndiv.classList.remove('d-none-custom');
+                bIndiv.style.display = 'block';
+                panelMulti.classList.remove('show');
+                btnIndiv.classList.add('active');
+                btnMulti.classList.remove('active');
+            }
+            actualizarContadoresYPreview();
+        }
+
+        function toggleModoSeleccion() {
+            const actual = document.getElementById('modo_seleccion_input').value;
+            setModoSeleccion(actual === 'multiple' ? 'individual' : 'multiple');
+        }
+
+        function marcarTodos(nombreCampo, estado) {
+            document.querySelectorAll(`input[name="${nombreCampo}"]`).forEach(cb => {
+                cb.checked = estado;
+            });
+            actualizarContadoresYPreview();
+        }
+
+        function actualizarContadoresYPreview() {
+            const eqChecked = document.querySelectorAll('input[name="tipo_equipo"]:checked').length;
+            const prChecked = document.querySelectorAll('input[name="provincia"]:checked').length;
+            document.getElementById('countEquipos').textContent = eqChecked;
+            document.getElementById('countProvincias').textContent = prChecked;
+            actualizarVistaPrevia();
+        }
+
+        // Simulación local cuando aún no se hizo POST o al cambiar inputs en vivo
+        function estimarPerdidaSimulada(tipo, prov, meses, anio, motor) {
+            const horas = meses * 200;
+            const difHora = (COSTOS_ALQ[tipo] || 90) - (COSTOS_OP[tipo] || 30);
+            const rep = REPARACION_MOTOR[motor] || 0;
+            const antiguedadFactor = 1 + Math.max(0, (2024 - anio) * 0.008);
+            const fProv = FACTOR_PROV[prov] || 1.0;
+            return Math.round(((horas * difHora) + rep) * antiguedadFactor * fProv);
+        }
+
+        function construirDatosDesdeFormulario() {
+            const modo = document.getElementById('modo_seleccion_input').value;
+            let equipos = [];
+            let provincias = [];
+
+            if (modo === 'multiple') {
+                equipos = Array.from(document.querySelectorAll('input[name="tipo_equipo"]:checked')).map(el => el.value);
+                provincias = Array.from(document.querySelectorAll('input[name="provincia"]:checked')).map(el => el.value);
+            } else {
+                equipos = [document.getElementById('tipo_individual').value];
+                provincias = [document.getElementById('provincia_individual').value];
+            }
+
+            if (equipos.length === 0) equipos = ['Excavadora'];
+            if (provincias.length === 0) provincias = ['Buenos Aires'];
+
+            const meses = Math.max(1, Math.min(60, parseInt(document.getElementById('input_meses').value) || 24));
+            const anio = Math.max(1990, Math.min(2024, parseInt(document.getElementById('input_anio').value) || 2015));
+            const motor = document.getElementById('input_motor').value;
+
+            const filas = [];
+            let idx = 1;
+            provincias.forEach(prov => {
+                equipos.forEach(tipo => {
+                    const horas = meses * 200;
+                    const perdida = estimarPerdidaSimulada(tipo, prov, meses, anio, motor);
+                    const critico = perdida >= UMBRAL_UNITARIO;
+                    filas.push({
+                        id: `${tipo.substring(0,3).toUpperCase()}-${prov.substring(0,3).toUpperCase()}-${String(idx).padStart(3,'0')}`,
+                        tipo: tipo,
+                        provincia: prov,
+                        meses_inactividad: meses,
+                        anio_fabricacion: anio,
+                        estado_motor: motor.replace('_', ' '),
+                        estado_motor_raw: motor,
+                        horas: horas,
+                        jornadas: Math.round(horas / 8),
+                        costo_propio: horas * (COSTOS_OP[tipo] || 30),
+                        costo_alquiler: horas * (COSTOS_ALQ[tipo] || 90),
+                        costo_manual: horas * (COSTOS_MAN[tipo] || 500),
+                        perdida_ia: perdida,
+                        critico: critico,
+                        alerta_reg: critico ? 'CRÍTICA' : 'Normal',
+                        alerta_clf: critico ? 'CRÍTICA' : 'Normal',
+                        coincidencia: 'Coinciden'
+                    });
+                    idx++;
+                });
+            });
+
+            return {
+                filas: filas,
+                equipos_seleccionados: equipos,
+                provincias_seleccionadas: provincias,
+                meses_inactividad: meses,
+                anio_fabricacion: anio,
+                estado_motor_texto: motor.replace('_', ' ')
+            };
+        }
+
+        function poblarSelectorUnidades(filas) {
+            const sel = document.getElementById('selectorMaquinaActiva');
+            sel.innerHTML = '';
+            filas.forEach((f, i) => {
+                const opt = document.createElement('option');
+                opt.value = i;
+                opt.textContent = `${f.id} · ${f.tipo} (${f.provincia})`;
+                sel.appendChild(opt);
+            });
+            estadoActual.indiceSeleccionado = 0;
+        }
+
+        function cambiarMaquinaActiva(idx) {
+            estadoActual.indiceSeleccionado = parseInt(idx) || 0;
+            renderizarVistaCompleta(false);
+        }
+
+        // ==========================================
+        // GRÁFICOS CHART.JS (IDÉNTICOS AL PDF LUCRODASH)
+        // ==========================================
+        let chartIzq = null;
+        let chartDer = null;
+
+        function actualizarGraficosLucroDash(filas, filaActiva) {
+            // Agrupamos o listamos las pérdidas por máquina para el gráfico izquierdo
+            const labelsIzq = filas.map(f => filas.length > 1 ? `${f.tipo} (${f.provincia.substring(0,3)})` : f.tipo);
+            const dataPerdidas = filas.map(f => f.perdida_ia);
+            const maxVal = Math.max(...dataPerdidas, filaActiva.perdida_ia, 100000);
+            const ejeMax = Math.ceil((maxVal * 1.12) / 50000) * 50000;
+
+            const ctx1 = document.getElementById('chartComparacionMaquinas').getContext('2d');
+            if (chartIzq) chartIzq.destroy();
+
+            chartIzq = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: labelsIzq,
+                    datasets: [{
+                        label: 'Pérdida estimada',
+                        data: dataPerdidas,
+                        backgroundColor: filas.map((f, i) => i === estadoActual.indiceSeleccionado ? '#eab308' : '#facc15'),
+                        borderColor: '#ca8a04',
+                        borderWidth: 1,
+                        borderRadius: 6,
+                        barThickness: filas.length > 4 ? 18 : 26
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (evt, elements) => {
+                        if (elements.length > 0) {
+                            const idx = elements[0].index;
+                            document.getElementById('selectorMaquinaActiva').value = idx;
+                            cambiarMaquinaActiva(idx);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => ' Pérdida: ' + fmtPesos(ctx.raw)
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: ejeMax,
+                            grid: { color: 'rgba(148, 163, 184, 0.22)', lineWidth: 0.6 },
+                            ticks: {
+                                color: '#94a3b8',
+                                font: { size: 10 },
+                                callback: val => '$' + (val / 1000).toLocaleString('es-AR') + 'k'
+                            }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: {
+                                color: '#e2e8f0',
+                                font: { size: 11, weight: '600' }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico Derecho: Detalle · [Equipo] (Barra Coral + Punto Celeste de Horas en eje derecho)
+            document.getElementById('tituloGraficoDetalle').textContent = `Detalle · ${filaActiva.tipo}`;
+
+            // Si hay varias provincias seleccionadas para el mismo tipo de equipo, las mostramos o mostramos la unidad activa
+            const mismasMaquinasPorProv = filas.filter(f => f.tipo === filaActiva.tipo);
+            const labelsDer = mismasMaquinasPorProv.map(f => f.provincia);
+            const dataCoral = mismasMaquinasPorProv.map(f => f.perdida_ia);
+            const dataHoras = mismasMaquinasPorProv.map(f => f.horas);
+
+            const maxHoras = Math.max(...dataHoras, 500);
+            const ejeHorasMax = Math.ceil((maxHoras * 1.15) / 500) * 500;
+
+            const ctx2 = document.getElementById('chartDetalleMaquina').getContext('2d');
+            if (chartDer) chartDer.destroy();
+
+            chartDer = new Chart(ctx2, {
+                data: {
+                    labels: labelsDer,
+                    datasets: [
+                        {
+                            type: 'line',
+                            label: 'Horas inactivas',
+                            data: dataHoras,
+                            yAxisID: 'yHoras',
+                            borderColor: '#38bdf8',
+                            backgroundColor: '#38bdf8',
+                            pointBackgroundColor: '#38bdf8',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2,
+                            pointRadius: 7,
+                            pointHoverRadius: 9,
+                            showLine: mismasMaquinasPorProv.length > 1
+                        },
+                        {
+                            type: 'bar',
+                            label: 'Pérdida económica',
+                            data: dataCoral,
+                            yAxisID: 'yPesos',
+                            backgroundColor: '#ff6b5b',
+                            borderRadius: 8,
+                            maxBarThickness: 180
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => {
+                                    if (ctx.dataset.yAxisID === 'yHoras') {
+                                        return ` Inactividad: ${ctx.raw.toLocaleString('es-AR')} h`;
+                                    }
+                                    return ` Pérdida: ${fmtPesos(ctx.raw)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 12, weight: '600' } }
+                        },
+                        yPesos: {
+                            type: 'linear',
+                            position: 'left',
+                            beginAtZero: true,
+                            max: ejeMax,
+                            grid: { color: 'rgba(148, 163, 184, 0.22)', lineWidth: 0.6 },
+                            ticks: {
+                                color: '#ff6b5b',
+                                font: { size: 10, weight: '600' },
+                                callback: val => '$' + (val / 1000).toLocaleString('es-AR') + 'k'
+                            }
+                        },
+                        yHoras: {
+                            type: 'linear',
+                            position: 'right',
+                            beginAtZero: true,
+                            max: ejeHorasMax,
+                            grid: { drawOnChartArea: false },
+                            ticks: {
+                                color: '#38bdf8',
+                                font: { size: 10, weight: '600' },
+                                callback: val => val + ' h'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Actualizar leyenda debajo del gráfico
+            document.getElementById('leyendaDetalleInferior').innerHTML = `
+                <span><strong>Máquina seleccionada:</strong> ${filaActiva.tipo} (${filaActiva.provincia})</span>
+                <span><strong>Valor perdido:</strong> ${fmtMillones(filaActiva.perdida_ia)}</span>
+                <span><strong>Actividad no realizada:</strong> ${filaActiva.horas.toLocaleString('es-AR')} h (${filaActiva.jornadas.toLocaleString('es-AR')} jornadas no realizadas)</span>
+            `;
+        }
+
+        // ==========================================
+        // ESCENA 3D THREE.JS (MAQUINARIA + FAJOS + UMBRAL + DETERIORO)
+        // ==========================================
+        let scene, camera, renderer, controls, grupoMaquina, grupoFajos, grupoDeterioro, planoUmbral;
+
+        function iniciarEscena3D() {
+            const canvas = document.getElementById('canvas3d');
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xd2c5b0); // Cielo/horizonte cálido estilo Lovable
+            scene.fog = new THREE.Fog(0xd2c5b0, 18, 45);
+
+            camera = new THREE.PerspectiveCamera(42, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+            camera.position.set(7.5, 5.2, 8.5);
+
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.shadowMap.enabled = true;
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.06;
+            controls.target.set(0.5, 1.0, 0);
+            controls.maxPolarAngle = Math.PI / 2 - 0.04;
+
+            // Luces
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+            scene.add(ambientLight);
+
+            const dirLight = new THREE.DirectionalLight(0xfff7ed, 0.95);
+            dirLight.position.set(10, 16, 10);
+            dirLight.castShadow = true;
+            scene.add(dirLight);
+
+            // Terreno circundante
+            const groundGeo = new THREE.PlaneGeometry(80, 80);
+            const groundMat = new THREE.MeshStandardMaterial({ color: 0xc2b299, roughness: 0.95 });
+            const ground = new THREE.Mesh(groundGeo, groundMat);
+            ground.rotation.x = -Math.PI / 2;
+            ground.position.y = -0.05;
+            ground.receiveShadow = true;
+            scene.add(ground);
+
+            // Playón de asfalto oscuro
+            const asphaltGeo = new THREE.BoxGeometry(11, 0.1, 7.5);
+            const asphaltMat = new THREE.MeshStandardMaterial({ color: 0x26292e, roughness: 0.85 });
+            const asphalt = new THREE.Mesh(asphaltGeo, asphaltMat);
+            asphalt.position.set(0.5, 0, 0);
+            asphalt.receiveShadow = true;
+            scene.add(asphalt);
+
+            // Líneas amarillas de playón judicial
+            const lineMat = new THREE.MeshBasicMaterial({ color: 0xfacc15 });
+            for (let i = -4; i <= 4; i += 1.6) {
+                const dash = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.02, 0.12), lineMat);
+                dash.position.set(i, 0.06, 3.1);
+                scene.add(dash);
+            }
+
+            // Grilla sutil sobre el asfalto
+            const grid = new THREE.GridHelper(10, 10, 0xfacc15, 0x3b424c);
+            grid.position.set(0.5, 0.06, 0);
+            scene.add(grid);
+
+            // Alambrado perimetral trasero
+            const postMat = new THREE.MeshStandardMaterial({ color: 0x6b7280, metalness: 0.5 });
+            for (let x = -4.5; x <= 5.5; x += 2.5) {
+                const post = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 2.2, 8), postMat);
+                post.position.set(x, 1.1, -3.5);
+                scene.add(post);
+            }
+
+            // Plano Rojo de Umbral (USD 100.000)
+            const umbralGeo = new THREE.PlaneGeometry(3.2, 2.6);
+            const umbralMat = new THREE.MeshBasicMaterial({
+                color: 0xef4444,
+                transparent: true,
+                opacity: 0.35,
+                side: THREE.DoubleSide
+            });
+            planoUmbral = new THREE.Mesh(umbralGeo, umbralMat);
+            planoUmbral.rotation.x = -Math.PI / 2;
+            planoUmbral.position.set(2.5, 1.4, -0.3);
+            scene.add(planoUmbral);
+
+            // Borde del plano rojo
+            const edges = new THREE.EdgesGeometry(umbralGeo);
+            const edgeLines = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xef4444 }));
+            planoUmbral.add(edgeLines);
+
+            grupoMaquina = new THREE.Group();
+            grupoFajos = new THREE.Group();
+            grupoDeterioro = new THREE.Group();
+            scene.add(grupoMaquina);
+            scene.add(grupoFajos);
+            scene.add(grupoDeterioro);
+
+            window.addEventListener('resize', () => {
+                if (!canvas) return;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            });
+
+            function animate() {
+                requestAnimationFrame(animate);
+                controls.update();
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        function actualizarEscena3D(fila) {
+            if (!scene) return;
+
+            // Limpiar grupos previos
+            while (grupoMaquina.children.length > 0) grupoMaquina.remove(grupoMaquina.children[0]);
+            while (grupoFajos.children.length > 0) grupoFajos.remove(grupoFajos.children[0]);
+            while (grupoDeterioro.children.length > 0) grupoDeterioro.remove(grupoDeterioro.children[0]);
+
+            // Color según estado de motor y tipo de máquina
+            const esGrave = fila.estado_motor_raw === 'Averia_Grave';
+            const requiereRep = fila.estado_motor_raw === 'Requiere_Reparacion';
+            const colorCarroceria = esGrave ? 0x7c5836 : (requiereRep ? 0x3b8a5a : 0x22c55e);
+
+            const bodyMat = new THREE.MeshStandardMaterial({ color: colorCarroceria, roughness: 0.6 });
+            const cabinMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, roughness: 0.3, metalness: 0.2 });
+            const darkMat = new THREE.MeshStandardMaterial({ color: 0x1f2937, roughness: 0.9 });
+            const rimMat = new THREE.MeshStandardMaterial({ color: 0xfbbf24, roughness: 0.5 });
+            const bladeMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.4, roughness: 0.6 });
+
+            // Chasis principal
+            const chasis = new THREE.Mesh(new THREE.BoxGeometry(2.3, 0.85, 1.3), bodyMat);
+            chasis.position.set(-1.5, 0.95, 0);
+            chasis.castShadow = true;
+            grupoMaquina.add(chasis);
+
+            // Cabina
+            const cabina = new THREE.Mesh(new THREE.BoxGeometry(1.15, 1.05, 1.15), cabinMat);
+            cabina.position.set(-1.1, 1.85, 0);
+            cabina.castShadow = true;
+            grupoMaquina.add(cabina);
+
+            // Techo cabina
+            const techo = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.12, 1.25), bodyMat);
+            techo.position.set(-1.1, 2.42, 0);
+            grupoMaquina.add(techo);
+
+            // Caño de escape
+            const escape = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.9, 10), darkMat);
+            escape.position.set(-2.1, 1.75, 0.45);
+            grupoMaquina.add(escape);
+
+            // Ruedas
+            const wheelPositions = [
+                [-0.85, 0.65, 0.75, 0.65],
+                [-0.85, 0.65, -0.75, 0.65],
+                [-2.2, 0.48, 0.75, 0.48],
+                [-2.2, 0.48, -0.75, 0.48]
+            ];
+            wheelPositions.forEach(([wx, wy, wz, rad]) => {
+                const tire = new THREE.Mesh(new THREE.CylinderGeometry(rad, rad, 0.35, 20), darkMat);
+                tire.rotation.x = Math.PI / 2;
+                tire.position.set(wx, wy, wz);
+                tire.castShadow = true;
+                grupoMaquina.add(tire);
+
+                const rim = new THREE.Mesh(new THREE.CylinderGeometry(rad * 0.52, rad * 0.52, 0.37, 16), rimMat);
+                rim.rotation.x = Math.PI / 2;
+                rim.position.set(wx, wy, wz);
+                grupoMaquina.add(rim);
+            });
+
+            // Pala frontal / brazo según tipo
+            const brazo1 = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.14, 0.12), bladeMat);
+            brazo1.position.set(-2.7, 0.75, 0.45);
+            brazo1.rotation.z = 0.25;
+            grupoMaquina.add(brazo1);
+
+            const brazo2 = brazo1.clone();
+            brazo2.position.z = -0.45;
+            grupoMaquina.add(brazo2);
+
+            const pala = new THREE.Mesh(new THREE.BoxGeometry(0.25, 0.85, 1.65), bladeMat);
+            pala.position.set(-3.35, 0.58, 0);
+            pala.castShadow = true;
+            grupoMaquina.add(pala);
+
+            // Deterioro (Óxido y piezas sueltas en el piso) si requiere reparación o avería grave
+            if (requiereRep || esGrave) {
+                const rustMat = new THREE.MeshStandardMaterial({ color: 0xea580c, roughness: 0.8 });
+                const cantPiezas = esGrave ? 5 : 2;
+                for (let p = 0; p < cantPiezas; p++) {
+                    const placa = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.08, 0.38), rustMat);
+                    placa.position.set(-1.8 + p * 0.65, 0.09, 1.35 + (p % 2) * 0.35);
+                    placa.rotation.y = p * 0.6;
+                    grupoDeterioro.add(placa);
+                }
+                const perno = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.09, 0.32, 12), bladeMat);
+                perno.position.set(-0.6, 0.16, 1.55);
+                grupoDeterioro.add(perno);
+            }
+
+            // Pila de fajos de billetes (1 fajo ≈ USD 10.000)
+            const totalFajos = Math.max(1, Math.min(48, Math.round(fila.perdida_ia / 10000)));
+            const billMat = new THREE.MeshStandardMaterial({ color: 0xbbe5c8, roughness: 0.5 });
+            const strapMat = new THREE.MeshStandardMaterial({ color: 0xfacc15, roughness: 0.4 });
+
+            const cols = 2;
+            const rows = 2;
+            const porCapa = cols * rows;
+
+            for (let i = 0; i < totalFajos; i++) {
+                const capa = Math.floor(i / porCapa);
+                const posEnCapa = i % porCapa;
+                const cx = posEnCapa % cols;
+                const cz = Math.floor(posEnCapa / cols);
+
+                const fajoGroup = new THREE.Group();
+                const billete = new THREE.Mesh(new THREE.BoxGeometry(0.65, 0.16, 0.38), billMat);
+                billete.castShadow = true;
+                fajoGroup.add(billete);
+
+                const faja = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.165, 0.39), strapMat);
+                fajoGroup.add(faja);
+
+                fajoGroup.position.set(2.15 + cx * 0.72, 0.14 + capa * 0.17, 0.25 + cz * 0.44);
+                grupoFajos.add(fajoGroup);
+            }
+        }
+
+        // ==========================================
+        // RENDERIZADO INTEGRAL DE LA INTERFAZ
+        // ==========================================
+        function renderizarVistaCompleta(reconstruirSelector = true) {
+            const data = estadoActual.datosActuales;
+            if (!data || !data.filas || data.filas.length === 0) return;
+
+            if (reconstruirSelector) {
+                poblarSelectorUnidades(data.filas);
+            }
+
+            const filaActiva = data.filas[estadoActual.indiceSeleccionado] || data.filas[0];
+            const totalIA = data.filas.reduce((acc, f) => acc + f.perdida_ia, 0);
+            const totalPropio = data.filas.reduce((acc, f) => acc + f.costo_propio, 0);
+            const totalAlquiler = data.filas.reduce((acc, f) => acc + f.costo_alquiler, 0);
+            const totalManual = data.filas.reduce((acc, f) => acc + f.costo_manual, 0);
+            const cantCriticos = data.filas.filter(f => f.critico).length;
+
+            // 1. Actualizar Banner Superior y Etiquetas 3D con la unidad activa
+            const banner = document.getElementById('topUmbralBanner');
+            const diffUmbral = UMBRAL_UNITARIO - filaActiva.perdida_ia;
+            document.getElementById('bannerMontoPrincipal').textContent = `USD ${Math.round(filaActiva.perdida_ia).toLocaleString('es-AR')} (${filaActiva.tipo} · ${filaActiva.provincia})`;
+            document.getElementById('tag3dMonto').textContent = `USD ${Math.round(filaActiva.perdida_ia).toLocaleString('es-AR')}`;
+
+            if (diffUmbral > 0) {
+                banner.classList.remove('critico');
+                document.getElementById('bannerSubtexto').textContent = `Le faltan USD ${Math.round(diffUmbral).toLocaleString('es-AR')} para llegar al umbral.`;
+                document.getElementById('bannerEstadoBadge').textContent = 'BAJO UMBRAL';
+            } else {
+                banner.classList.add('critico');
+                document.getElementById('bannerSubtexto').textContent = `Supera el umbral crítico de USD 100.000 en USD ${Math.round(Math.abs(diffUmbral)).toLocaleString('es-AR')}.`;
+                document.getElementById('bannerEstadoBadge').textContent = 'ALERTA CRÍTICA';
+            }
+
+            // 2. Actualizar Trío de Tarjetas Inferiores
+            const pctUmbral = Math.min(100, (filaActiva.perdida_ia / UMBRAL_UNITARIO) * 100);
+            document.getElementById('kpiTermometroPct').textContent = `${pctUmbral.toFixed(1)}% del umbral`;
+            document.getElementById('kpiTermometroBar').style.width = `${pctUmbral}%`;
+            document.getElementById('kpiTermometroDesc').textContent = data.filas.length > 1 
+                ? `Lote completo (${data.filas.length} unidades): ${fmtPesos(totalIA)} acumulados.`
+                : `Comparación directa contra el umbral de reposición (USD 100.000).`;
+
+            document.getElementById('kpiSignificaTitulo').textContent = `${filaActiva.horas.toLocaleString('es-AR')} horas inactivas`;
+            document.getElementById('kpiSignificaDesc').textContent = `Equivale a ${filaActiva.jornadas.toLocaleString('es-AR')} jornadas laborales no realizadas en ${filaActiva.provincia}.`;
+
+            const costoMensualExtra = 200 * ((COSTOS_ALQ[filaActiva.tipo] || 90) - (COSTOS_OP[filaActiva.tipo] || 30));
+            if (diffUmbral > 0) {
+                const mesesRestantes = Math.ceil(diffUmbral / Math.max(1, costoMensualExtra));
+                document.getElementById('kpiCuentaTitulo').textContent = `${mesesRestantes} mes(es) para umbral`;
+                document.getElementById('kpiCuentaDesc').textContent = `Al ritmo actual (+USD ${costoMensualExtra.toLocaleString('es-AR')}/mes), cruzará el límite pronto.`;
+            } else {
+                document.getElementById('kpiCuentaTitulo').textContent = `Umbral excedido`;
+                document.getElementById('kpiCuentaDesc').textContent = `Amerita subasta anticipada o reasignación inmediata según criterio pericial.`;
+            }
+
+            // 3. Actualizar Escena 3D
+            actualizarEscena3D(filaActiva);
+
+            // 4. Actualizar Informe LucroDash y Gráficos
+            const ahora = new Date();
+            document.getElementById('reportFechaHora').textContent = ahora.toLocaleString('es-AR');
+            document.getElementById('reportCantCriticos').textContent = `${cantCriticos} lote(s) crítico(s) de ${data.filas.length}`;
+            document.getElementById('reportNivelAlerta').textContent = cantCriticos > 0 
+                ? 'Nivel de alerta: REVISIÓN REQUERIDA' 
+                : 'Nivel de alerta: MONITOREO PREVENTIVO';
+
+            document.getElementById('repEquiposList').textContent = data.equipos_seleccionados.join(', ');
+            document.getElementById('repProvinciasList').textContent = data.provincias_seleccionadas.join(', ');
+            document.getElementById('repMeses').textContent = data.meses_inactividad;
+            document.getElementById('repAnio').textContent = data.anio_fabricacion;
+            document.getElementById('repMotor').textContent = data.estado_motor_texto;
+            document.getElementById('repPerdidaTotal').textContent = fmtPesos(totalIA);
+
+            document.getElementById('repCostoPropio').textContent = fmtPesos(totalPropio);
+            document.getElementById('repCostoAlquiler').textContent = fmtPesos(totalAlquiler);
+            document.getElementById('repCostoManual').textContent = fmtPesos(totalManual);
+
+            actualizarGraficosLucroDash(data.filas, filaActiva);
+
+            // 5. Poblar tabla de lotes
+            const tbody = document.getElementById('tablaLotesBody');
+            tbody.innerHTML = '';
+            data.filas.forEach((f, idx) => {
+                const tr = document.createElement('tr');
+                if (idx === estadoActual.indiceSeleccionado) tr.classList.add('row-selected');
+                tr.style.cursor = 'pointer';
+                tr.onclick = () => {
+                    document.getElementById('selectorMaquinaActiva').value = idx;
+                    cambiarMaquinaActiva(idx);
+                };
+                tr.innerHTML = `
+                    <td><strong>${f.id}</strong></td>
+                    <td>${f.tipo}</td>
+                    <td>${f.provincia}</td>
+                    <td>${f.meses_inactividad}</td>
+                    <td><strong>${fmtPesos(f.perdida_ia)}</strong></td>
+                    <td><span class="${f.alerta_reg === 'CRÍTICA' ? 'badge-critica' : 'badge-normal'}">${f.alerta_reg}</span></td>
+                    <td><span class="${f.alerta_clf === 'CRÍTICA' ? 'badge-critica' : 'badge-normal'}">${f.alerta_clf}</span></td>
+                    <td>${f.coincidencia}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function actualizarVistaPrevia() {
+            estadoActual.datosActuales = construirDatosDesdeFormulario();
+            renderizarVistaCompleta(true);
+        }
+
+        function exportarInformePDF() {
+            const elemento = document.getElementById('areaInformeImprimible');
+            const opt = {
+                margin: 8,
+                filename: `lucrodash-informe-${new Date().toISOString().slice(0,10)}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#161b22' },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
+            };
+            html2pdf().set(opt).from(elemento).save();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            iniciarEscena3D();
+            const eqChecked = document.querySelectorAll('input[name="tipo_equipo"]:checked').length;
+            const prChecked = document.querySelectorAll('input[name="provincia"]:checked').length;
+            document.getElementById('countEquipos').textContent = eqChecked;
+            document.getElementById('countProvincias').textContent = prChecked;
+
+            if (SERVER_RESULTS && SERVER_RESULTS.filas && SERVER_RESULTS.filas.length > 0) {
+                estadoActual.datosActuales = SERVER_RESULTS;
+                renderizarVistaCompleta(true);
+            } else {
+                actualizarVistaPrevia();
+            }
+        });
+    </script>
 </body>
 </html>
